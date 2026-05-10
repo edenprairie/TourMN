@@ -1,0 +1,214 @@
+{
+  "nav": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "itineraries": "Itineraries",
+    "brands": "Local Brands",
+    "language": "中文"
+  },
+  "hero": {
+    "title": "Discover Minnesota",
+    "welcome": "Welcome Xinyi, Vivian, and Anthony to Minnesota",
+    "subtitle": "Explore the Land of 10,000 Lakes, breathtaking landscapes, and iconic global brands.",
+    "cta": "Start Exploring"
+  },
+  "home": {
+    "intro_title": "Welcome to the North Star State",
+    "intro_desc": "Whether you have just a few days or weeks to explore, Minnesota offers an unparalleled mix of natural beauty, rich culture, and historic innovation. Choose your own adventure from our curated list of must-see destinations.",
+    "featured_destinations": "Featured Destinations",
+    "famous_brands": "World-Class Brands Born Here",
+    "view_all": "View All"
+  },
+  "destinations": {
+    "title": "Top Destinations",
+    "subtitle": "Tailor your 2-3 day itinerary based on your interests. Here are some of the most remarkable places to visit.",
+    "places": {
+      "sculpture_garden": {
+        "name": "Minneapolis Sculpture Garden",
+        "description": "An iconic Minneapolis landmark featuring the famous Spoonbridge and Cherry sculpture. Located near downtown Minneapolis, this beautiful garden is a must-visit for art lovers."
+      },
+      "moa": {
+        "name": "Mall of America",
+        "description": "The largest shopping mall in the United States. Originally the site of the Metropolitan Stadium, it now features an indoor amusement park, aquarium, and hundreds of stores."
+      },
+      "red_wing": {
+        "name": "Red Wing Town & Boot",
+        "description": "Famous for the Red Wing heritage boots that gained fame during WWII. A picturesque town just an hour's drive from the Twin Cities. Highly recommended for vintage fashion lovers and picking up a memorable pair of boots."
+      },
+      "lake_city": {
+        "name": "Lake City",
+        "description": "The birthplace of water skiing. Enjoy stunning summer views that feel like being by the ocean. Located a short, scenic drive from Red Wing."
+      },
+      "basilica": {
+        "name": "Basilica of Saint Mary",
+        "description": "A prominent and beautiful Catholic basilica located in downtown Minneapolis, known for its stunning architecture."
+      },
+      "guthrie": {
+        "name": "Guthrie Theater",
+        "description": "A renowned theater with unique architecture. The 'Endless Bridge' extends into mid-air and offers excellent, free public views. The land was donated by the city with the promise of lifetime free access to the public spaces."
+      },
+      "st_anthony": {
+        "name": "Saint Anthony Falls",
+        "description": "The 'Mother Falls' of Minneapolis. This natural wonder powered the city's early milling industry, giving rise to iconic brands like General Mills, Pillsbury, and Häagen-Dazs."
+      },
+      "mia": {
+        "name": "Minneapolis Institute of Art (Mia)",
+        "description": "A high-quality museum featuring a vast collection of precious artifacts, including extensive Asian art exhibits. General admission is always free."
+      },
+      "capitol": {
+        "name": "Minnesota State Capitol",
+        "description": "The seat of the Minnesota state government in Saint Paul, featuring a magnificent dome and beautiful marble architecture."
+      },
+      "arboretum": {
+        "name": "Minnesota Landscape Arboretum",
+        "description": "The University of Minnesota's expansive botanical garden, offering beautiful trails and diverse plant collections year-round."
+      },
+      "como": {
+        "name": "Como Zoo & Conservatory",
+        "description": "A wonderful, family-friendly destination featuring a zoo and a stunning glass-domed conservatory filled with lush tropical plants."
+      },
+      "hill_house": {
+        "name": "James J. Hill House",
+        "description": "The historic, massive mansion of the famous railroad tycoon James J. Hill, located on Summit Avenue in Saint Paul."
+      },
+      "cathedral": {
+        "name": "Cathedral of Saint Paul",
+        "description": "A breathtaking Catholic cathedral dominating the Saint Paul skyline, known for its classic Renaissance architecture."
+      }
+    }
+  },
+  "brands": {
+    "title": "Iconic Brands & Companies",
+    "subtitle": "Minnesota is home to numerous Fortune 500 companies and brands that have shaped the world.",
+    "categories": {
+      "food": "Food & Consumer Goods",
+      "dining": "Dining & Restaurants",
+      "retail": "Retail",
+      "healthcare": "Healthcare & Wellness",
+      "agriculture": "Agriculture & Supply Chain",
+      "industry": "Industry & Technology",
+      "finance": "Finance & Insurance"
+    },
+    "companies": {
+      "spam": {
+        "name": "Spam",
+        "description": "Invented by Hormel Foods in Austin, MN. It became a military staple during WWII and remains highly popular, especially in Asian markets."
+      },
+      "red_wing_shoes": {
+        "name": "Red Wing Shoes",
+        "description": "Renowned for high-quality work boots and WWII paratrooper boots."
+      },
+      "general_mills": {
+        "name": "General Mills",
+        "description": "A global food giant behind brands like Cheerios, Häagen-Dazs, Betty Crocker, and Yoplait."
+      },
+      "pillsbury": {
+        "name": "Pillsbury",
+        "description": "Famous for flour, baked goods, and cookie dough, represented by the iconic 'Pillsbury Doughboy'."
+      },
+      "land_o_lakes": {
+        "name": "Land O'Lakes",
+        "description": "One of America's largest dairy cooperatives, known for premium butter and cheese."
+      },
+      "dairy_queen": {
+        "name": "Dairy Queen (DQ)",
+        "description": "World-famous ice cream and fast-food chain, headquartered in Bloomington, MN."
+      },
+      "buffalo_wild_wings": {
+        "name": "Buffalo Wild Wings",
+        "description": "Famous for chicken wings and its sports bar atmosphere, headquartered in Minneapolis."
+      },
+      "target": {
+        "name": "Target",
+        "description": "A retail giant and popular discount department store headquartered in Minneapolis."
+      },
+      "best_buy": {
+        "name": "Best Buy",
+        "description": "The largest consumer electronics retailer in the US, headquartered in Richfield, MN."
+      },
+      "mayo_clinic": {
+        "name": "Mayo Clinic",
+        "description": "A world-renowned medical institution in Rochester, MN, known for advanced research, diagnosis, and treatment."
+      },
+      "medtronic": {
+        "name": "Medtronic",
+        "description": "The world's largest medical device company, producing pacemakers and surgical tools."
+      },
+      "unitedhealth": {
+        "name": "UnitedHealth Group",
+        "description": "One of the world's largest health insurance and healthcare management companies, based in Minnetonka, MN."
+      },
+      "cargill": {
+        "name": "Cargill",
+        "description": "The largest privately held agricultural company globally, spanning food processing, trade, and finance."
+      },
+      "3m": {
+        "name": "3M",
+        "description": "A global innovation powerhouse that invented N95 masks, Post-it notes, and Scotch tape."
+      },
+      "polaris": {
+        "name": "Polaris",
+        "description": "Manufacturer of ATVs, snowmobiles, and watercraft."
+      },
+      "toro": {
+        "name": "Toro",
+        "description": "Makers of premium landscaping, golf course maintenance, and snow removal equipment."
+      },
+      "ecolab": {
+        "name": "Ecolab",
+        "description": "A global leader in water, hygiene, and infection prevention solutions."
+      },
+      "us_bank": {
+        "name": "U.S. Bank",
+        "description": "The fifth-largest bank in the United States, headquartered in Minneapolis."
+      },
+      "ameriprise": {
+        "name": "Ameriprise Financial",
+        "description": "A prominent wealth management, insurance, and financial services company."
+      },
+      "thrivent": {
+        "name": "Thrivent",
+        "description": "A Christian-based financial company providing insurance, investments, and financial planning."
+      }
+    }
+  },
+  "itineraries": {
+    "title": "Suggested Itineraries",
+    "subtitle": "Make the most of your trip with these curated plans designed to showcase the very best of Minnesota.",
+    "one_day": {
+      "title": "1-Day: Twin Cities Highlights",
+      "desc": "Perfect for a quick trip focusing on core cultural and historical landmarks.",
+      "morning": {
+        "time": "Morning",
+        "activity": "Start at the Minneapolis Sculpture Garden for iconic photos, then visit the nearby Basilica of Saint Mary."
+      },
+      "afternoon": {
+        "time": "Afternoon",
+        "activity": "Enjoy world-class art at the Minneapolis Institute of Art (Mia), then head to the historic Saint Anthony Falls."
+      },
+      "evening": {
+        "time": "Evening",
+        "activity": "End the day at the Guthrie Theater—take in the view from the Endless Bridge and perhaps catch a show."
+      }
+    },
+    "three_day": {
+      "title": "3-Day: The Full Minnesota Experience",
+      "desc": "A well-rounded trip balancing city culture, shopping, and natural beauty.",
+      "day_1": {
+        "time": "Day 1: Arts & Architecture",
+        "activity": "Explore the Sculpture Garden and Mia. Then head to St. Paul to marvel at the State Capitol, Cathedral of Saint Paul, and James J. Hill House."
+      },
+      "day_2": {
+        "time": "Day 2: Family & Shopping",
+        "activity": "Spend the morning admiring nature at Como Zoo & Conservatory, then dedicate the afternoon and evening to exploring the Mall of America."
+      },
+      "day_3": {
+        "time": "Day 3: Nature & Heritage Drive",
+        "activity": "Head south for a scenic drive along the Mississippi River. Visit Red Wing for its heritage boots and charming town, then continue to Lake City for stunning waterside views."
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Explore Minnesota. Presented by Jun Wang."
+  }
+}

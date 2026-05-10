@@ -1,0 +1,214 @@
+{
+  "nav": {
+    "home": "首页",
+    "destinations": "热门景点",
+    "itineraries": "行程推荐",
+    "brands": "知名品牌",
+    "language": "English"
+  },
+  "hero": {
+    "title": "探索明尼苏达",
+    "welcome": "欢迎 Xinyi、Vivian 和 Anthony 来到明尼苏达",
+    "subtitle": "探索万湖之州的壮丽自然景观和世界级知名品牌。",
+    "cta": "开启旅程"
+  },
+  "home": {
+    "intro_title": "欢迎来到北极星之州",
+    "intro_desc": "无论您只有几天还是几周的时间，明尼苏达州都能为您提供无与伦比的自然美景、丰富的文化和历史悠久的创新。从我们精选的必游目的地中选择您的专属旅程。",
+    "featured_destinations": "特色景点",
+    "famous_brands": "诞生于此的世界级品牌",
+    "view_all": "查看全部"
+  },
+  "destinations": {
+    "title": "必看景点",
+    "subtitle": "以下罗列一些明州值得看的景点，根据个人兴趣选择最后确定行程。2-3天时间不太可能都看。",
+    "places": {
+      "sculpture_garden": {
+        "name": "Minneapolis Sculpture Garden",
+        "description": "明尼阿波利斯标志雕塑（Spoonbridge and Cherry），坐落于Minneapolis Downtown附近，非常值得一看的艺术圣地。"
+      },
+      "moa": {
+        "name": "Mall of America",
+        "description": "全美最大shopping mall，之前是一所体育馆，中心有室内游乐场、水族馆等丰富设施。"
+      },
+      "red_wing": {
+        "name": "Red Wing Town & Boot",
+        "description": "因二战军靴而名声大振的工装靴品牌发源地，被众多热爱阿美咔叽的时尚人士追捧。距离双城1小时车程，很值得访问和购买一双靴子作为纪念。"
+      },
+      "lake_city": {
+        "name": "Lake City",
+        "description": "Water ski（滑水）运动的发祥地，夏天风景很美，有点儿海边的感觉，从Red Wing town过去很近，路上风景不错。"
+      },
+      "basilica": {
+        "name": "Basilica of Saint Mary",
+        "description": "位于明尼阿波利斯downtown的一座知名天主教堂，建筑宏伟壮观。"
+      },
+      "guthrie": {
+        "name": "Guthrie Theater",
+        "description": "著名的剧院，被百老汇奉为“风水”剧院，很多的名剧初演特意选择此剧院以图吉利。伸到半空中的“无尽桥”是观景极佳场所，因为剧院土地是城市捐献的，承诺终生供公众免费参观。"
+      },
+      "st_anthony": {
+        "name": "Saint Anthony Falls",
+        "description": "明尼阿波利斯的母亲瀑布，从此才有了General Mills（通用磨坊）和众多食品品牌类似Pillsbury, Cheerios，哈根达斯等等。"
+      },
+      "mia": {
+        "name": "Minneapolis Institute of Art (Mia)",
+        "description": "质量很高的博物馆，有很多珍贵的藏品，包括丰富的中国艺术展品，门票免费。"
+      },
+      "capitol": {
+        "name": "Minnesota State Capitol",
+        "description": "明尼苏达州政府所在地，位于圣保罗，拥有宏伟的圆顶和美丽的大理石建筑。"
+      },
+      "arboretum": {
+        "name": "Minnesota Landscape Arboretum",
+        "description": "明尼苏达大学的植物园，四季都有不同的自然景观和丰富的植物品种。"
+      },
+      "como": {
+        "name": "Como Zoo & Conservatory",
+        "description": "非常适合家庭游玩的免费动物园及温室植物园，玻璃圆顶的温室非常漂亮。"
+      },
+      "hill_house": {
+        "name": "James J. Hill House",
+        "description": "著名铁路大亨James J. Hill的故居，位于圣保罗的Summit Avenue，历史悠久的豪宅。"
+      },
+      "cathedral": {
+        "name": "Cathedral of Saint Paul",
+        "description": "圣保罗的天主教堂，宏伟的古典文艺复兴风格建筑，是圣保罗市的标志。"
+      }
+    }
+  },
+  "brands": {
+    "title": "知名公司与品牌",
+    "subtitle": "明尼苏达州是众多改变世界的财富500强企业和品牌的故乡。",
+    "categories": {
+      "food": "食品与消费品",
+      "dining": "餐饮",
+      "retail": "零售",
+      "healthcare": "医疗与健康",
+      "agriculture": "农业与食品供应链",
+      "industry": "工业与科技",
+      "finance": "金融与保险"
+    },
+    "companies": {
+      "spam": {
+        "name": "Spam（世棒午餐肉）",
+        "description": "由荷美尔食品在明州奥斯汀市发明，二战期间成为军需食品，在亚洲市场尤其受欢迎。"
+      },
+      "red_wing_shoes": {
+        "name": "Red Wing Shoes（红翼鞋）",
+        "description": "以制造高品质工作靴和二战期间的伞兵靴闻名。"
+      },
+      "general_mills": {
+        "name": "General Mills（通用磨坊）",
+        "description": "全球食品巨头，旗下品牌包括Cheerios、哈根达斯、Betty Crocker、优诺等。"
+      },
+      "pillsbury": {
+        "name": "Pillsbury（品食乐）",
+        "description": "以面粉、烘焙食品和饼干面团闻名，标志性角色是“Pillsbury Doughboy”。"
+      },
+      "land_o_lakes": {
+        "name": "Land O’Lakes（乐利湖）",
+        "description": "美国最大的乳制品合作社之一，以黄油、奶酪和乳制品闻名。"
+      },
+      "dairy_queen": {
+        "name": "Dairy Queen (DQ)",
+        "description": "全球知名的冰淇淋和快餐连锁品牌，总部位于明尼苏达州布卢明顿。"
+      },
+      "buffalo_wild_wings": {
+        "name": "Buffalo Wild Wings",
+        "description": "以鸡翅和体育酒吧氛围闻名的连锁餐厅，总部设在明尼阿波利斯。"
+      },
+      "target": {
+        "name": "Target（塔吉特）",
+        "description": "美国知名折扣百货公司，零售行业巨头之一，总部位于明尼阿波利斯。"
+      },
+      "best_buy": {
+        "name": "Best Buy（百思买）",
+        "description": "美国最大的消费电子零售商，总部设在明尼苏达州里奇菲尔德。"
+      },
+      "mayo_clinic": {
+        "name": "Mayo Clinic（梅奥诊所）",
+        "description": "世界顶级医疗机构，以先进的医疗研究、诊断和治疗闻名，位于明尼苏达州罗切斯特。"
+      },
+      "medtronic": {
+        "name": "Medtronic（美敦力）",
+        "description": "全球最大的医疗器械公司，总部在明尼阿波利斯，主要生产心脏起搏器、神经调控设备等。"
+      },
+      "unitedhealth": {
+        "name": "UnitedHealth Group（联合健康集团）",
+        "description": "全球最大健康保险和医疗管理公司之一，总部位于明尼苏达州明尼通卡。"
+      },
+      "cargill": {
+        "name": "Cargill（嘉吉）",
+        "description": "全球最大的私人控股农业公司，业务涵盖食品加工、农业、贸易和金融。"
+      },
+      "3m": {
+        "name": "3M（明尼苏达矿业制造公司）",
+        "description": "发明了N95口罩、便利贴、Scotch透明胶带等，是全球科技创新巨头。"
+      },
+      "polaris": {
+        "name": "Polaris（北极星工业）",
+        "description": "生产全地形车（ATV）、雪地摩托、水上摩托等。"
+      },
+      "toro": {
+        "name": "Toro（托罗公司）",
+        "description": "制造园艺设备、高尔夫球场维护设备和除雪机。"
+      },
+      "ecolab": {
+        "name": "Ecolab（艺康集团）",
+        "description": "全球领先的水处理、清洁和卫生技术公司，服务于酒店、医疗和食品加工行业。"
+      },
+      "us_bank": {
+        "name": "U.S. Bank（美国银行）",
+        "description": "美国第五大银行，总部位于明尼阿波利斯。"
+      },
+      "ameriprise": {
+        "name": "Ameriprise Financial（安普财务）",
+        "description": "财富管理、保险和金融服务公司。"
+      },
+      "thrivent": {
+        "name": "Thrivent（斯瑞文金融）",
+        "description": "提供保险、投资和财务规划的基督教背景金融公司。"
+      }
+    }
+  },
+  "itineraries": {
+    "title": "精选行程推荐",
+    "subtitle": "通过这些精心设计的行程计划，充分利用您的旅行时间，领略明尼苏达州的最佳风采。",
+    "one_day": {
+      "title": "一日游：双城精华之旅",
+      "desc": "适合时间紧凑的游客，重点游览双城核心文化与历史地标。",
+      "morning": {
+        "time": "上午",
+        "activity": "从明尼阿波利斯雕塑花园开始，与标志性的樱桃勺子合影，然后参观附近的宏伟建筑——圣玛丽圣殿。"
+      },
+      "afternoon": {
+        "time": "下午",
+        "activity": "在明尼阿波利斯艺术博物馆（Mia）欣赏世界级的艺术藏品，随后前往历史悠久的圣安东尼瀑布感受自然与工业的结合。"
+      },
+      "evening": {
+        "time": "晚上",
+        "activity": "在格思里剧院结束一天的行程——从“无尽桥”上欣赏壮丽的密西西比河夜景，或者观赏一场精彩的演出。"
+      }
+    },
+    "three_day": {
+      "title": "三日游：深度体验之旅",
+      "desc": "完美平衡城市文化、购物乐趣与自然美景的全面行程。",
+      "day_1": {
+        "time": "第一天：艺术与建筑",
+        "activity": "游览明尼阿波利斯雕塑花园和Mia博物馆。然后前往圣保罗，欣赏壮观的州议会大厦、圣保罗大教堂以及历史悠久的詹姆斯·J·希尔故居。"
+      },
+      "day_2": {
+        "time": "第二天：家庭与购物",
+        "activity": "上午在科莫动物园与温室植物园亲近自然，感受热带植物的魅力；下午和晚上在全美最大的购物中心（Mall of America）尽情购物与娱乐。"
+      },
+      "day_3": {
+        "time": "第三天：自然与文化探索",
+        "activity": "沿着密西西比河向南进行风景如画的自驾游。参观红翼小镇（Red Wing）购买经典的工装靴，然后前往湖城（Lake City）欣赏迷人的水畔风光。"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 探索明州。Jun Wang 倾情呈现。"
+  }
+}

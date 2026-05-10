@@ -1,0 +1,156 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background-image: url('/images/lake_city.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(15, 23, 42, 0.8),
+    rgba(30, 58, 138, 0.6)
+  );
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 100%;
+  padding-top: 6rem;
+}
+
+.textContent {
+  max-width: 800px;
+}
+
+.welcomeBanner {
+  width: min(100%, 780px);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(15, 23, 42, 0.48);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.2);
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0.95rem 0;
+  animation: marquee 18s linear infinite;
+}
+
+.marqueeItem {
+  position: relative;
+  flex: 0 0 auto;
+  padding-left: 2.5rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.98);
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+
+.marqueeItem::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  transform: translateY(-50%);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.65);
+}
+
+.textContent h1 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.textContent p {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(30, 58, 138, 0.39);
+}
+
+.primaryBtn:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  color: white;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 720px;
+    background-attachment: scroll;
+  }
+
+  .content {
+    padding-top: 7rem;
+  }
+
+  .welcomeBanner {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .marqueeTrack {
+    gap: 1.5rem;
+    animation-duration: 14s;
+  }
+
+  .textContent h1 {
+    font-size: clamp(2.75rem, 15vw, 4.25rem);
+  }
+}
