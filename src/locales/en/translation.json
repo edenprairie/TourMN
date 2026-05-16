@@ -8,7 +8,7 @@
   },
   "hero": {
     "title": "Discover Minnesota",
-    "welcome": "Welcome Xinyi, Vivian, and Anthony to Minnesota",
+    "welcome": "Welcome Xinyi, Vivian, Anthony, and Taemin to Minnesota",
     "subtitle": "Explore the Land of 10,000 Lakes, breathtaking landscapes, and iconic global brands.",
     "cta": "Start Exploring"
   },
@@ -74,6 +74,10 @@
       "cathedral": {
         "name": "Cathedral of Saint Paul",
         "description": "A breathtaking Catholic cathedral dominating the Saint Paul skyline, known for its classic Renaissance architecture."
+      },
+      "rice_park": {
+        "name": "Rice Park",
+        "description": "A charming downtown Saint Paul park framed by Landmark Center, the Ordway, and the Saint Paul Hotel. It is an easy stop for a stroll, photos, and a quick break between nearby cultural landmarks."
       }
     }
   },

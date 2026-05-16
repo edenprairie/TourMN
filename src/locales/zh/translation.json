@@ -8,7 +8,7 @@
   },
   "hero": {
     "title": "探索明尼苏达",
-    "welcome": "欢迎 Xinyi、Vivian 和 Anthony 来到明尼苏达",
+    "welcome": "欢迎 Xinyi、Vivian、Anthony 和 Taemin 来到明尼苏达",
     "subtitle": "探索万湖之州的壮丽自然景观和世界级知名品牌。",
     "cta": "开启旅程"
   },
@@ -74,6 +74,10 @@
       "cathedral": {
         "name": "Cathedral of Saint Paul",
         "description": "圣保罗的天主教堂，宏伟的古典文艺复兴风格建筑，是圣保罗市的标志。"
+      },
+      "rice_park": {
+        "name": "Rice Park",
+        "description": "位于圣保罗市中心的一座精致小公园，周边就是 Landmark Center、Ordway 和圣保罗酒店。很适合在参观附近建筑之间顺路散步、拍照和短暂休息。"
       }
     }
   },

@@ -16,7 +16,8 @@ const destinationData = [
   { key: 'arboretum', img: '/images/arboretum.jpg', url: 'https://arb.umn.edu/' },
   { key: 'como', img: '/images/como.jpg', url: 'https://comozooconservatory.org/' },
   { key: 'hill_house', img: '/images/hill_house.jpg', url: 'https://www.mnhs.org/hillhouse' },
-  { key: 'cathedral', img: '/images/cathedral.jpg', url: 'https://www.cathedralsaintpaul.org/' }
+  { key: 'cathedral', img: '/images/cathedral.jpg', url: 'https://www.cathedralsaintpaul.org/' },
+  { key: 'rice_park', img: '/images/rice_park.jpg', url: 'https://www.stpaul.gov/facilities/rice-park' }
 ];
 
 const Destinations: React.FC = () => {
