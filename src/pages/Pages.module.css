@@ -95,3 +95,247 @@
   height: 1px;
   background: var(--border-color);
 }
+
+.adminPanel {
+  margin: 1.75rem auto 0;
+  max-width: 760px;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.adminBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(30, 58, 138, 0.08);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.adminActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.adminButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border-color);
+  background: white;
+  color: var(--text-primary);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.adminButton:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.adminHint {
+  margin: 0.9rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.draggableCard {
+  position: relative;
+}
+
+.dragHandle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.55rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: grab;
+  user-select: none;
+}
+
+.viewToggle {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.viewToggleButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: white;
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.viewToggleActive {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.mapView {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.mapSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mapCategoryTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.mapCategoryTab {
+  border: 1px solid var(--border-color);
+  background: white;
+  color: var(--text-primary);
+  border-radius: 999px;
+  padding: 0.65rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mapCategoryTabActive {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.mapCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 72vh;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.mapCardButton {
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mapPanel {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 6.5rem;
+}
+
+.mapPanelHeader {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mapPanelHeader h2 {
+  margin-bottom: 0.35rem;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+}
+
+.mapPanelHeader p {
+  color: var(--text-secondary);
+}
+
+.mapCanvas {
+  width: 100%;
+  height: 70vh;
+  min-height: 480px;
+}
+
+.mapCardButtonActive {
+  border-radius: var(--radius-lg);
+}
+
+.mapCardButtonActive > * {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 991px) {
+  .mapView {
+    grid-template-columns: 1fr;
+  }
+
+  .mapSidebar {
+    order: 2;
+  }
+
+  .mapPanel {
+    order: 1;
+    position: static;
+  }
+
+  .mapCardList {
+    max-height: none;
+  }
+
+  .mapCanvas {
+    height: 54vh;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .viewToggle {
+    display: flex;
+    width: 100%;
+  }
+
+  .viewToggleButton {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+
+  .mapCategoryTabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.25rem;
+  }
+
+  .mapCategoryTab {
+    white-space: nowrap;
+  }
+
+  .mapPanelHeader {
+    padding: 0.85rem 1rem;
+  }
+
+  .mapCanvas {
+    height: 48vh;
+    min-height: 300px;
+  }
+}

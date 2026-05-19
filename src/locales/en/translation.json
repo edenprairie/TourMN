@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "destinations": "Destinations",
+    "food_drink": "Food & Drink",
     "itineraries": "Itineraries",
     "brands": "Local Brands",
     "language": "中文"
@@ -22,6 +23,10 @@
   "destinations": {
     "title": "Top Destinations",
     "subtitle": "Tailor your 2-3 day itinerary based on your interests. Here are some of the most remarkable places to visit.",
+    "groups": {
+      "core": "Twin Cities Core",
+      "day_trips": "Day Trips & Beyond"
+    },
     "places": {
       "sculpture_garden": {
         "name": "Minneapolis Sculpture Garden",
@@ -30,6 +35,10 @@
       "moa": {
         "name": "Mall of America",
         "description": "The largest shopping mall in the United States. Originally the site of the Metropolitan Stadium, it now features an indoor amusement park, aquarium, and hundreds of stores."
+      },
+      "skyway_system": {
+        "name": "Minneapolis Skyway System",
+        "description": "The world's largest continuous skyway system, spanning 11 miles and connecting over 80 city blocks. These climate-controlled, glass-enclosed pedestrian bridges let you explore downtown Minneapolis in comfort year-round — a truly unique urban experience."
       },
       "red_wing": {
         "name": "Red Wing Town & Boot",
@@ -47,9 +56,25 @@
         "name": "Guthrie Theater",
         "description": "A renowned theater with unique architecture. The 'Endless Bridge' extends into mid-air and offers excellent, free public views. The land was donated by the city with the promise of lifetime free access to the public spaces."
       },
+      "endless_bridge": {
+        "name": "Endless Bridge",
+        "description": "The Guthrie's dramatic cantilevered public walkway stretches out toward the Mississippi River and is one of the best free viewpoints in Minneapolis."
+      },
+      "amber_box": {
+        "name": "Amber Box",
+        "description": "The Guthrie's striking yellow glass lookout space on the upper levels offers a memorable interior view of the river, Stone Arch Bridge, and the Minneapolis skyline."
+      },
       "st_anthony": {
         "name": "Saint Anthony Falls",
         "description": "The 'Mother Falls' of Minneapolis. This natural wonder powered the city's early milling industry, giving rise to iconic brands like General Mills, Pillsbury, and Häagen-Dazs."
+      },
+      "stone_arch_bridge": {
+        "name": "Stone Arch Bridge",
+        "description": "The defining Minneapolis landmark for skyline and river views. This historic bridge spans the Mississippi beside Saint Anthony Falls and is one of the best places in the city for a walk and photos."
+      },
+      "mill_city_museum": {
+        "name": "Mill City Museum",
+        "description": "One of the best places to understand how Minneapolis was built by flour milling. Set inside the ruins of the Washburn A Mill, it combines city history, river views, and one of the most distinctive museum settings in Minnesota."
       },
       "mia": {
         "name": "Minneapolis Institute of Art (Mia)",
@@ -78,6 +103,18 @@
       "rice_park": {
         "name": "Rice Park",
         "description": "A charming downtown Saint Paul park framed by Landmark Center, the Ordway, and the Saint Paul Hotel. It is an easy stop for a stroll, photos, and a quick break between nearby cultural landmarks."
+      },
+      "minnehaha_falls": {
+        "name": "Minnehaha Falls",
+        "description": "One of Minneapolis's most iconic natural landmarks, this 53-foot waterfall in Minnehaha Park is a beautiful stop for a walk, photos, and a quick taste of Minnesota scenery right in the city."
+      },
+      "wayzata_lake_street": {
+        "name": "Wayzata Lake Street",
+        "description": "A walkable lakeside main street lined with shops, restaurants, and marina views. It is one of the easiest and most pleasant ways to experience Lake Minnetonka from shore."
+      },
+      "lake_minnetonka": {
+        "name": "Lake Minnetonka",
+        "description": "A large, scenic lake west of Minneapolis known for boating, waterfront towns, and broad open-water views. It is a strong pick for a relaxed afternoon drive or sunset stop."
       }
     }
   },
@@ -173,6 +210,298 @@
       "thrivent": {
         "name": "Thrivent",
         "description": "A Christian-based financial company providing insurance, investments, and financial planning."
+      }
+    }
+  },
+  "food_drink": {
+    "title": "Food & Drink",
+    "subtitle": "A practical Twin Cities guide to places worth going for meals, beer, and wine. These are 10 recommended picks per category rather than a strict ranking.",
+    "map_link": "Open in Google Maps",
+    "admin": {
+      "draft_badge": "Admin Draft Active",
+      "published_badge": "Published Order",
+      "copy_order": "Copy Ranking JSON",
+      "copied": "Copied",
+      "reset_order": "Reset to Published Order",
+      "hint": "Open this page with ?admin=1 to reorder cards. Drag within a category, then copy the JSON if you want to save that order back into the site data.",
+      "drag_label": "Drag to reorder"
+    },
+    "views": {
+      "list": "List View",
+      "map": "Map View"
+    },
+    "categories": {
+      "restaurants": "Recommended Restaurants",
+      "breweries": "Recommended Breweries",
+      "vineyards": "Recommended Vineyards & Wineries",
+      "chinese_restaurants": "Recommended Chinese Restaurants",
+      "cafes_bakeries": "Recommended Cafes & Bakeries"
+    },
+    "places": {
+      "spoon_and_stable": {
+        "name": "Spoon and Stable",
+        "location": "North Loop, Minneapolis",
+        "description": "A flagship Minneapolis restaurant in a restored stable building, known for polished New American cooking and one of the strongest all-around dinner experiences in the city."
+      },
+      "restaurant_alma": {
+        "name": "Restaurant Alma",
+        "location": "Marcy-Holmes, Minneapolis",
+        "description": "One of Minneapolis's long-running fine dining standards, with a refined seasonal menu and a calm, intimate atmosphere."
+      },
+      "hai_hai": {
+        "name": "Hai Hai",
+        "location": "Northeast Minneapolis",
+        "description": "A bright, energetic restaurant serving Southeast Asian-inspired dishes and cocktails in one of Minneapolis's strongest dining neighborhoods."
+      },
+      "meritage": {
+        "name": "Meritage",
+        "location": "Downtown St. Paul",
+        "description": "A dependable downtown St. Paul brasserie for oysters, steak frites, and classic French dishes in an elegant but approachable room."
+      },
+      "matts_bar": {
+        "name": "Matt's Bar",
+        "location": "South Minneapolis",
+        "description": "An iconic South Minneapolis stop for the original Jucy Lucy and a no-frills Minnesota burger experience."
+      },
+      "colita": {
+        "name": "Colita",
+        "location": "Kingfield, Minneapolis",
+        "description": "A stylish South Minneapolis restaurant centered on modern Mexican cooking, mezcal, and a warm, social atmosphere."
+      },
+      "aster_cafe": {
+        "name": "Aster Cafe",
+        "location": "St. Anthony Main, Minneapolis",
+        "description": "A strong pick when the goal is as much the setting as the food, with a riverfront patio and one of the best skyline views in the city."
+      },
+      "khaluna": {
+        "name": "Khaluna",
+        "location": "Uptown area, Minneapolis",
+        "description": "A polished Minneapolis restaurant from chef Ann Ahmed, serving Lao-inspired dishes in a space that works well for both dinner out and visitors."
+      },
+      "myriel": {
+        "name": "Myriel",
+        "location": "Highland Park, St. Paul",
+        "description": "A small St. Paul restaurant with a thoughtful seasonal menu, strong execution, and a quieter neighborhood feel than many headline spots."
+      },
+      "porzana": {
+        "name": "Porzana",
+        "location": "North Loop, Minneapolis",
+        "description": "A stylish steakhouse from the Jester Concepts group, centered on live-fire cooking, strong meat dishes, and a lively higher-end dinner atmosphere."
+      },
+      "nolos": {
+        "name": "NOLO's Kitchen & Bar",
+        "location": "North Loop, Minneapolis",
+        "description": "A reliable North Loop option for groups and visitors, with a broad menu, polished room, and a location that fits naturally into a downtown outing."
+      },
+      "smack_shack": {
+        "name": "Smack Shack",
+        "location": "North Loop, Minneapolis",
+        "description": "A well-known seafood spot with a strong local following, especially useful when you want a more energetic casual meal in the North Loop."
+      },
+      "surly": {
+        "name": "Surly Brewing",
+        "location": "Prospect Park, Minneapolis",
+        "description": "A flagship Twin Cities brewery with a large destination taproom, beer hall scale, and one of the most recognizable names in Minnesota craft beer."
+      },
+      "summit": {
+        "name": "Summit Brewing",
+        "location": "West Seventh, St. Paul",
+        "description": "A St. Paul classic with deep local roots, known for balanced beer styles and a taproom that makes an easy stop on a brewery-focused afternoon."
+      },
+      "indeed": {
+        "name": "Indeed Brewing",
+        "location": "Northeast Minneapolis",
+        "description": "A Northeast Minneapolis staple with a friendly taproom and a lineup that ranges from approachable staples to seasonal and experimental pours."
+      },
+      "fair_state": {
+        "name": "Fair State Brewing Cooperative",
+        "location": "Northeast Minneapolis",
+        "description": "One of the most respected breweries in the metro, especially strong on lagers, hoppy beers, and a more neighborhood-driven atmosphere."
+      },
+      "utepils": {
+        "name": "Utepils Brewing",
+        "location": "Harrison / Bassett Creek, Minneapolis",
+        "description": "A west Minneapolis brewery known for European-style beers and an outdoor setting that makes it especially good in warmer months."
+      },
+      "blackstack": {
+        "name": "BlackStack Brewing",
+        "location": "Midway, St. Paul",
+        "description": "A St. Paul favorite for hazy IPAs and a spacious taproom that is easy for groups and casual visits."
+      },
+      "pryes": {
+        "name": "Pryes Brewing",
+        "location": "North Loop riverfront, Minneapolis",
+        "description": "A riverfront brewery with a strong patio, reliable food program, and a location that pairs well with time along the Mississippi."
+      },
+      "falling_knife": {
+        "name": "Falling Knife Brewing",
+        "location": "Northeast Minneapolis",
+        "description": "A popular Minneapolis brewery with a more energetic taproom feel and a beer list that leans modern and hop-forward."
+      },
+      "bauhaus": {
+        "name": "Bauhaus Brew Labs",
+        "location": "Northeast Minneapolis",
+        "description": "A well-known Northeast brewery with a broad beer lineup and a social taproom that often feels busy in the best way."
+      },
+      "modist": {
+        "name": "Modist Brewing",
+        "location": "North Loop, Minneapolis",
+        "description": "A North Loop brewery known for experimentation and a distinctive voice, while still remaining accessible for visitors."
+      },
+      "alexis_bailly": {
+        "name": "Alexis Bailly Vineyard & Winery",
+        "location": "Hastings",
+        "description": "Minnesota's oldest winery, located in Hastings, and a good choice when you want a place with real local wine history."
+      },
+      "saint_croix": {
+        "name": "Saint Croix Vineyards",
+        "location": "Stillwater area, Marine on St. Croix",
+        "description": "A long-running Stillwater-area winery with tasting room access, scenic grounds, and a convenient day-trip feel from the Twin Cities."
+      },
+      "schram": {
+        "name": "Schram Vineyards Winery & Brewery",
+        "location": "Waconia",
+        "description": "A polished Waconia destination that combines vineyard views with a broader food-and-drink outing atmosphere."
+      },
+      "sovereign_estate": {
+        "name": "Sovereign Estate",
+        "location": "Waconia / Lake Waconia",
+        "description": "A scenic Lake Waconia winery that works especially well for a slower afternoon built around wine, views, and the grounds."
+      },
+      "winehaven": {
+        "name": "Winehaven Winery",
+        "location": "Chisago Lakes",
+        "description": "A Chisago Lakes destination with a larger estate feel and a comfortable setting for people who want wine tasting without rushing."
+      },
+      "seven_vines": {
+        "name": "7 Vines Vineyard",
+        "location": "Dellwood",
+        "description": "A refined Dellwood winery close enough to the metro for an easy outing, with attractive grounds and a more polished tasting experience."
+      },
+      "parley_lake": {
+        "name": "Parley Lake Winery",
+        "location": "Waconia",
+        "description": "A Waconia-area winery that feels more laid-back and seasonal, especially appealing during warmer weather and event weekends."
+      },
+      "cannon_river": {
+        "name": "Cannon River Winery",
+        "location": "Cannon Falls",
+        "description": "A popular Cannon Falls stop that is a little beyond the core metro, but still a practical and well-known wine day trip."
+      },
+      "two_silo": {
+        "name": "Two Silo Winery & Vineyard",
+        "location": "White Bear Lake area",
+        "description": "A White Bear Lake-area winery with a farmstead feel, making it one of the easier vineyard-style outings from the Twin Cities side."
+      },
+      "wild_mountain": {
+        "name": "Wild Mountain Winery",
+        "location": "Marine on St. Croix area",
+        "description": "A Stillwater-area winery with event energy, seasonal programming, and enough space to feel more like an excursion than a quick stop."
+      },
+      "peking_garden": {
+        "name": "Peking Garden",
+        "location": "University Avenue area, St. Paul",
+        "description": "A longstanding St. Paul Chinese restaurant that is especially useful for classic dishes, family-style meals, and a more old-school neighborhood feel."
+      },
+      "mandarin_kitchen": {
+        "name": "Mandarin Kitchen",
+        "location": "Bloomington",
+        "description": "A long-running Bloomington favorite for dim sum and larger group meals, and still one of the safest Chinese recommendations in the metro."
+      },
+      "jade_dynasty": {
+        "name": "Jade Dynasty",
+        "location": "Lyn-Lake, Minneapolis",
+        "description": "A newer Lyn-Lake destination with a broader traditional Chinese menu and one of the more relevant dim sum options inside Minneapolis proper."
+      },
+      "legendary_spice": {
+        "name": "Legendary Spice",
+        "location": "Stadium Village, Minneapolis",
+        "description": "A strong choice when the goal is Sichuan-style heat, hot pot, and a menu that goes well beyond standard American Chinese dishes."
+      },
+      "tea_house": {
+        "name": "Tea House",
+        "location": "University / Plymouth Ave area, Minneapolis",
+        "description": "A Twin Cities standby with a very large menu, reliable group-friendly dining, and a mix of familiar and more regional Chinese dishes."
+      },
+      "master_noodle": {
+        "name": "Master Noodle",
+        "location": "Dinkytown / University area, Minneapolis",
+        "description": "A practical pick for hand-pulled noodles, dumplings, and soup-based dishes when you want something more focused and casual."
+      },
+      "grand_szechuan": {
+        "name": "Grand Szechuan",
+        "location": "Bloomington",
+        "description": "A dependable neighborhood option in Bloomington for spicy Sichuan-leaning dishes and a menu built more for repeat local visits than hype."
+      },
+      "ju_yuan": {
+        "name": "Ju Yuan",
+        "location": "Golden Valley / West metro",
+        "description": "A useful west-metro option with a broad Chinese menu that works well for straightforward family-style meals."
+      },
+      "home_taste": {
+        "name": "Home Taste",
+        "location": "St. Louis Park / West metro",
+        "description": "A good pick for people looking for a more regional and less generic Chinese menu, especially on the west side of the metro."
+      },
+      "hong_kong_noodle": {
+        "name": "Hong Kong Noodle",
+        "location": "Bloomington",
+        "description": "A practical choice for noodle soups, roast meats, and quick Cantonese-style comfort food without making the meal feel overly formal."
+      },
+      "northern_kitchen": {
+        "name": "Northern Kitchen",
+        "location": "Bloomington",
+        "description": "A newer Bloomington-area Chinese spot that is useful for regional dishes and gives the south metro another strong option beyond the older standbys."
+      },
+      "patisserie_46": {
+        "name": "Patisserie 46",
+        "location": "Kingfield, Minneapolis",
+        "description": "One of the metro's strongest pastry stops, known for polished French baking, laminated pastries, and a consistent neighborhood following."
+      },
+      "marc_heu": {
+        "name": "Marc Heu Patisserie Paris",
+        "location": "Cathedral Hill, St. Paul",
+        "description": "A St. Paul favorite for French pastries, desserts, and a more polished bakery experience that still feels approachable."
+      },
+      "rustica": {
+        "name": "Rustica Bakery",
+        "location": "South Minneapolis / Linden Hills area",
+        "description": "A respected local bakery with strong breads, pastries, and cafe staples, especially useful when you want a reliable all-around stop."
+      },
+      "isles_bun": {
+        "name": "Isles Bun & Coffee",
+        "location": "Uptown / Whittier edge, Minneapolis",
+        "description": "A Minneapolis institution for cinnamon rolls and a classic neighborhood cafe feel that remains easy to recommend to visitors."
+      },
+      "black_walnut": {
+        "name": "Black Walnut Bakery",
+        "location": "North Loop, Minneapolis",
+        "description": "A modern bakery with a strong pastry program and the kind of quality that makes it stand out even in a competitive local category."
+      },
+      "angel_food": {
+        "name": "Angel Food Bakery & Donut Bar",
+        "location": "Downtown Minneapolis",
+        "description": "A lively downtown Minneapolis stop for donuts, sweets, and bakery treats when the goal is something less formal and more fun."
+      },
+      "cafe_ceres": {
+        "name": "Cafe Ceres",
+        "location": "Multiple Minneapolis locations",
+        "description": "A polished Minneapolis cafe with strong coffee, good pastries, and a clean, contemporary setting that works well for casual meetups."
+      },
+      "french_meadow": {
+        "name": "French Meadow Bakery & Cafe",
+        "location": "Uptown / Lyn-Lake, Minneapolis",
+        "description": "A long-running local cafe and bakery with broad appeal, especially useful when you need a place that works for mixed groups."
+      },
+      "keys_cafe": {
+        "name": "Keys Cafe & Bakery",
+        "location": "Multiple Twin Cities locations",
+        "description": "A Twin Cities classic that leans more comfort cafe than boutique bakery, but still earns its place for baked goods and local familiarity."
+      },
+      "patricks_bakery": {
+        "name": "Patrick's Bakery & Cafe",
+        "location": "Edina / Richfield / Maple Grove",
+        "description": "A dependable French-style bakery and cafe with pastries, desserts, and a reliable suburban option outside the core city center."
       }
     }
   },

@@ -2,6 +2,7 @@
   "nav": {
     "home": "首页",
     "destinations": "热门景点",
+    "food_drink": "美食美酒",
     "itineraries": "行程推荐",
     "brands": "知名品牌",
     "language": "English"
@@ -22,6 +23,10 @@
   "destinations": {
     "title": "必看景点",
     "subtitle": "以下罗列一些明州值得看的景点，根据个人兴趣选择最后确定行程。2-3天时间不太可能都看。",
+    "groups": {
+      "core": "双城核心景点",
+      "day_trips": "周边短途与更远去处"
+    },
     "places": {
       "sculpture_garden": {
         "name": "Minneapolis Sculpture Garden",
@@ -30,6 +35,10 @@
       "moa": {
         "name": "Mall of America",
         "description": "全美最大shopping mall，之前是一所体育馆，中心有室内游乐场、水族馆等丰富设施。"
+      },
+      "skyway_system": {
+        "name": "Minneapolis Skyway System",
+        "description": "全球最大的连续空中走廊系统，全长11英里，连接超过80个城市街区。这些恒温控制的玻璃封闭人行天桥让您全年舒适地探索明尼阿波利斯市中心——一种独特的城市体验。"
       },
       "red_wing": {
         "name": "Red Wing Town & Boot",
@@ -47,9 +56,25 @@
         "name": "Guthrie Theater",
         "description": "著名的剧院，被百老汇奉为“风水”剧院，很多的名剧初演特意选择此剧院以图吉利。伸到半空中的“无尽桥”是观景极佳场所，因为剧院土地是城市捐献的，承诺终生供公众免费参观。"
       },
+      "endless_bridge": {
+        "name": "Endless Bridge",
+        "description": "格思里剧院里极具标志性的悬臂观景步道，向密西西比河方向伸出，是明尼阿波利斯最值得一看的免费观景点之一。"
+      },
+      "amber_box": {
+        "name": "Amber Box",
+        "description": "格思里剧院高层那间非常醒目的黄色玻璃观景空间，可以看到密西西比河、Stone Arch Bridge 和明尼阿波利斯天际线。"
+      },
       "st_anthony": {
         "name": "Saint Anthony Falls",
         "description": "明尼阿波利斯的母亲瀑布，从此才有了General Mills（通用磨坊）和众多食品品牌类似Pillsbury, Cheerios，哈根达斯等等。"
+      },
+      "stone_arch_bridge": {
+        "name": "Stone Arch Bridge",
+        "description": "明尼阿波利斯最重要、最具代表性的地标之一。它横跨密西西比河，紧邻圣安东尼瀑布，是看城市天际线、散步和拍照都非常值得去的一站。"
+      },
+      "mill_city_museum": {
+        "name": "Mill City Museum",
+        "description": "这是理解明尼阿波利斯如何因面粉工业而崛起的最佳地点之一。博物馆建在 Washburn A Mill 的遗址之中，把城市历史、河景和非常独特的工业遗迹空间结合在了一起。"
       },
       "mia": {
         "name": "Minneapolis Institute of Art (Mia)",
@@ -78,6 +103,18 @@
       "rice_park": {
         "name": "Rice Park",
         "description": "位于圣保罗市中心的一座精致小公园，周边就是 Landmark Center、Ordway 和圣保罗酒店。很适合在参观附近建筑之间顺路散步、拍照和短暂休息。"
+      },
+      "minnehaha_falls": {
+        "name": "Minnehaha Falls",
+        "description": "明尼阿波利斯最具代表性的自然景点之一，位于 Minnehaha Park 内，是一座 53 英尺高的瀑布。很适合散步、拍照，也能在城市里快速感受明州自然风景。"
+      },
+      "wayzata_lake_street": {
+        "name": "Wayzata Lake Street",
+        "description": "Wayzata 临湖的一条主街，聚集了餐厅、商店和码头景色。想轻松感受 Lake Minnetonka 的湖边氛围，这里是很直接也很好逛的一站。"
+      },
+      "lake_minnetonka": {
+        "name": "Lake Minnetonka",
+        "description": "位于明尼阿波利斯西侧的大型湖区，以游船、水岸小镇和开阔湖景闻名。很适合安排一个轻松的下午自驾或傍晚看日落。"
       }
     }
   },
@@ -173,6 +210,298 @@
       "thrivent": {
         "name": "Thrivent（斯瑞文金融）",
         "description": "提供保险、投资和财务规划的基督教背景金融公司。"
+      }
+    }
+  },
+  "food_drink": {
+    "title": "美食美酒",
+    "subtitle": "面向双城地区的一份实用美食清单，覆盖餐厅、精酿啤酒厂和葡萄园/酒庄。这里是每类 10 个推荐去处，不是严格排名。",
+    "map_link": "在 Google 地图中打开",
+    "admin": {
+      "draft_badge": "管理员草稿已启用",
+      "published_badge": "当前为已发布顺序",
+      "copy_order": "复制排序 JSON",
+      "copied": "已复制",
+      "reset_order": "恢复为已发布顺序",
+      "hint": "用 ?admin=1 打开本页即可拖拽排序。每个分类内都可以调整顺序，然后复制 JSON 作为后续写回站点数据的依据。",
+      "drag_label": "拖拽排序"
+    },
+    "views": {
+      "list": "列表视图",
+      "map": "地图视图"
+    },
+    "categories": {
+      "restaurants": "推荐餐厅",
+      "breweries": "推荐精酿啤酒厂",
+      "vineyards": "推荐葡萄园与酒庄",
+      "chinese_restaurants": "推荐中餐馆",
+      "cafes_bakeries": "推荐咖啡馆与面包甜点店"
+    },
+    "places": {
+      "spoon_and_stable": {
+        "name": "Spoon and Stable",
+        "location": "North Loop, Minneapolis",
+        "description": "明尼阿波利斯很有代表性的高水准餐厅之一，位于改造后的旧马厩建筑内，整体出品和用餐体验都很完整。"
+      },
+      "restaurant_alma": {
+        "name": "Restaurant Alma",
+        "location": "Marcy-Holmes, Minneapolis",
+        "description": "明尼阿波利斯经得起时间检验的一家精致餐厅，主打季节性菜单，整体氛围安静而讲究。"
+      },
+      "hai_hai": {
+        "name": "Hai Hai",
+        "location": "Northeast Minneapolis",
+        "description": "一家明亮有活力的餐厅，提供东南亚风味灵感菜肴和鸡尾酒，所在片区本身也是双城很强的餐饮目的地。"
+      },
+      "meritage": {
+        "name": "Meritage",
+        "location": "Downtown St. Paul",
+        "description": "位于圣保罗 downtown 的法式小酒馆，生蚝、牛排薯条和经典法餐都很稳，环境正式但不僵硬。"
+      },
+      "matts_bar": {
+        "name": "Matt's Bar",
+        "location": "South Minneapolis",
+        "description": "南明尼阿波利斯极具代表性的老店，以原版 Jucy Lucy 闻名，是很典型的明州汉堡体验。"
+      },
+      "colita": {
+        "name": "Colita",
+        "location": "Kingfield, Minneapolis",
+        "description": "一家风格很完整的现代墨西哥餐厅，兼顾菜品、mezcal 和适合社交聚餐的气氛。"
+      },
+      "aster_cafe": {
+        "name": "Aster Cafe",
+        "location": "St. Anthony Main, Minneapolis",
+        "description": "如果你想要的是景色和用餐体验一起在线，这里是很强的一站，河边露台和城市天际线都很出色。"
+      },
+      "khaluna": {
+        "name": "Khaluna",
+        "location": "Uptown 一带, Minneapolis",
+        "description": "主厨 Ann Ahmed 的 Minneapolis 餐厅，偏老挝风格灵感，空间和出品都很适合带访客去。"
+      },
+      "myriel": {
+        "name": "Myriel",
+        "location": "Highland Park, St. Paul",
+        "description": "圣保罗一家体量不大但口碑很强的餐厅，季节性菜单做得细致，整体更偏安静社区气质。"
+      },
+      "porzana": {
+        "name": "Porzana",
+        "location": "North Loop, Minneapolis",
+        "description": "一间以明火料理和牛排为核心的高质量餐厅，整体更适合认真吃一顿晚餐或带访客去。"
+      },
+      "nolos": {
+        "name": "NOLO's Kitchen & Bar",
+        "location": "North Loop, Minneapolis",
+        "description": "North Loop 很实用的一家餐厅酒吧，菜单覆盖面广，环境也适合带朋友或访客一起去。"
+      },
+      "smack_shack": {
+        "name": "Smack Shack",
+        "location": "North Loop, Minneapolis",
+        "description": "双城很知名的海鲜餐厅之一，适合想在 North Loop 吃一顿更热闹、偏休闲一点的晚餐。"
+      },
+      "surly": {
+        "name": "Surly Brewing",
+        "location": "Prospect Park, Minneapolis",
+        "description": "双城最具代表性的精酿品牌之一，taproom 规模大、目的地属性强，很适合第一次来的人。"
+      },
+      "summit": {
+        "name": "Summit Brewing",
+        "location": "West Seventh, St. Paul",
+        "description": "圣保罗经典老牌酒厂，地方根基很深，啤酒风格稳定，taproom 也很适合顺路安排。"
+      },
+      "indeed": {
+        "name": "Indeed Brewing",
+        "location": "Northeast Minneapolis",
+        "description": "Northeast Minneapolis 的人气酒厂，taproom 友好，既有容易入口的常规款，也有季节和实验款。"
+      },
+      "fair_state": {
+        "name": "Fair State Brewing Cooperative",
+        "location": "Northeast Minneapolis",
+        "description": "双城最受尊重的酒厂之一，特别擅长 lager 和 hop-forward 风格，社区感也很强。"
+      },
+      "utepils": {
+        "name": "Utepils Brewing",
+        "location": "Minneapolis 西侧 / Bassett Creek 一带",
+        "description": "位于明尼阿波利斯西侧的一家酒厂，以欧式风格啤酒和适合暖季停留的户外环境见长。"
+      },
+      "blackstack": {
+        "name": "BlackStack Brewing",
+        "location": "Midway, St. Paul",
+        "description": "圣保罗很受欢迎的一家酒厂，以 hazy IPA 和宽敞轻松的 taproom 闻名。"
+      },
+      "pryes": {
+        "name": "Pryes Brewing",
+        "location": "North Loop 河边, Minneapolis",
+        "description": "河边位置很好的酒厂，露台强、餐食也稳，适合和密西西比河边活动搭配安排。"
+      },
+      "falling_knife": {
+        "name": "Falling Knife Brewing",
+        "location": "Northeast Minneapolis",
+        "description": "一间更偏活力型氛围的 Minneapolis 酒厂，酒单更现代，也比较偏 hop-forward。"
+      },
+      "bauhaus": {
+        "name": "Bauhaus Brew Labs",
+        "location": "Northeast Minneapolis",
+        "description": "Northeast 很知名的一家酒厂，酒单覆盖面广，taproom 的社交氛围也一直不错。"
+      },
+      "modist": {
+        "name": "Modist Brewing",
+        "location": "North Loop, Minneapolis",
+        "description": "North Loop 的实验型酒厂，风格鲜明，但对第一次来访的人仍然比较友好。"
+      },
+      "alexis_bailly": {
+        "name": "Alexis Bailly Vineyard & Winery",
+        "location": "Hastings",
+        "description": "明州历史最久的酒庄，位于 Hastings，很适合想把“本地葡萄酒历史”也一起体验到的人。"
+      },
+      "saint_croix": {
+        "name": "Saint Croix Vineyards",
+        "location": "Stillwater 一带 / Marine on St. Croix",
+        "description": "Stillwater 一带长期运营的酒庄，酒庄环境和 day trip 氛围都很好，离双城也比较顺手。"
+      },
+      "schram": {
+        "name": "Schram Vineyards Winery & Brewery",
+        "location": "Waconia",
+        "description": "Waconia 很成熟的一处酒庄目的地，既有葡萄园景色，也更像完整的周末出行点。"
+      },
+      "sovereign_estate": {
+        "name": "Sovereign Estate",
+        "location": "Waconia / Lake Waconia",
+        "description": "Lake Waconia 边景色很强的酒庄，适合把下午放慢节奏，围绕风景和品酒来安排。"
+      },
+      "winehaven": {
+        "name": "Winehaven Winery",
+        "location": "Chisago Lakes",
+        "description": "位于 Chisago Lakes 的酒庄，整体更有庄园感，适合不赶时间、想舒舒服服品酒的人。"
+      },
+      "seven_vines": {
+        "name": "7 Vines Vineyard",
+        "location": "Dellwood",
+        "description": "Dellwood 一带气质很精致的酒庄，离双城很近，整体体验也更偏讲究和完整。"
+      },
+      "parley_lake": {
+        "name": "Parley Lake Winery",
+        "location": "Waconia",
+        "description": "Waconia 一带更偏轻松季节感的酒庄，天气好的时候尤其适合去。"
+      },
+      "cannon_river": {
+        "name": "Cannon River Winery",
+        "location": "Cannon Falls",
+        "description": "位于 Cannon Falls 的知名酒庄，虽然稍微远一点，但仍然是很实际的葡萄酒短途目的地。"
+      },
+      "two_silo": {
+        "name": "Two Silo Winery & Vineyard",
+        "location": "White Bear Lake 一带",
+        "description": "White Bear Lake 一带带有农庄气质的酒庄，从双城过去比较方便，也更有“葡萄园 outing”的感觉。"
+      },
+      "wild_mountain": {
+        "name": "Wild Mountain Winery",
+        "location": "Marine on St. Croix 一带",
+        "description": "Stillwater 一带一处活动感更强的酒庄，季节活动多，更像一次完整的小 excursion。"
+      },
+      "peking_garden": {
+        "name": "Peking Garden",
+        "location": "University Avenue 一带, St. Paul",
+        "description": "圣保罗一家经营时间很长的中餐馆，适合经典中式菜肴、多人共享用餐，也更有老牌社区餐馆的感觉。"
+      },
+      "mandarin_kitchen": {
+        "name": "Mandarin Kitchen",
+        "location": "Bloomington",
+        "description": "Bloomington 很稳的一家老牌中餐馆，以点心和适合多人聚餐见长，仍然是双城最常被放心推荐的中餐选择之一。"
+      },
+      "jade_dynasty": {
+        "name": "Jade Dynasty",
+        "location": "Lyn-Lake, Minneapolis",
+        "description": "Lyn-Lake 一带较新的中餐目的地，传统中餐菜单更完整，在明尼阿波利斯市区内也算较值得专门去的一家。"
+      },
+      "legendary_spice": {
+        "name": "Legendary Spice",
+        "location": "Stadium Village, Minneapolis",
+        "description": "如果目标是四川风味、麻辣和火锅，这家比常规美式中餐更对路。"
+      },
+      "tea_house": {
+        "name": "Tea House",
+        "location": "Minneapolis University / Plymouth Ave 一带",
+        "description": "双城比较经典的一家中餐馆，菜单很大，适合多人聚餐，也兼顾大众菜和偏地域风味的选择。"
+      },
+      "master_noodle": {
+        "name": "Master Noodle",
+        "location": "Dinkytown / University 一带, Minneapolis",
+        "description": "适合想吃手工拉面、饺子和汤面的人，方向更聚焦，也更偏轻松随意。"
+      },
+      "grand_szechuan": {
+        "name": "Grand Szechuan",
+        "location": "Bloomington",
+        "description": "Bloomington 一带很实用的一家川菜馆，更像适合常去的本地店，而不是只靠名气的目的地。"
+      },
+      "ju_yuan": {
+        "name": "Ju Yuan",
+        "location": "Golden Valley / 西边 metro",
+        "description": "西边 metro 区域比较实用的一家中餐选择，适合直接安排家常型多人共享用餐。"
+      },
+      "home_taste": {
+        "name": "Home Taste",
+        "location": "St. Louis Park / 西边 metro",
+        "description": "如果你想找更偏地域、没那么泛化的中餐菜单，这家是西边值得考虑的一站。"
+      },
+      "hong_kong_noodle": {
+        "name": "Hong Kong Noodle",
+        "location": "Bloomington",
+        "description": "适合想吃汤面、烧味和更偏粤式日常 comfort food 的时候，整体不走过度正式路线。"
+      },
+      "northern_kitchen": {
+        "name": "Northern Kitchen",
+        "location": "Bloomington",
+        "description": "Bloomington 一带较新的中餐选择之一，适合想找更偏地域菜或想在南边 metro 试试新店的人。"
+      },
+      "patisserie_46": {
+        "name": "Patisserie 46",
+        "location": "Kingfield, Minneapolis",
+        "description": "双城很强的法式甜点和面包店之一，可颂、甜点和整体出品都很稳。"
+      },
+      "marc_heu": {
+        "name": "Marc Heu Patisserie Paris",
+        "location": "Cathedral Hill, St. Paul",
+        "description": "圣保罗很受欢迎的法式甜点店，整体体验更精致，但仍然不难接近。"
+      },
+      "rustica": {
+        "name": "Rustica Bakery",
+        "location": "South Minneapolis / Linden Hills 一带",
+        "description": "本地口碑很稳的一家面包店，面包、甜点和 cafe 类基本款都很能打。"
+      },
+      "isles_bun": {
+        "name": "Isles Bun & Coffee",
+        "location": "Uptown / Whittier 边上, Minneapolis",
+        "description": "明尼阿波利斯很有代表性的老牌社区咖啡甜点店，以 cinnamon roll 特别出名。"
+      },
+      "black_walnut": {
+        "name": "Black Walnut Bakery",
+        "location": "North Loop, Minneapolis",
+        "description": "偏现代路线的高质量面包甜点店，放在双城 bakery 清单里很有代表性。"
+      },
+      "angel_food": {
+        "name": "Angel Food Bakery & Donut Bar",
+        "location": "Downtown Minneapolis",
+        "description": "位于 downtown Minneapolis，适合想吃甜甜圈、甜点和更轻松有趣一点的 bakery stop。"
+      },
+      "cafe_ceres": {
+        "name": "Cafe Ceres",
+        "location": "Minneapolis 多个门店",
+        "description": "一间做得比较完整的 Minneapolis 咖啡馆，咖啡和甜点都在线，空间也适合轻松见面。"
+      },
+      "french_meadow": {
+        "name": "French Meadow Bakery & Cafe",
+        "location": "Uptown / Lyn-Lake, Minneapolis",
+        "description": "本地经营时间很久的 cafe 和 bakery，适合口味需求比较杂、同行人比较多的时候。"
+      },
+      "keys_cafe": {
+        "name": "Keys Cafe & Bakery",
+        "location": "Twin Cities 多个门店",
+        "description": "更偏经典本地 cafe 路线，不是 boutique bakery，但凭借烘焙和熟悉度仍然值得列入。"
+      },
+      "patricks_bakery": {
+        "name": "Patrick's Bakery & Cafe",
+        "location": "Edina / Richfield / Maple Grove",
+        "description": "法式路线的稳定 suburban 选择，甜点、面包和 cafe 体验都比较完整。"
       }
     }
   },

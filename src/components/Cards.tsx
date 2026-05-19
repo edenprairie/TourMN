@@ -31,14 +31,23 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({ name, descript
 interface BrandCardProps {
   name: string;
   description: string;
+  meta?: string;
+  linkUrl?: string;
+  linkLabel?: string;
 }
 
-export const BrandCard: React.FC<BrandCardProps> = ({ name, description }) => {
+export const BrandCard: React.FC<BrandCardProps> = ({ name, description, meta, linkUrl, linkLabel }) => {
   return (
     <div className={`${styles.brandCard} hover-lift`}>
       <div className={styles.brandContent}>
         <h3 className={styles.title}>{name}</h3>
+        {meta && <p className={styles.meta}>{meta}</p>}
         <p className={styles.description}>{description}</p>
+        {linkUrl && linkLabel && (
+          <a href={linkUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
+            {linkLabel} <ExternalLink size={16} />
+          </a>
+        )}
       </div>
     </div>
   );

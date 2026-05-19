@@ -78,4 +78,14 @@
 
 .brandContent {
   padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.meta {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.65rem;
 }

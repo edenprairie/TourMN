@@ -139,6 +139,8 @@
   gap: 1rem;
   box-shadow: var(--shadow-md);
   border-top: 1px solid var(--border-color);
+  max-height: calc(100vh - 5.5rem);
+  overflow-y: auto;
 }
 
 .mobileNavLink {
