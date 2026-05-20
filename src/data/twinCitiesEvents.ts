@@ -113,20 +113,6 @@ export const twinCitiesEvents: TwinCitiesEvent[] = [
     },
   },
   {
-    id: 'twin-cities-pride',
-    month: 'June',
-    date: 'June 27-28',
-    name: 'Twin Cities Pride Festival',
-    location: 'Loring Park, Minneapolis',
-    category: 'Festival',
-    sourceName: 'Twin Cities Pride',
-    sourceUrl: 'https://tcpride.org/festival/',
-    description: {
-      en: 'Minnesota’s largest free Pride festival, with vendors, entertainment, community resources, and the Sunday parade downtown.',
-      zh: '明尼苏达最大的免费 Pride 节庆活动，有摊位、表演、社区资源和周日市中心游行。',
-    },
-  },
-  {
     id: 'hmong-freedom-celebration',
     month: 'June',
     date: 'June 27-28',
