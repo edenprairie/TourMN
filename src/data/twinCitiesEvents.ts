@@ -351,6 +351,20 @@ export const twinCitiesEvents: TwinCitiesEvent[] = [
     },
   },
   {
+    id: 'red-wing-arts-fall-festival',
+    month: 'October',
+    date: 'October 10-11',
+    name: 'Red Wing Arts Fall Festival',
+    location: 'Downtown Red Wing',
+    category: 'Art',
+    sourceName: 'Red Wing Arts',
+    sourceUrl: 'https://redwingarts.org/redwing-arts-fall-festival',
+    description: {
+      en: 'A two-day juried fine arts festival in downtown Red Wing with 120-plus regional artists, food, music, and peak fall-color day-trip energy.',
+      zh: '在 Red Wing 市中心举办的两日评审艺术节，聚集 120 多位区域艺术家，并有美食、音乐和适合秋色短途旅行的氛围。',
+    },
+  },
+  {
     id: 'turkey-trot-st-paul',
     month: 'November',
     date: 'November 26',
