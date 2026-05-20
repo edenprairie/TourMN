@@ -43,6 +43,20 @@ export const twinCitiesEvents: TwinCitiesEvent[] = [
     },
   },
   {
+    id: 'twin-cities-asian-fair',
+    month: 'May',
+    date: 'May 30',
+    name: 'Twin Cities West Metro Asian Fair',
+    location: 'Hilde Performance Center, Plymouth',
+    category: 'Culture',
+    sourceName: 'TC Asian Fair',
+    sourceUrl: 'https://tcasianfair.org/',
+    description: {
+      en: 'A family-friendly Asian culture festival with food, dance, performances, activities, and community booths representing Chinese, Indian, Vietnamese, Korean, Hmong, Thai, and more.',
+      zh: '面向家庭的亚洲文化节，有美食、舞蹈、演出、互动活动和社区展位，涵盖中国、印度、越南、韩国、苗族、泰国等文化。',
+    },
+  },
+  {
     id: 'edina-art-fair',
     month: 'June',
     date: 'June 5-7',
