@@ -282,6 +282,11 @@
         "location": "Downtown St. Paul",
         "description": "A dependable downtown St. Paul brasserie for oysters, steak frites, and classic French dishes in an elegant but approachable room."
       },
+      "ichiban_sushi_edina": {
+        "name": "Ichiban Sushi",
+        "location": "Edina / Southdale area",
+        "description": "A strong Edina pick for sushi and Japanese dishes, especially useful for groups looking for an all-you-can-eat sushi option with a broad menu."
+      },
       "matts_bar": {
         "name": "Matt's Bar",
         "location": "South Minneapolis",

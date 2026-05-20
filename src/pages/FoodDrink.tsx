@@ -32,6 +32,7 @@ const foodDrinkCategories: Category[] = [
       { id: 'restaurant_alma', lat: 44.9889, lng: -93.2576, mapQuery: 'Restaurant Alma Minneapolis MN' },
       { id: 'hai_hai', lat: 44.9986, lng: -93.2668, mapQuery: 'Hai Hai Minneapolis MN' },
       { id: 'meritage', lat: 44.9488, lng: -93.0954, mapQuery: 'Meritage Saint Paul MN' },
+      { id: 'ichiban_sushi_edina', lat: 44.8764, lng: -93.3393, mapQuery: 'Ichiban Sushi 3529 W 70th St Edina MN' },
       { id: 'matts_bar', lat: 44.9398, lng: -93.2548, mapQuery: "Matt's Bar Minneapolis MN" },
       { id: 'colita', lat: 44.9303, lng: -93.298, mapQuery: 'Colita Minneapolis MN' },
       { id: 'aster_cafe', lat: 44.9832, lng: -93.2586, mapQuery: 'Aster Cafe Minneapolis MN' },

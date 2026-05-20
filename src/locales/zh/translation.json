@@ -282,6 +282,11 @@
         "location": "Downtown St. Paul",
         "description": "位于圣保罗 downtown 的法式小酒馆，生蚝、牛排薯条和经典法餐都很稳，环境正式但不僵硬。"
       },
+      "ichiban_sushi_edina": {
+        "name": "Ichiban Sushi",
+        "location": "Edina / Southdale 一带",
+        "description": "Edina 很实用的一家寿司和日餐选择，尤其适合想吃 all-you-can-eat 寿司、同行人数较多或菜单需求比较宽的人。"
+      },
       "matts_bar": {
         "name": "Matt's Bar",
         "location": "South Minneapolis",
