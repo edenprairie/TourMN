@@ -342,6 +342,11 @@
         "location": "West Seventh, St. Paul",
         "description": "A St. Paul classic with deep local roots, known for balanced beer styles and a taproom that makes an easy stop on a brewery-focused afternoon."
       },
+      "saint_paul_brewing": {
+        "name": "Saint Paul Brewing",
+        "location": "Dayton's Bluff, St. Paul",
+        "description": "A destination brewpub set in original Hamm's Brewery buildings, with a full kitchen, full bar, and one of the metro's most memorable garden patios."
+      },
       "indeed": {
         "name": "Indeed Brewing",
         "location": "Northeast Minneapolis",

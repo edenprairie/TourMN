@@ -49,6 +49,7 @@ const foodDrinkCategories: Category[] = [
     places: [
       { id: 'surly', lat: 44.9736, lng: -93.2277, mapQuery: 'Surly Brewing Minneapolis MN' },
       { id: 'summit', lat: 44.931, lng: -93.1218, mapQuery: 'Summit Brewing Saint Paul MN' },
+      { id: 'saint_paul_brewing', lat: 44.9627, lng: -93.0733, mapQuery: 'Saint Paul Brewing 688 Minnehaha Avenue East Saint Paul MN' },
       { id: 'indeed', lat: 44.9982, lng: -93.2661, mapQuery: 'Indeed Brewing Minneapolis MN' },
       { id: 'fair_state', lat: 45.0003, lng: -93.2665, mapQuery: 'Fair State Brewing Minneapolis MN' },
       { id: 'utepils', lat: 44.9782, lng: -93.3088, mapQuery: 'Utepils Brewing Minneapolis MN' },

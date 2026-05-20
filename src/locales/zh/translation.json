@@ -342,6 +342,11 @@
         "location": "West Seventh, St. Paul",
         "description": "圣保罗经典老牌酒厂，地方根基很深，啤酒风格稳定，taproom 也很适合顺路安排。"
       },
+      "saint_paul_brewing": {
+        "name": "Saint Paul Brewing",
+        "location": "Dayton's Bluff, St. Paul",
+        "description": "位于原 Hamm's Brewery 建筑群中的目的地型 brewpub，有完整厨房和酒吧，花园露台很有特色，适合作为圣保罗啤酒行程重点。"
+      },
       "indeed": {
         "name": "Indeed Brewing",
         "location": "Northeast Minneapolis",
