@@ -20,6 +20,24 @@
     "famous_brands": "World-Class Brands Born Here",
     "view_all": "View All"
   },
+  "events": {
+    "eyebrow": "Twin Cities events",
+    "title": "May-December 2026 Event Calendar",
+    "subtitle": "A curated visitor calendar of confirmed public events across Minneapolis, Saint Paul, and nearby metro stops. Dates can change, so each card links back to an official source.",
+    "month_filter": "Filter Twin Cities events by month",
+    "all_months": "All",
+    "source_note": "Compiled from official visitor, city, and event-organizer pages on May 20, 2026. December holiday schedules are still being published, so that card is marked as a watchlist item.",
+    "months": {
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    }
+  },
   "destinations": {
     "title": "Top Destinations",
     "subtitle": "Tailor your 2-3 day itinerary based on your interests. Here are some of the most remarkable places to visit.",

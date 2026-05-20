@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Hero from '../components/Hero';
 import { DestinationCard, BrandCard } from '../components/Cards';
+import TwinCitiesEvents from '../components/TwinCitiesEvents';
 import styles from './Pages.module.css';
 
 const Home: React.FC = () => {
@@ -19,6 +20,8 @@ const Home: React.FC = () => {
           <p className="animate-fade-in delay-100">{t('home.intro_desc')}</p>
         </div>
       </section>
+
+      <TwinCitiesEvents />
 
       <section className={`section ${styles.homeSection} bg-light`}>
         <div className="container">
