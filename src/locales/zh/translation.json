@@ -282,6 +282,11 @@
         "location": "Downtown St. Paul",
         "description": "位于圣保罗 downtown 的法式小酒馆，生蚝、牛排薯条和经典法餐都很稳，环境正式但不僵硬。"
       },
+      "vinai": {
+        "name": "Vinai",
+        "location": "Northeast Minneapolis",
+        "description": "主厨 Yia Vang 打造的苗族风味目的地餐厅，围绕 Hmong 美食、历史和连接感展开，菜品适合分享，风味鲜明。"
+      },
       "ichiban_sushi_edina": {
         "name": "Ichiban Sushi",
         "location": "Edina / Southdale 一带",

@@ -282,6 +282,11 @@
         "location": "Downtown St. Paul",
         "description": "A dependable downtown St. Paul brasserie for oysters, steak frites, and classic French dishes in an elegant but approachable room."
       },
+      "vinai": {
+        "name": "Vinai",
+        "location": "Northeast Minneapolis",
+        "description": "Chef Yia Vang's destination restaurant for Hmong food, history, and connection, with bold shared dishes and a strong sense of place."
+      },
       "ichiban_sushi_edina": {
         "name": "Ichiban Sushi",
         "location": "Edina / Southdale area",
