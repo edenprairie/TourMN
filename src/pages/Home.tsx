@@ -21,7 +21,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <TwinCitiesEvents />
+      <TwinCitiesEvents variant="preview" />
 
       <section className={`section ${styles.homeSection} bg-light`}>
         <div className="container">

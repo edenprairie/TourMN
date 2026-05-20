@@ -35,6 +35,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { path: '/', label: t('nav.home') },
     { path: '/destinations', label: t('nav.destinations') },
+    { path: '/events', label: t('nav.events') },
     { path: '/food-drink', label: t('nav.food_drink') },
     { path: '/itineraries', label: t('nav.itineraries') },
     { path: '/brands', label: t('nav.brands') },
@@ -88,7 +89,7 @@ const Navbar: React.FC = () => {
             <Link 
               key={link.path} 
               to={link.path}
-              className={styles.mobileNavLink}
+              className={`${styles.mobileNavLink} ${location.pathname === link.path ? styles.mobileActive : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.label}

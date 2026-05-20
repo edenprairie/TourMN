@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "destinations": "Destinations",
+    "events": "Events",
     "food_drink": "Food & Drink",
     "itineraries": "Itineraries",
     "brands": "Local Brands",
@@ -22,6 +23,11 @@
   },
   "events": {
     "eyebrow": "Twin Cities events",
+    "preview_title": "Upcoming Twin Cities Events",
+    "preview_subtitle": "A quick look at major public events coming up soon. Open the full calendar for every month from May through December 2026.",
+    "preview_cta": "View Full Event Calendar",
+    "page_title": "Twin Cities Event Calendar",
+    "page_subtitle": "Major visitor-friendly events across Minneapolis, Saint Paul, and the metro area from May through December 2026.",
     "title": "May-December 2026 Event Calendar",
     "subtitle": "A curated visitor calendar of confirmed public events across Minneapolis, Saint Paul, and nearby metro stops. Dates can change, so each card links back to an official source.",
     "month_filter": "Filter Twin Cities events by month",

@@ -30,7 +30,7 @@
   gap: 0.5rem;
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
   color: var(--text-primary);
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -51,17 +51,17 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1040px) {
   .desktopNav {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 
 .links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.15rem;
 }
 
 .navLink {
@@ -121,7 +121,7 @@
   padding: 0.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1040px) {
   .mobileToggle {
     display: none;
   }
@@ -154,6 +154,11 @@
 .mobileNavLink:hover {
   color: var(--primary);
   background: rgba(30, 58, 138, 0.06);
+}
+
+.mobileActive {
+  color: var(--primary);
+  background: rgba(30, 58, 138, 0.08);
 }
 
 .mobileLangBtn {
@@ -204,6 +209,11 @@
 }
 
 :root.dark .mobileNavLink:hover {
+  background: rgba(96, 165, 250, 0.14);
+  color: var(--primary);
+}
+
+:root.dark .mobileActive {
   background: rgba(96, 165, 250, 0.14);
   color: var(--primary);
 }

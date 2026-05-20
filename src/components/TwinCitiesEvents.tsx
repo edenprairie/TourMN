@@ -1,21 +1,31 @@
 import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { CalendarDays, ExternalLink, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CalendarDays, ExternalLink, MapPin } from 'lucide-react';
 import { twinCitiesEventMonths, twinCitiesEvents } from '../data/twinCitiesEvents';
 import styles from './TwinCitiesEvents.module.css';
 
-const TwinCitiesEvents: React.FC = () => {
+interface TwinCitiesEventsProps {
+  variant?: 'preview' | 'full';
+}
+
+const TwinCitiesEvents: React.FC<TwinCitiesEventsProps> = ({ variant = 'full' }) => {
   const { t, i18n } = useTranslation();
   const [activeMonth, setActiveMonth] = useState('All');
   const language = i18n.language.startsWith('zh') ? 'zh' : 'en';
+  const isPreview = variant === 'preview';
 
   const filteredEvents = useMemo(() => {
+    if (isPreview) {
+      return twinCitiesEvents.slice(0, 6);
+    }
+
     if (activeMonth === 'All') {
       return twinCitiesEvents;
     }
 
     return twinCitiesEvents.filter((event) => event.month === activeMonth);
-  }, [activeMonth]);
+  }, [activeMonth, isPreview]);
 
   return (
     <section className={`section ${styles.eventsSection}`} id="twin-cities-events">
@@ -23,30 +33,32 @@ const TwinCitiesEvents: React.FC = () => {
         <div className={styles.header}>
           <div>
             <p className={styles.eyebrow}>{t('events.eyebrow')}</p>
-            <h2>{t('events.title')}</h2>
+            <h2>{isPreview ? t('events.preview_title') : t('events.title')}</h2>
           </div>
-          <p>{t('events.subtitle')}</p>
+          <p>{isPreview ? t('events.preview_subtitle') : t('events.subtitle')}</p>
         </div>
 
-        <div className={styles.monthTabs} aria-label={t('events.month_filter')}>
-          <button
-            type="button"
-            className={`${styles.monthTab} ${activeMonth === 'All' ? styles.monthTabActive : ''}`}
-            onClick={() => setActiveMonth('All')}
-          >
-            {t('events.all_months')}
-          </button>
-          {twinCitiesEventMonths.map((month) => (
+        {!isPreview && (
+          <div className={styles.monthTabs} aria-label={t('events.month_filter')}>
             <button
               type="button"
-              key={month}
-              className={`${styles.monthTab} ${activeMonth === month ? styles.monthTabActive : ''}`}
-              onClick={() => setActiveMonth(month)}
+              className={`${styles.monthTab} ${activeMonth === 'All' ? styles.monthTabActive : ''}`}
+              onClick={() => setActiveMonth('All')}
             >
-              {t(`events.months.${month.toLowerCase()}`)}
+              {t('events.all_months')}
             </button>
-          ))}
-        </div>
+            {twinCitiesEventMonths.map((month) => (
+              <button
+                type="button"
+                key={month}
+                className={`${styles.monthTab} ${activeMonth === month ? styles.monthTabActive : ''}`}
+                onClick={() => setActiveMonth(month)}
+              >
+                {t(`events.months.${month.toLowerCase()}`)}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className={styles.eventGrid}>
           {filteredEvents.map((event) => (
@@ -76,7 +88,15 @@ const TwinCitiesEvents: React.FC = () => {
           ))}
         </div>
 
-        <p className={styles.sourceNote}>{t('events.source_note')}</p>
+        {isPreview ? (
+          <div className={styles.previewAction}>
+            <Link to="/events">
+              {t('events.preview_cta')} <ArrowRight size={16} />
+            </Link>
+          </div>
+        ) : (
+          <p className={styles.sourceNote}>{t('events.source_note')}</p>
+        )}
       </div>
     </section>
   );

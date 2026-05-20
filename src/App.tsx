@@ -7,6 +7,7 @@ import Destinations from './pages/Destinations';
 import LocalBrands from './pages/LocalBrands';
 import Itineraries from './pages/Itineraries';
 import FoodDrink from './pages/FoodDrink';
+import Events from './pages/Events';
 import './i18n';
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/destinations" element={<Destinations />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/food-drink" element={<FoodDrink />} />
             <Route path="/itineraries" element={<Itineraries />} />
             <Route path="/brands" element={<LocalBrands />} />

@@ -136,6 +136,29 @@
   font-size: 0.92rem;
 }
 
+.previewAction {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.previewAction a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 999px;
+  padding: 0.8rem 1.15rem;
+  font-weight: 800;
+  box-shadow: var(--shadow-sm);
+}
+
+.previewAction a:hover {
+  background: var(--primary-light);
+  color: white;
+}
+
 :root.dark .eventsSection {
   background:
     linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(52, 211, 153, 0.08)),
