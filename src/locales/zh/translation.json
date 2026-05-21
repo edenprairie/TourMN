@@ -312,6 +312,16 @@
         "location": "Harmon District, Minneapolis",
         "description": "一间 artisanal steakhouse，主打自家烟熏肉、手切牛排、明州 wagyu、手工香肠、海鲜和季节性 beer garden。"
       },
+      "capital_grille": {
+        "name": "The Capital Grille",
+        "location": "Hennepin Theatre District, Minneapolis",
+        "description": "位于明尼阿波利斯剧院区附近的高端牛排馆，适合 dry-aged steak、葡萄酒、商务晚餐和更正式的庆祝用餐。"
+      },
+      "zelo": {
+        "name": "Zelo",
+        "location": "Nicollet Mall, Minneapolis",
+        "description": "Nicollet Mall 上的现代意大利餐厅，主打新鲜 pasta、海鲜、葡萄酒和稳定的 downtown 晚餐体验。"
+      },
       "ie_italian_eatery": {
         "name": "ie Italian Eatery",
         "location": "South Minneapolis",

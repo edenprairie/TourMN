@@ -38,6 +38,8 @@ const foodDrinkCategories: Category[] = [
       { id: 'bar_la_grassa', lat: 44.989, lng: -93.2797, mapQuery: 'Bar La Grassa 800 Washington Avenue North Minneapolis MN' },
       { id: 'mannys_steakhouse', lat: 44.9731, lng: -93.2721, mapQuery: "Manny's Steakhouse 825 Marquette Ave Minneapolis MN" },
       { id: 'butchers_tale', lat: 44.9746, lng: -93.2788, mapQuery: "The Butcher's Tale 1121 Hennepin Ave Minneapolis MN" },
+      { id: 'capital_grille', lat: 44.9762, lng: -93.2761, mapQuery: 'The Capital Grille 801 Hennepin Ave Minneapolis MN' },
+      { id: 'zelo', lat: 44.9745, lng: -93.2735, mapQuery: 'Zelo 831 Nicollet Mall Minneapolis MN' },
       { id: 'ie_italian_eatery', lat: 44.9164, lng: -93.2474, mapQuery: 'Italian Eatery 4724 Cedar Avenue Minneapolis MN' },
       { id: 'ichiban_sushi_edina', lat: 44.8764, lng: -93.3393, mapQuery: 'Ichiban Sushi 3529 W 70th St Edina MN' },
       { id: 'matts_bar', lat: 44.9398, lng: -93.2548, mapQuery: "Matt's Bar Minneapolis MN" },

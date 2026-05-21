@@ -312,6 +312,16 @@
         "location": "Harmon District, Minneapolis",
         "description": "An artisanal steakhouse specializing in house-smoked meats, hand-cut steaks, Minnesota wagyu, sausages, seafood, and a seasonal beer garden."
       },
+      "capital_grille": {
+        "name": "The Capital Grille",
+        "location": "Hennepin Theatre District, Minneapolis",
+        "description": "An upscale downtown steakhouse near the theater district, useful for dry-aged steaks, wine, business dinners, and polished special-occasion meals."
+      },
+      "zelo": {
+        "name": "Zelo",
+        "location": "Nicollet Mall, Minneapolis",
+        "description": "A contemporary Italian restaurant on Nicollet Mall serving fresh pastas, seafood, wine, and a dependable downtown dinner experience."
+      },
       "ie_italian_eatery": {
         "name": "ie Italian Eatery",
         "location": "South Minneapolis",
