@@ -302,6 +302,16 @@
         "location": "North Loop, Minneapolis",
         "description": "Isaac Becker 和 Nancy St. Pierre 的 North Loop 意大利餐厅，以 pasta、酒单和热闹但稳定的用餐体验闻名。"
       },
+      "mannys_steakhouse": {
+        "name": "Manny's Steakhouse",
+        "location": "Downtown Minneapolis",
+        "description": "明尼阿波利斯 downtown 经典牛排馆，以大份量牛排、成熟服务和传统高端商务晚餐氛围闻名。"
+      },
+      "butchers_tale": {
+        "name": "The Butcher's Tale",
+        "location": "Harmon District, Minneapolis",
+        "description": "一间 artisanal steakhouse，主打自家烟熏肉、手切牛排、明州 wagyu、手工香肠、海鲜和季节性 beer garden。"
+      },
       "ie_italian_eatery": {
         "name": "ie Italian Eatery",
         "location": "South Minneapolis",
