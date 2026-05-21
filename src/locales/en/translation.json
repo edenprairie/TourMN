@@ -239,7 +239,7 @@
   },
   "food_drink": {
     "title": "Food & Drink",
-    "subtitle": "A practical Twin Cities guide to places worth going for meals, beer, and wine. These are 10 recommended picks per category rather than a strict ranking.",
+    "subtitle": "A practical Twin Cities guide to places worth going for meals, beer, and wine. These are recommended picks per category rather than a strict ranking.",
     "map_link": "Open in Google Maps",
     "admin": {
       "draft_badge": "Admin Draft Active",
