@@ -41,6 +41,7 @@ const foodDrinkCategories: Category[] = [
       { id: 'capital_grille', lat: 44.9762, lng: -93.2761, mapQuery: 'The Capital Grille 801 Hennepin Ave Minneapolis MN' },
       { id: 'zelo', lat: 44.9745, lng: -93.2735, mapQuery: 'Zelo 831 Nicollet Mall Minneapolis MN' },
       { id: 'sixsmith', lat: 44.9696, lng: -93.5175, mapQuery: '6Smith 294 Grove Lane East Wayzata MN' },
+      { id: 'cov', lat: 44.9693, lng: -93.5147, mapQuery: 'COV 700 East Lake Street Wayzata MN' },
       { id: 'ie_italian_eatery', lat: 44.9164, lng: -93.2474, mapQuery: 'Italian Eatery 4724 Cedar Avenue Minneapolis MN' },
       { id: 'ichiban_sushi_edina', lat: 44.8764, lng: -93.3393, mapQuery: 'Ichiban Sushi 3529 W 70th St Edina MN' },
       { id: 'matts_bar', lat: 44.9398, lng: -93.2548, mapQuery: "Matt's Bar Minneapolis MN" },

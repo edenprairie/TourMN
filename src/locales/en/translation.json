@@ -327,6 +327,11 @@
         "location": "Wayzata / Lake Minnetonka",
         "description": "A lakefront Wayzata steak-and-seafood restaurant in the Boatworks building, with patio views, brunch, cocktails, and a strong Lake Minnetonka outing feel."
       },
+      "cov": {
+        "name": "CōV",
+        "location": "Wayzata / Edina",
+        "description": "A coastal American restaurant with two useful visitor stops: the original lakefront Wayzata location on Lake Minnetonka and a newer Galleria Edina location."
+      },
       "ie_italian_eatery": {
         "name": "ie Italian Eatery",
         "location": "South Minneapolis",

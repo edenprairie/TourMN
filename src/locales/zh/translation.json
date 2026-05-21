@@ -327,6 +327,11 @@
         "location": "Wayzata / Lake Minnetonka",
         "description": "位于 Wayzata 湖边 Boatworks building 的牛排和海鲜餐厅，有露台湖景、brunch、鸡尾酒，很适合搭配 Lake Minnetonka 半日行程。"
       },
+      "cov": {
+        "name": "CōV",
+        "location": "Wayzata / Edina",
+        "description": "Coastal American 风格餐厅，有两个很实用的访客地点：Lake Minnetonka 湖边的 Wayzata 原店，以及 Galleria Edina 新店。"
+      },
       "ie_italian_eatery": {
         "name": "ie Italian Eatery",
         "location": "South Minneapolis",
