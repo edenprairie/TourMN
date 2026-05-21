@@ -287,6 +287,26 @@
         "location": "Northeast Minneapolis",
         "description": "主厨 Yia Vang 打造的苗族风味目的地餐厅，围绕 Hmong 美食、历史和连接感展开，菜品适合分享，风味鲜明。"
       },
+      "demi": {
+        "name": "Demi",
+        "location": "North Loop, Minneapolis",
+        "description": "Gavin Kaysen 在 North Loop 打造的小型 tasting menu 餐厅，更适合提前预约、认真安排的一顿特殊晚餐。"
+      },
+      "one_twelve_eatery": {
+        "name": "112 Eatery",
+        "location": "Warehouse District, Minneapolis",
+        "description": "明尼阿波利斯 downtown 经营多年的经典餐厅，氛围亲密、有晚餐和夜宵感，适合想认真吃但又不想太正式的时候。"
+      },
+      "bar_la_grassa": {
+        "name": "Bar La Grassa",
+        "location": "North Loop, Minneapolis",
+        "description": "Isaac Becker 和 Nancy St. Pierre 的 North Loop 意大利餐厅，以 pasta、酒单和热闹但稳定的用餐体验闻名。"
+      },
+      "ie_italian_eatery": {
+        "name": "ie Italian Eatery",
+        "location": "South Minneapolis",
+        "description": "位于 Cedar Avenue 的社区型意大利餐厅，现由 Travail 团队运营，主打手工 pasta、comfort food 和温暖的南明尼阿波利斯气质。"
+      },
       "ichiban_sushi_edina": {
         "name": "Ichiban Sushi",
         "location": "Edina / Southdale 一带",
@@ -331,6 +351,11 @@
         "name": "Smack Shack",
         "location": "North Loop, Minneapolis",
         "description": "双城很知名的海鲜餐厅之一，适合想在 North Loop 吃一顿更热闹、偏休闲一点的晚餐。"
+      },
+      "oceanaire": {
+        "name": "The Oceanaire Seafood Room",
+        "location": "Downtown Minneapolis",
+        "description": "位于 downtown Minneapolis 的高端海鲜餐厅，适合新鲜鱼类、贝类、happy hour，或剧院、酒店、商务区附近更正式的晚餐。"
       },
       "surly": {
         "name": "Surly Brewing",

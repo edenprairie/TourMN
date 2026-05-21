@@ -33,6 +33,10 @@ const foodDrinkCategories: Category[] = [
       { id: 'hai_hai', lat: 44.9986, lng: -93.2668, mapQuery: 'Hai Hai Minneapolis MN' },
       { id: 'meritage', lat: 44.9488, lng: -93.0954, mapQuery: 'Meritage Saint Paul MN' },
       { id: 'vinai', lat: 44.9992, lng: -93.2662, mapQuery: 'Vinai 1300 NE 2nd St Minneapolis MN' },
+      { id: 'demi', lat: 44.9848, lng: -93.2701, mapQuery: 'Demi 212 N 2nd St Minneapolis MN' },
+      { id: 'one_twelve_eatery', lat: 44.9843, lng: -93.2712, mapQuery: '112 Eatery 112 N 3rd St Minneapolis MN' },
+      { id: 'bar_la_grassa', lat: 44.989, lng: -93.2797, mapQuery: 'Bar La Grassa 800 Washington Avenue North Minneapolis MN' },
+      { id: 'ie_italian_eatery', lat: 44.9164, lng: -93.2474, mapQuery: 'Italian Eatery 4724 Cedar Avenue Minneapolis MN' },
       { id: 'ichiban_sushi_edina', lat: 44.8764, lng: -93.3393, mapQuery: 'Ichiban Sushi 3529 W 70th St Edina MN' },
       { id: 'matts_bar', lat: 44.9398, lng: -93.2548, mapQuery: "Matt's Bar Minneapolis MN" },
       { id: 'colita', lat: 44.9303, lng: -93.298, mapQuery: 'Colita Minneapolis MN' },
@@ -41,7 +45,8 @@ const foodDrinkCategories: Category[] = [
       { id: 'myriel', lat: 44.9167, lng: -93.1703, mapQuery: 'Myriel Saint Paul MN' },
       { id: 'porzana', lat: 44.9825, lng: -93.278, mapQuery: 'Porzana Minneapolis MN' },
       { id: 'nolos', lat: 44.9841, lng: -93.277, mapQuery: "NOLO's Kitchen and Bar Minneapolis MN" },
-      { id: 'smack_shack', lat: 44.9863, lng: -93.2785, mapQuery: 'Smack Shack Minneapolis MN' }
+      { id: 'smack_shack', lat: 44.9863, lng: -93.2785, mapQuery: 'Smack Shack Minneapolis MN' },
+      { id: 'oceanaire', lat: 44.9774, lng: -93.2708, mapQuery: 'The Oceanaire Seafood Room 50 S 6th St Minneapolis MN' }
     ]
   },
   {

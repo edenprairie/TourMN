@@ -287,6 +287,26 @@
         "location": "Northeast Minneapolis",
         "description": "Chef Yia Vang's destination restaurant for Hmong food, history, and connection, with bold shared dishes and a strong sense of place."
       },
+      "demi": {
+        "name": "Demi",
+        "location": "North Loop, Minneapolis",
+        "description": "An intimate tasting-menu restaurant from Gavin Kaysen in the North Loop, best for a polished special-occasion dinner with reservations planned ahead."
+      },
+      "one_twelve_eatery": {
+        "name": "112 Eatery",
+        "location": "Warehouse District, Minneapolis",
+        "description": "A long-running downtown Minneapolis favorite with a cozy late-night feel, deep wine list, and a menu that works well for serious but unpretentious dining."
+      },
+      "bar_la_grassa": {
+        "name": "Bar La Grassa",
+        "location": "North Loop, Minneapolis",
+        "description": "A North Loop Italian restaurant from Isaac Becker and Nancy St. Pierre, known for pastas, wine, and a lively room that still feels like a Minneapolis standard."
+      },
+      "ie_italian_eatery": {
+        "name": "ie Italian Eatery",
+        "location": "South Minneapolis",
+        "description": "A neighborhood Italian restaurant on Cedar Avenue, now run by Travail, with handmade pasta, comfort food, and a warm South Minneapolis feel."
+      },
       "ichiban_sushi_edina": {
         "name": "Ichiban Sushi",
         "location": "Edina / Southdale area",
@@ -331,6 +351,11 @@
         "name": "Smack Shack",
         "location": "North Loop, Minneapolis",
         "description": "A well-known seafood spot with a strong local following, especially useful when you want a more energetic casual meal in the North Loop."
+      },
+      "oceanaire": {
+        "name": "The Oceanaire Seafood Room",
+        "location": "Downtown Minneapolis",
+        "description": "An upscale downtown seafood room for fresh fish, shellfish, happy hour, and more formal dinners near the theater, hotels, and office core."
       },
       "surly": {
         "name": "Surly Brewing",
