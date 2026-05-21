@@ -322,6 +322,11 @@
         "location": "Nicollet Mall, Minneapolis",
         "description": "A contemporary Italian restaurant on Nicollet Mall serving fresh pastas, seafood, wine, and a dependable downtown dinner experience."
       },
+      "sixsmith": {
+        "name": "6Smith",
+        "location": "Wayzata / Lake Minnetonka",
+        "description": "A lakefront Wayzata steak-and-seafood restaurant in the Boatworks building, with patio views, brunch, cocktails, and a strong Lake Minnetonka outing feel."
+      },
       "ie_italian_eatery": {
         "name": "ie Italian Eatery",
         "location": "South Minneapolis",

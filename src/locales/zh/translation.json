@@ -322,6 +322,11 @@
         "location": "Nicollet Mall, Minneapolis",
         "description": "Nicollet Mall 上的现代意大利餐厅，主打新鲜 pasta、海鲜、葡萄酒和稳定的 downtown 晚餐体验。"
       },
+      "sixsmith": {
+        "name": "6Smith",
+        "location": "Wayzata / Lake Minnetonka",
+        "description": "位于 Wayzata 湖边 Boatworks building 的牛排和海鲜餐厅，有露台湖景、brunch、鸡尾酒，很适合搭配 Lake Minnetonka 半日行程。"
+      },
       "ie_italian_eatery": {
         "name": "ie Italian Eatery",
         "location": "South Minneapolis",
