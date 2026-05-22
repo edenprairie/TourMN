@@ -202,4 +202,32 @@
   .monthTab {
     white-space: nowrap;
   }
+
+  :root.dark .eventCard {
+    background: #f8fafc;
+    border-color: rgba(15, 23, 42, 0.12);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+  }
+
+  :root.dark .eventDate {
+    background: #1e3a8a;
+    color: #ffffff;
+  }
+
+  :root.dark .eventTopline {
+    color: #047857;
+  }
+
+  :root.dark .eventBody h3 {
+    color: #0f172a;
+  }
+
+  :root.dark .eventBody p,
+  :root.dark .location {
+    color: #334155;
+  }
+
+  :root.dark .eventFooter a {
+    color: #1d4ed8;
+  }
 }
