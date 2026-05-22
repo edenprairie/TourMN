@@ -4,24 +4,44 @@ import { Link, useLocation } from 'react-router-dom';
 import { Globe, Menu, X, MapPin, Moon, Sun } from 'lucide-react';
 import styles from './Navbar.module.css';
 
+const THEME_STORAGE_KEY = 'theme';
+const getSystemPrefersDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    return localStorage.getItem('theme') === 'dark';
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+      return savedTheme === 'dark';
+    }
+
+    return getSystemPrefersDark();
   });
 
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
     }
   }, [isDarkMode]);
+
+  useEffect(() => {
+    if (localStorage.getItem(THEME_STORAGE_KEY)) {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const syncSystemTheme = (event: MediaQueryListEvent) => {
+      setIsDarkMode(event.matches);
+    };
+
+    mediaQuery.addEventListener('change', syncSystemTheme);
+    return () => mediaQuery.removeEventListener('change', syncSystemTheme);
+  }, []);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === 'en' ? 'zh' : 'en';
@@ -29,7 +49,11 @@ const Navbar: React.FC = () => {
   };
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((current) => {
+      const next = !current;
+      localStorage.setItem(THEME_STORAGE_KEY, next ? 'dark' : 'light');
+      return next;
+    });
   };
 
   const navLinks = [
