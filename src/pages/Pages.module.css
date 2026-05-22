@@ -276,6 +276,30 @@
   min-height: 480px;
 }
 
+:root.dark .pageHeader {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(52, 211, 153, 0.08));
+}
+
+:root.dark .adminButton,
+:root.dark .viewToggleButton,
+:root.dark .mapCategoryTab {
+  background: var(--surface-color);
+  color: var(--text-primary);
+  border-color: rgba(148, 163, 184, 0.24);
+}
+
+:root.dark .viewToggleActive,
+:root.dark .mapCategoryTabActive {
+  background: #bfdbfe;
+  color: #0f172a;
+  border-color: #bfdbfe;
+}
+
+:root.dark .adminBadge {
+  background: rgba(191, 219, 254, 0.14);
+  color: #dbeafe;
+}
+
 .mapCardButtonActive {
   border-radius: var(--radius-lg);
 }

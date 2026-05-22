@@ -89,3 +89,16 @@
   font-weight: 600;
   margin-bottom: 0.65rem;
 }
+
+:root.dark .brandCard {
+  background: var(--surface-color);
+  border-color: rgba(148, 163, 184, 0.24);
+}
+
+:root.dark .brandCard::before {
+  background: linear-gradient(to bottom, #93c5fd, #34d399);
+}
+
+:root.dark .meta {
+  color: #bfdbfe;
+}

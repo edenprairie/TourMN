@@ -170,6 +170,23 @@
   background: rgba(30, 41, 59, 0.86);
 }
 
+:root.dark .monthTab {
+  color: #dbeafe;
+  border-color: rgba(147, 197, 253, 0.24);
+}
+
+:root.dark .monthTabActive,
+:root.dark .previewAction a {
+  background: #bfdbfe;
+  color: #0f172a;
+  border-color: #bfdbfe;
+}
+
+:root.dark .eventDate {
+  background: rgba(191, 219, 254, 0.14);
+  color: #dbeafe;
+}
+
 @media (max-width: 767px) {
   .header {
     grid-template-columns: 1fr;
