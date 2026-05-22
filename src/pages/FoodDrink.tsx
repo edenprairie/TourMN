@@ -62,6 +62,7 @@ const foodDrinkCategories: Category[] = [
       { id: 'mandarin_kitchen', lat: 44.8611, lng: -93.2622, mapQuery: 'Mandarin Kitchen Bloomington MN' },
       { id: 'jade_dynasty', lat: 44.9484, lng: -93.2888, mapQuery: 'Jade Dynasty Minneapolis MN' },
       { id: 'ichiban_sushi_edina', lat: 44.8764, lng: -93.3393, mapQuery: 'Ichiban Sushi 3529 W 70th St Edina MN' },
+      { id: 'billy_sushi', lat: 44.9843, lng: -93.2697, mapQuery: 'Billy Sushi 116 N 1st Ave Minneapolis MN' },
       { id: 'kpot_maple_grove', lat: 45.1189, lng: -93.4566, mapQuery: 'KPOT Korean BBQ and Hot Pot 13601 Grove Dr Maple Grove MN' },
       { id: 'red_ginger_china_bistro', lat: 45.1203, lng: -93.1867, mapQuery: 'Red Ginger China Bistro 5999 Rice Creek Pkwy Shoreview MN' },
       { id: 'legendary_spice', lat: 44.9729, lng: -93.227, mapQuery: 'Legendary Spice Minneapolis MN' },

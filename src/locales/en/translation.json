@@ -512,6 +512,11 @@
         "location": "Lyn-Lake, Minneapolis",
         "description": "A newer Lyn-Lake destination with a broader traditional Chinese menu and one of the more relevant dim sum options inside Minneapolis proper."
       },
+      "billy_sushi": {
+        "name": "Billy Sushi",
+        "location": "North Loop, Minneapolis",
+        "description": "A high-energy North Loop sushi and Japanese dining spot with omakase, sake, private dining, and a polished dinner experience built around pristine fish."
+      },
       "kpot_maple_grove": {
         "name": "KPOT Korean BBQ & Hot Pot",
         "location": "Maple Grove",

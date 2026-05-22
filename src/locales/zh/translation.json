@@ -512,6 +512,11 @@
         "location": "Lyn-Lake, Minneapolis",
         "description": "Lyn-Lake 一带较新的中餐目的地，传统中餐菜单更完整，在明尼阿波利斯市区内也算较值得专门去的一家。"
       },
+      "billy_sushi": {
+        "name": "Billy Sushi",
+        "location": "North Loop, Minneapolis",
+        "description": "North Loop 人气很高的寿司和日式餐厅，有 omakase、清酒、私人包间和更完整的晚餐体验，主打高质量鱼料。"
+      },
       "kpot_maple_grove": {
         "name": "KPOT Korean BBQ & Hot Pot",
         "location": "Maple Grove",
