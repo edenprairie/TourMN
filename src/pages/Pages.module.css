@@ -144,6 +144,12 @@
   box-shadow: var(--shadow-sm);
 }
 
+.adminButton:disabled,
+.viewToggleButton:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+}
+
 .adminHint {
   margin: 0.9rem 0 0;
   color: var(--text-secondary);
@@ -276,28 +282,35 @@
   min-height: 480px;
 }
 
-:root.dark .pageHeader {
+:global(:root.dark) .pageHeader {
   background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(52, 211, 153, 0.08));
 }
 
-:root.dark .adminButton,
-:root.dark .viewToggleButton,
-:root.dark .mapCategoryTab {
-  background: var(--surface-color);
-  color: var(--text-primary);
+:global(:root.dark) .adminButton,
+:global(:root.dark) .viewToggleButton,
+:global(:root.dark) .mapCategoryTab {
+  background: #0f172a;
+  color: #f8fafc;
   border-color: rgba(148, 163, 184, 0.24);
 }
 
-:root.dark .viewToggleActive,
-:root.dark .mapCategoryTabActive {
+:global(:root.dark) .viewToggleActive,
+:global(:root.dark) .mapCategoryTabActive {
   background: #bfdbfe;
   color: #0f172a;
   border-color: #bfdbfe;
 }
 
-:root.dark .adminBadge {
+:global(:root.dark) .adminBadge {
   background: rgba(191, 219, 254, 0.14);
   color: #dbeafe;
+}
+
+:global(:root.dark) .adminButton:disabled,
+:global(:root.dark) .viewToggleButton:disabled {
+  background: #e2e8f0;
+  color: #334155;
+  border-color: #cbd5e1;
 }
 
 .mapCardButtonActive {

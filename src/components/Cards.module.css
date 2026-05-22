@@ -90,15 +90,16 @@
   margin-bottom: 0.65rem;
 }
 
-:root.dark .brandCard {
-  background: var(--surface-color);
-  border-color: rgba(148, 163, 184, 0.24);
+:global(:root.dark) .brandCard {
+  background: #0f172a;
+  border-color: rgba(148, 163, 184, 0.28);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.24);
 }
 
-:root.dark .brandCard::before {
+:global(:root.dark) .brandCard::before {
   background: linear-gradient(to bottom, #93c5fd, #34d399);
 }
 
-:root.dark .meta {
+:global(:root.dark) .meta {
   color: #bfdbfe;
 }
