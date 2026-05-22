@@ -43,7 +43,6 @@ const foodDrinkCategories: Category[] = [
       { id: 'sixsmith', lat: 44.9696, lng: -93.5175, mapQuery: '6Smith 294 Grove Lane East Wayzata MN' },
       { id: 'cov', lat: 44.9693, lng: -93.5147, mapQuery: 'COV 700 East Lake Street Wayzata MN' },
       { id: 'ie_italian_eatery', lat: 44.9164, lng: -93.2474, mapQuery: 'Italian Eatery 4724 Cedar Avenue Minneapolis MN' },
-      { id: 'ichiban_sushi_edina', lat: 44.8764, lng: -93.3393, mapQuery: 'Ichiban Sushi 3529 W 70th St Edina MN' },
       { id: 'matts_bar', lat: 44.9398, lng: -93.2548, mapQuery: "Matt's Bar Minneapolis MN" },
       { id: 'colita', lat: 44.9303, lng: -93.298, mapQuery: 'Colita Minneapolis MN' },
       { id: 'aster_cafe', lat: 44.9832, lng: -93.2586, mapQuery: 'Aster Cafe Minneapolis MN' },
@@ -52,7 +51,27 @@ const foodDrinkCategories: Category[] = [
       { id: 'porzana', lat: 44.9825, lng: -93.278, mapQuery: 'Porzana Minneapolis MN' },
       { id: 'nolos', lat: 44.9841, lng: -93.277, mapQuery: "NOLO's Kitchen and Bar Minneapolis MN" },
       { id: 'smack_shack', lat: 44.9863, lng: -93.2785, mapQuery: 'Smack Shack Minneapolis MN' },
-      { id: 'oceanaire', lat: 44.9774, lng: -93.2708, mapQuery: 'The Oceanaire Seafood Room 50 S 6th St Minneapolis MN' }
+      { id: 'oceanaire', lat: 44.9774, lng: -93.2708, mapQuery: 'The Oceanaire Seafood Room 50 S 6th St Minneapolis MN' },
+      { id: 'lookout_bar_grill', lat: 45.1135, lng: -93.4476, mapQuery: 'Lookout Bar and Grill 8672 Pineview Ln N Maple Grove MN' }
+    ]
+  },
+  {
+    id: 'chinese_restaurants',
+    places: [
+      { id: 'peking_garden', lat: 44.9555, lng: -93.1166, mapUrl: 'https://maps.app.goo.gl/XQd2dodx5EegHL2Q8' },
+      { id: 'mandarin_kitchen', lat: 44.8611, lng: -93.2622, mapQuery: 'Mandarin Kitchen Bloomington MN' },
+      { id: 'jade_dynasty', lat: 44.9484, lng: -93.2888, mapQuery: 'Jade Dynasty Minneapolis MN' },
+      { id: 'ichiban_sushi_edina', lat: 44.8764, lng: -93.3393, mapQuery: 'Ichiban Sushi 3529 W 70th St Edina MN' },
+      { id: 'kpot_maple_grove', lat: 45.1189, lng: -93.4566, mapQuery: 'KPOT Korean BBQ and Hot Pot 13601 Grove Dr Maple Grove MN' },
+      { id: 'red_ginger_china_bistro', lat: 45.1203, lng: -93.1867, mapQuery: 'Red Ginger China Bistro 5999 Rice Creek Pkwy Shoreview MN' },
+      { id: 'legendary_spice', lat: 44.9729, lng: -93.227, mapQuery: 'Legendary Spice Minneapolis MN' },
+      { id: 'tea_house', lat: 44.9707, lng: -93.2818, mapQuery: 'Tea House Minneapolis MN' },
+      { id: 'master_noodle', lat: 44.9792, lng: -93.235, mapQuery: 'Master Noodle Minneapolis MN' },
+      { id: 'grand_szechuan', lat: 44.8603, lng: -93.325, mapQuery: 'Grand Szechuan Bloomington MN' },
+      { id: 'ju_yuan', lat: 44.9777, lng: -93.358, mapQuery: 'Ju Yuan Golden Valley MN' },
+      { id: 'home_taste', lat: 44.9478, lng: -93.3465, mapQuery: 'Home Taste Saint Louis Park MN' },
+      { id: 'hong_kong_noodle', lat: 44.8611, lng: -93.2622, mapUrl: 'https://maps.app.goo.gl/8GJTcyihMtEHm6ho7' },
+      { id: 'northern_kitchen', lat: 44.8614, lng: -93.2672, mapUrl: 'https://maps.app.goo.gl/cH4PH7SkwgEyWjU3A' }
     ]
   },
   {
@@ -84,22 +103,6 @@ const foodDrinkCategories: Category[] = [
       { id: 'cannon_river', lat: 44.5074, lng: -92.905, mapQuery: 'Cannon River Winery Cannon Falls MN' },
       { id: 'two_silo', lat: 45.0742, lng: -92.997, mapQuery: 'Two Silo Winery White Bear Lake MN' },
       { id: 'wild_mountain', lat: 45.1992, lng: -92.816, mapQuery: 'Wild Mountain Winery Marine on Saint Croix MN' }
-    ]
-  },
-  {
-    id: 'chinese_restaurants',
-    places: [
-      { id: 'peking_garden', lat: 44.9555, lng: -93.1166, mapUrl: 'https://maps.app.goo.gl/XQd2dodx5EegHL2Q8' },
-      { id: 'mandarin_kitchen', lat: 44.8611, lng: -93.2622, mapQuery: 'Mandarin Kitchen Bloomington MN' },
-      { id: 'jade_dynasty', lat: 44.9484, lng: -93.2888, mapQuery: 'Jade Dynasty Minneapolis MN' },
-      { id: 'legendary_spice', lat: 44.9729, lng: -93.227, mapQuery: 'Legendary Spice Minneapolis MN' },
-      { id: 'tea_house', lat: 44.9707, lng: -93.2818, mapQuery: 'Tea House Minneapolis MN' },
-      { id: 'master_noodle', lat: 44.9792, lng: -93.235, mapQuery: 'Master Noodle Minneapolis MN' },
-      { id: 'grand_szechuan', lat: 44.8603, lng: -93.325, mapQuery: 'Grand Szechuan Bloomington MN' },
-      { id: 'ju_yuan', lat: 44.9777, lng: -93.358, mapQuery: 'Ju Yuan Golden Valley MN' },
-      { id: 'home_taste', lat: 44.9478, lng: -93.3465, mapQuery: 'Home Taste Saint Louis Park MN' },
-      { id: 'hong_kong_noodle', lat: 44.8611, lng: -93.2622, mapUrl: 'https://maps.app.goo.gl/8GJTcyihMtEHm6ho7' },
-      { id: 'northern_kitchen', lat: 44.8614, lng: -93.2672, mapUrl: 'https://maps.app.goo.gl/cH4PH7SkwgEyWjU3A' }
     ]
   },
   {

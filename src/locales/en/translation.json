@@ -258,7 +258,7 @@
       "restaurants": "Recommended Restaurants",
       "breweries": "Recommended Breweries",
       "vineyards": "Recommended Vineyards & Wineries",
-      "chinese_restaurants": "Recommended Chinese Restaurants",
+      "chinese_restaurants": "Recommended Chinese & Asian Restaurants",
       "cafes_bakeries": "Recommended Cafes & Bakeries"
     },
     "places": {
@@ -387,6 +387,11 @@
         "location": "Downtown Minneapolis",
         "description": "An upscale downtown seafood room for fresh fish, shellfish, happy hour, and more formal dinners near the theater, hotels, and office core."
       },
+      "lookout_bar_grill": {
+        "name": "Lookout Bar & Grill",
+        "location": "Maple Grove",
+        "description": "A casual Maple Grove bar and grill with a large patio, live music, sports, daily specials, and a broad American menu for groups."
+      },
       "surly": {
         "name": "Surly Brewing",
         "location": "Prospect Park, Minneapolis",
@@ -506,6 +511,16 @@
         "name": "Jade Dynasty",
         "location": "Lyn-Lake, Minneapolis",
         "description": "A newer Lyn-Lake destination with a broader traditional Chinese menu and one of the more relevant dim sum options inside Minneapolis proper."
+      },
+      "kpot_maple_grove": {
+        "name": "KPOT Korean BBQ & Hot Pot",
+        "location": "Maple Grove",
+        "description": "A Korean BBQ and hot pot restaurant in Maple Grove built for group dining, with grill-at-the-table meats, soup bases, and a lively all-you-can-eat format."
+      },
+      "red_ginger_china_bistro": {
+        "name": "Red Ginger China Bistro",
+        "location": "Shoreview",
+        "description": "The sister restaurant recommended by House of Kirin after Kirin House closed, serving the same recipes from the same chef in Shoreview."
       },
       "legendary_spice": {
         "name": "Legendary Spice",

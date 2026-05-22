@@ -258,7 +258,7 @@
       "restaurants": "推荐餐厅",
       "breweries": "推荐精酿啤酒厂",
       "vineyards": "推荐葡萄园与酒庄",
-      "chinese_restaurants": "推荐中餐馆",
+      "chinese_restaurants": "推荐中餐与亚洲餐厅",
       "cafes_bakeries": "推荐咖啡馆与面包甜点店"
     },
     "places": {
@@ -387,6 +387,11 @@
         "location": "Downtown Minneapolis",
         "description": "位于 downtown Minneapolis 的高端海鲜餐厅，适合新鲜鱼类、贝类、happy hour，或剧院、酒店、商务区附近更正式的晚餐。"
       },
+      "lookout_bar_grill": {
+        "name": "Lookout Bar & Grill",
+        "location": "Maple Grove",
+        "description": "Maple Grove 的休闲 bar & grill，有大露台、现场音乐、体育转播、每日特价和适合多人聚餐的美式菜单。"
+      },
       "surly": {
         "name": "Surly Brewing",
         "location": "Prospect Park, Minneapolis",
@@ -506,6 +511,16 @@
         "name": "Jade Dynasty",
         "location": "Lyn-Lake, Minneapolis",
         "description": "Lyn-Lake 一带较新的中餐目的地，传统中餐菜单更完整，在明尼阿波利斯市区内也算较值得专门去的一家。"
+      },
+      "kpot_maple_grove": {
+        "name": "KPOT Korean BBQ & Hot Pot",
+        "location": "Maple Grove",
+        "description": "Maple Grove 的韩式烤肉与火锅餐厅，适合多人聚餐，桌边烤肉、汤底选择和 all-you-can-eat 形式都比较热闹。"
+      },
+      "red_ginger_china_bistro": {
+        "name": "Red Ginger China Bistro",
+        "location": "Shoreview",
+        "description": "Kirin House 关闭后其官网推荐的姊妹餐厅，位于 Shoreview，由同一位厨师延续原有菜谱。"
       },
       "legendary_spice": {
         "name": "Legendary Spice",
