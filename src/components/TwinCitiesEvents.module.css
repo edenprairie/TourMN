@@ -62,7 +62,7 @@
 }
 
 .eventCard {
-  background: rgba(255, 255, 255, 0.88);
+  background: #f8fafc;
   border: 1px solid rgba(30, 58, 138, 0.12);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -75,8 +75,8 @@
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  background: rgba(30, 58, 138, 0.08);
-  color: var(--primary);
+  background: #dbeafe;
+  color: #1d4ed8;
   font-weight: 800;
   padding: 0.85rem 1rem;
 }
@@ -90,20 +90,20 @@
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 0.65rem;
-  color: var(--secondary);
+  color: #059669;
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 .eventBody h3 {
-  color: var(--text-primary);
+  color: #0f172a;
   font-size: 1.35rem;
   margin-bottom: 0.65rem;
 }
 
 .eventBody p {
-  color: var(--text-secondary);
+  color: #475569;
   font-size: 0.95rem;
 }
 
@@ -123,11 +123,11 @@
 }
 
 .location {
-  color: var(--text-secondary);
+  color: #64748b;
 }
 
 .eventFooter a {
-  color: var(--primary);
+  color: #2563eb;
 }
 
 .sourceNote {
@@ -165,9 +165,14 @@
     var(--surface-color);
 }
 
-:root.dark .monthTab,
-:root.dark .eventCard {
+:root.dark .monthTab {
   background: rgba(30, 41, 59, 0.86);
+}
+
+:root.dark .eventCard {
+  background: #f8fafc;
+  border-color: rgba(15, 23, 42, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
 }
 
 :root.dark .monthTab {
@@ -183,8 +188,8 @@
 }
 
 :root.dark .eventDate {
-  background: rgba(191, 219, 254, 0.14);
-  color: #dbeafe;
+  background: #1e3a8a;
+  color: #ffffff;
 }
 
 @media (max-width: 767px) {
@@ -203,31 +208,7 @@
     white-space: nowrap;
   }
 
-  :root.dark .eventCard {
-    background: #f8fafc;
-    border-color: rgba(15, 23, 42, 0.12);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
-  }
-
-  :root.dark .eventDate {
-    background: #1e3a8a;
-    color: #ffffff;
-  }
-
-  :root.dark .eventTopline {
-    color: #047857;
-  }
-
-  :root.dark .eventBody h3 {
-    color: #0f172a;
-  }
-
-  :root.dark .eventBody p,
-  :root.dark .location {
-    color: #334155;
-  }
-
-  :root.dark .eventFooter a {
-    color: #1d4ed8;
+  .eventGrid {
+    gap: 1.1rem;
   }
 }
