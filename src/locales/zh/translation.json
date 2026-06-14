@@ -302,6 +302,11 @@
         "location": "North Loop, Minneapolis",
         "description": "Isaac Becker 和 Nancy St. Pierre 的 North Loop 意大利餐厅，以 pasta、酒单和热闹但稳定的用餐体验闻名。"
       },
+      "st_pierre": {
+        "name": "St. Pierre Steak & Seafood",
+        "location": "North Loop, Minneapolis",
+        "description": "North Loop 的高端牛排与海鲜餐厅，有经典 steakhouse 氛围、生蚝、海鲜、鸡尾酒、葡萄酒、happy hour 和半私密用餐空间。"
+      },
       "mannys_steakhouse": {
         "name": "Manny's Steakhouse",
         "location": "Downtown Minneapolis",

@@ -36,6 +36,7 @@ const foodDrinkCategories: Category[] = [
       { id: 'demi', lat: 44.9848, lng: -93.2701, mapQuery: 'Demi 212 N 2nd St Minneapolis MN' },
       { id: 'one_twelve_eatery', lat: 44.9843, lng: -93.2712, mapQuery: '112 Eatery 112 N 3rd St Minneapolis MN' },
       { id: 'bar_la_grassa', lat: 44.989, lng: -93.2797, mapQuery: 'Bar La Grassa 800 Washington Avenue North Minneapolis MN' },
+      { id: 'st_pierre', lat: 44.989, lng: -93.2797, mapQuery: 'St. Pierre Steak and Seafood 800 Washington Ave N Minneapolis MN' },
       { id: 'mannys_steakhouse', lat: 44.9731, lng: -93.2721, mapQuery: "Manny's Steakhouse 825 Marquette Ave Minneapolis MN" },
       { id: 'butchers_tale', lat: 44.9746, lng: -93.2788, mapQuery: "The Butcher's Tale 1121 Hennepin Ave Minneapolis MN" },
       { id: 'capital_grille', lat: 44.9762, lng: -93.2761, mapQuery: 'The Capital Grille 801 Hennepin Ave Minneapolis MN' },

@@ -302,6 +302,11 @@
         "location": "North Loop, Minneapolis",
         "description": "A North Loop Italian restaurant from Isaac Becker and Nancy St. Pierre, known for pastas, wine, and a lively room that still feels like a Minneapolis standard."
       },
+      "st_pierre": {
+        "name": "St. Pierre Steak & Seafood",
+        "location": "North Loop, Minneapolis",
+        "description": "An upscale North Loop steak-and-seafood restaurant with classic steakhouse energy, oysters, seafood, cocktails, wine, happy hour, and semi-private dining."
+      },
       "mannys_steakhouse": {
         "name": "Manny's Steakhouse",
         "location": "Downtown Minneapolis",
