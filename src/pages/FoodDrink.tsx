@@ -111,10 +111,10 @@ const foodDrinkCategories: Category[] = [
   {
     id: 'cafes_bakeries',
     places: [
+      { id: 'isles_bun', lat: 44.9522, lng: -93.2987, mapUrl: 'https://maps.app.goo.gl/MjdAkezLa4jh2vXg7' },
       { id: 'patisserie_46', lat: 44.9287, lng: -93.286, mapQuery: 'Patisserie 46 Minneapolis MN' },
       { id: 'marc_heu', lat: 44.9481, lng: -93.105, mapQuery: 'Marc Heu Patisserie Saint Paul MN' },
       { id: 'rustica', lat: 44.934, lng: -93.298, mapQuery: 'Rustica Bakery Minneapolis MN' },
-      { id: 'isles_bun', lat: 44.9489, lng: -93.2941, mapQuery: 'Isles Bun and Coffee Minneapolis MN' },
       { id: 'black_walnut', lat: 44.9817, lng: -93.2757, mapQuery: 'Black Walnut Bakery Minneapolis MN' },
       { id: 'angel_food', lat: 44.9801, lng: -93.27, mapQuery: 'Angel Food Bakery Minneapolis MN' },
       { id: 'cafe_ceres', lat: 44.9488, lng: -93.2984, mapQuery: 'Cafe Ceres Minneapolis MN' },
