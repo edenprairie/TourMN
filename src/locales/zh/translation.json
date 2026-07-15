@@ -302,6 +302,11 @@
         "location": "North Loop, Minneapolis",
         "description": "Isaac Becker 和 Nancy St. Pierre 的 North Loop 意大利餐厅，以 pasta、酒单和热闹但稳定的用餐体验闻名。"
       },
+      "sanjusan": {
+        "name": "Sanjusan",
+        "location": "North Loop, Minneapolis",
+        "description": "North Loop 的日式意大利餐厅，晚餐氛围精致，有创意 pasta、pizza、鸡尾酒，也属于 Kado no Mise 相关餐饮体系。"
+      },
       "st_pierre": {
         "name": "St. Pierre Steak & Seafood",
         "location": "North Loop, Minneapolis",

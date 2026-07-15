@@ -302,6 +302,11 @@
         "location": "North Loop, Minneapolis",
         "description": "A North Loop Italian restaurant from Isaac Becker and Nancy St. Pierre, known for pastas, wine, and a lively room that still feels like a Minneapolis standard."
       },
+      "sanjusan": {
+        "name": "Sanjusan",
+        "location": "North Loop, Minneapolis",
+        "description": "A North Loop Japanese-Italian restaurant with a polished dinner feel, creative pastas and pizza, cocktails, and a connection to the Kado no Mise group."
+      },
       "st_pierre": {
         "name": "St. Pierre Steak & Seafood",
         "location": "North Loop, Minneapolis",
