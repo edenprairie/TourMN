@@ -90,7 +90,8 @@ const foodDrinkCategories: Category[] = [
       { id: 'pryes', lat: 44.9849, lng: -93.2878, mapQuery: 'Pryes Brewing Minneapolis MN' },
       { id: 'falling_knife', lat: 45.0056, lng: -93.2515, mapQuery: 'Falling Knife Brewing Minneapolis MN' },
       { id: 'bauhaus', lat: 45.0022, lng: -93.2668, mapQuery: 'Bauhaus Brew Labs Minneapolis MN' },
-      { id: 'modist', lat: 44.984, lng: -93.2765, mapQuery: 'Modist Brewing Minneapolis MN' }
+      { id: 'modist', lat: 44.984, lng: -93.2765, mapQuery: 'Modist Brewing Minneapolis MN' },
+      { id: 'boom_island', lat: 44.8942459, lng: -93.446602, mapUrl: 'https://maps.app.goo.gl/Uczzq8N74vYR5e7R9' }
     ]
   },
   {

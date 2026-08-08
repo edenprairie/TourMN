@@ -457,6 +457,11 @@
         "location": "North Loop, Minneapolis",
         "description": "A North Loop brewery known for experimentation and a distinctive voice, while still remaining accessible for visitors."
       },
+      "boom_island": {
+        "name": "Boom Island Brewing",
+        "location": "Minnetonka",
+        "description": "A Belgian-style brewery in the west metro near Lake Minnetonka, with a family-friendly taproom, reliable food, and a beer list rooted in Belgian tradition."
+      },
       "alexis_bailly": {
         "name": "Alexis Bailly Vineyard & Winery",
         "location": "Hastings",
