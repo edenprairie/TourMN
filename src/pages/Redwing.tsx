@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { X } from 'lucide-react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import styles from './Pages.module.css';
 
 const redwingImages = [
@@ -30,27 +30,54 @@ const redwingImages = [
 ];
 
 const Redwing: React.FC = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const triggerRefs = useRef<Array<HTMLButtonElement | null>>([]);
+
+  const closeLightbox = useCallback(() => {
+    const closingIndex = selectedIndex;
+    setSelectedIndex(null);
+
+    if (closingIndex !== null) {
+      window.requestAnimationFrame(() => triggerRefs.current[closingIndex]?.focus());
+    }
+  }, [selectedIndex]);
+
+  const moveImage = useCallback((direction: number) => {
+    setSelectedIndex((currentIndex) => {
+      if (currentIndex === null) {
+        return currentIndex;
+      }
+
+      return (currentIndex + direction + redwingImages.length) % redwingImages.length;
+    });
+  }, []);
 
   useEffect(() => {
-    if (!selectedImage) {
+    if (selectedIndex === null) {
       return undefined;
     }
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        setSelectedImage(null);
+        closeLightbox();
+      } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        moveImage(-1);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        moveImage(1);
       }
     };
 
+    const previousBodyOverflow = document.body.style.overflow;
     document.addEventListener('keydown', handleKeyDown);
     document.body.style.overflow = 'hidden';
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
+      document.body.style.overflow = previousBodyOverflow;
     };
-  }, [selectedImage]);
+  }, [closeLightbox, moveImage, selectedIndex]);
 
   return (
     <section className={styles.redwingPage}>
@@ -67,7 +94,10 @@ const Redwing: React.FC = () => {
               className={styles.redwingCard}
               key={imageName}
               type="button"
-              onClick={() => setSelectedImage(imageName)}
+              onClick={() => setSelectedIndex(index)}
+              ref={(element) => {
+                triggerRefs.current[index] = element;
+              }}
               aria-label={`Enlarge Red Wing shoes collection photo ${index + 1}`}
             >
               <img
@@ -80,7 +110,7 @@ const Redwing: React.FC = () => {
         </div>
       </div>
 
-      {selectedImage && (
+      {selectedIndex !== null && (
         <div
           className={styles.redwingLightbox}
           role="dialog"
@@ -88,22 +118,38 @@ const Redwing: React.FC = () => {
           aria-label="Enlarged Red Wing shoes collection photo"
           onClick={(event) => {
             if (event.target === event.currentTarget) {
-              setSelectedImage(null);
+              closeLightbox();
             }
           }}
         >
           <button
+            className={styles.redwingLightboxNav}
+            type="button"
+            onClick={() => moveImage(-1)}
+            aria-label="Previous Red Wing photo"
+          >
+            <ChevronLeft size={30} aria-hidden="true" />
+          </button>
+          <button
             className={styles.redwingLightboxClose}
             type="button"
-            onClick={() => setSelectedImage(null)}
+            onClick={closeLightbox}
             aria-label="Close enlarged photo"
           >
             <X size={24} aria-hidden="true" />
           </button>
+          <button
+            className={styles.redwingLightboxNav}
+            type="button"
+            onClick={() => moveImage(1)}
+            aria-label="Next Red Wing photo"
+          >
+            <ChevronRight size={30} aria-hidden="true" />
+          </button>
           <img
             className={styles.redwingLightboxImage}
-            src={`/images/redwing/${selectedImage}`}
-            alt="Enlarged Red Wing shoes collection photo"
+            src={`/images/redwing/${redwingImages[selectedIndex]}`}
+            alt={`Enlarged Red Wing shoes collection photo ${selectedIndex + 1}`}
           />
         </div>
       )}

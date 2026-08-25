@@ -370,6 +370,43 @@
   box-shadow: 0 30px 100px rgba(0, 0, 0, 0.55);
 }
 
+.redwingLightboxNav,
+.unhLightboxNav {
+  align-items: center;
+  background: rgba(255, 250, 242, 0.12);
+  border: 1px solid rgba(255, 250, 242, 0.32);
+  border-radius: 999px;
+  color: #fffaf2;
+  cursor: pointer;
+  display: flex;
+  height: 3.25rem;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.25rem;
+  z-index: 1;
+}
+
+.redwingLightboxNav:first-of-type,
+.unhLightboxNav:first-of-type {
+  left: 1.5rem;
+}
+
+.redwingLightboxNav:nth-of-type(3),
+.unhLightboxNav:nth-of-type(3) {
+  right: 1.5rem;
+}
+
+.redwingLightboxNav:hover,
+.redwingLightboxNav:focus-visible,
+.unhLightboxNav:hover,
+.unhLightboxNav:focus-visible {
+  background: rgba(242, 166, 90, 0.28);
+  border-color: #f2a65a;
+  outline: none;
+}
+
 .redwingLightboxClose {
   align-items: center;
   background: rgba(255, 250, 242, 0.12);
@@ -616,6 +653,22 @@
   .redwingLightboxClose {
     right: 1rem;
     top: 1rem;
+  }
+
+  .redwingLightboxNav,
+  .unhLightboxNav {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+
+  .redwingLightboxNav:first-of-type,
+  .unhLightboxNav:first-of-type {
+    left: 0.75rem;
+  }
+
+  .redwingLightboxNav:nth-of-type(3),
+  .unhLightboxNav:nth-of-type(3) {
+    right: 0.75rem;
   }
 
   .unhPage {

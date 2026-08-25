@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import styles from './Pages.module.css';
 
 const unhImages = [
@@ -45,6 +45,16 @@ const Unh: React.FC = () => {
     }
   }, [selectedIndex]);
 
+  const moveImage = useCallback((direction: number) => {
+    setSelectedIndex((currentIndex) => {
+      if (currentIndex === null) {
+        return currentIndex;
+      }
+
+      return (currentIndex + direction + unhImages.length) % unhImages.length;
+    });
+  }, []);
+
   useEffect(() => {
     if (selectedIndex === null) {
       return undefined;
@@ -54,6 +64,12 @@ const Unh: React.FC = () => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         closeLightbox();
+      } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        moveImage(-1);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        moveImage(1);
       }
     };
 
@@ -64,7 +80,7 @@ const Unh: React.FC = () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = previousBodyOverflow;
     };
-  }, [closeLightbox, selectedIndex]);
+  }, [closeLightbox, moveImage, selectedIndex]);
 
   return (
     <section className={styles.unhPage}>
@@ -110,12 +126,28 @@ const Unh: React.FC = () => {
           role="dialog"
         >
           <button
+            aria-label="Previous UNH gallery photo"
+            className={styles.unhLightboxNav}
+            onClick={() => moveImage(-1)}
+            type="button"
+          >
+            <ChevronLeft aria-hidden="true" size={30} />
+          </button>
+          <button
             aria-label="Close enlarged photo"
             className={styles.unhLightboxClose}
             onClick={closeLightbox}
             type="button"
           >
             <X aria-hidden="true" size={24} />
+          </button>
+          <button
+            aria-label="Next UNH gallery photo"
+            className={styles.unhLightboxNav}
+            onClick={() => moveImage(1)}
+            type="button"
+          >
+            <ChevronRight aria-hidden="true" size={30} />
           </button>
           <img
             alt={`Enlarged UNH gallery photo ${selectedIndex + 1}`}
