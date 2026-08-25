@@ -72,7 +72,7 @@ const Unh: React.FC = () => {
         <header className={styles.unhHeader}>
           <p>Visual Collection</p>
           <h1>UNH Gallery</h1>
-          <span>A collection of moments, places, and details from UNH.</span>
+          <span>Our good friend Jixiang visits UNH - September 14, 2024.</span>
         </header>
 
         <div className={styles.unhGrid}>
