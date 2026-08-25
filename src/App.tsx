@@ -9,15 +9,17 @@ import Itineraries from './pages/Itineraries';
 import FoodDrink from './pages/FoodDrink';
 import Events from './pages/Events';
 import Redwing from './pages/Redwing';
+import Unh from './pages/Unh';
 import './i18n';
 
 const AppContent: React.FC = () => {
   const { pathname } = useLocation();
-  const isHiddenRedwingPage = pathname === '/redwing' || pathname === '/redwing/';
+  const normalizedPathname = pathname.replace(/\/$/, '') || '/';
+  const isHiddenGalleryPage = normalizedPathname === '/redwing' || normalizedPathname === '/unh';
 
   return (
     <div className="app-container">
-      {!isHiddenRedwingPage && <Navbar />}
+      {!isHiddenGalleryPage && <Navbar />}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,9 +29,10 @@ const AppContent: React.FC = () => {
           <Route path="/itineraries" element={<Itineraries />} />
           <Route path="/brands" element={<LocalBrands />} />
           <Route path="/redwing" element={<Redwing />} />
+          <Route path="/unh" element={<Unh />} />
         </Routes>
       </main>
-      {!isHiddenRedwingPage && <Footer />}
+      {!isHiddenGalleryPage && <Footer />}
     </div>
   );
 };

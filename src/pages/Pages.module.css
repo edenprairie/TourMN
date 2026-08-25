@@ -394,6 +394,119 @@
   outline: none;
 }
 
+.unhPage {
+  min-height: 100vh;
+  padding: 4rem 0;
+  background:
+    radial-gradient(circle at top right, rgba(96, 165, 250, 0.16), transparent 34rem),
+    linear-gradient(180deg, #0e1729 0%, #16263d 56%, #09111f 100%);
+  color: #f4f7fb;
+}
+
+.unhHeader {
+  max-width: 760px;
+  margin-bottom: 2.5rem;
+}
+
+.unhHeader p {
+  color: #62d7bd;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.unhHeader h1 {
+  color: #f8fbff;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  line-height: 0.92;
+  margin-bottom: 1rem;
+}
+
+.unhHeader span {
+  color: rgba(228, 237, 248, 0.78);
+  font-size: 1.05rem;
+}
+
+.unhGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.unhCard {
+  aspect-ratio: 4 / 3;
+  background: rgba(244, 247, 251, 0.06);
+  border: 1px solid rgba(244, 247, 251, 0.14);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
+  cursor: zoom-in;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  width: 100%;
+}
+
+.unhCard:hover,
+.unhCard:focus-visible {
+  border-color: rgba(98, 215, 189, 0.86);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+  outline: none;
+  transform: translateY(-4px);
+}
+
+.unhCard img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.unhLightbox {
+  align-items: center;
+  background: rgba(5, 9, 16, 0.94);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 2rem;
+  position: fixed;
+  z-index: 1000;
+}
+
+.unhLightboxImage {
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.58);
+  max-height: min(90vh, 1100px);
+  max-width: min(92vw, 1400px);
+  object-fit: contain;
+}
+
+.unhLightboxClose {
+  align-items: center;
+  background: rgba(244, 247, 251, 0.12);
+  border: 1px solid rgba(244, 247, 251, 0.34);
+  border-radius: 999px;
+  color: #f8fbff;
+  cursor: pointer;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  width: 3rem;
+  z-index: 1;
+}
+
+.unhLightboxClose:hover,
+.unhLightboxClose:focus-visible {
+  background: rgba(98, 215, 189, 0.28);
+  border-color: #62d7bd;
+  outline: none;
+}
+
 :global(:root.dark) .pageHeader {
   background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(52, 211, 153, 0.08));
 }
@@ -501,6 +614,23 @@
   }
 
   .redwingLightboxClose {
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .unhPage {
+    padding: 2.5rem 0;
+  }
+
+  .unhGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .unhLightbox {
+    padding: 1rem;
+  }
+
+  .unhLightboxClose {
     right: 1rem;
     top: 1rem;
   }
