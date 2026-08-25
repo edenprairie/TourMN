@@ -6,7 +6,6 @@ const redwingImages = [
   'redwing1.jpeg',
   'redwing2.jpeg',
   'redwing3.jpeg',
-  'redwing4.jpeg',
   'redwing5.jpeg',
   'redwing6.jpeg',
   'redwing7.jpeg',
@@ -27,6 +26,7 @@ const redwingImages = [
   'redwing21.jpeg',
   'redwing22.jpeg',
   'redwing23.jpeg',
+  'redwing4.jpeg',
 ];
 
 const Redwing: React.FC = () => {
