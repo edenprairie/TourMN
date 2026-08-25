@@ -324,12 +324,24 @@
 }
 
 .redwingCard {
+  padding: 0;
+  width: 100%;
+  cursor: zoom-in;
   aspect-ratio: 4 / 5;
   background: rgba(255, 250, 242, 0.06);
   border: 1px solid rgba(255, 250, 242, 0.12);
   border-radius: var(--radius-lg);
   box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
   overflow: hidden;
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.redwingCard:hover,
+.redwingCard:focus-visible {
+  border-color: rgba(242, 166, 90, 0.82);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+  outline: none;
+  transform: translateY(-4px);
 }
 
 .redwingCard img {
@@ -337,6 +349,49 @@
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+.redwingLightbox {
+  align-items: center;
+  background: rgba(8, 6, 5, 0.92);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 2rem;
+  position: fixed;
+  z-index: 1000;
+}
+
+.redwingLightboxImage {
+  max-height: min(90vh, 1100px);
+  max-width: min(92vw, 1400px);
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.55);
+}
+
+.redwingLightboxClose {
+  align-items: center;
+  background: rgba(255, 250, 242, 0.12);
+  border: 1px solid rgba(255, 250, 242, 0.32);
+  border-radius: 999px;
+  color: #fffaf2;
+  cursor: pointer;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  width: 3rem;
+  z-index: 1;
+}
+
+.redwingLightboxClose:hover,
+.redwingLightboxClose:focus-visible {
+  background: rgba(242, 166, 90, 0.28);
+  border-color: #f2a65a;
+  outline: none;
 }
 
 :global(:root.dark) .pageHeader {
@@ -439,5 +494,14 @@
 
   .redwingGrid {
     grid-template-columns: 1fr;
+  }
+
+  .redwingLightbox {
+    padding: 1rem;
+  }
+
+  .redwingLightboxClose {
+    right: 1rem;
+    top: 1rem;
   }
 }

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { X } from 'lucide-react';
 import styles from './Pages.module.css';
 
 const redwingImages = [
@@ -29,27 +30,83 @@ const redwingImages = [
 ];
 
 const Redwing: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!selectedImage) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
+
   return (
     <section className={styles.redwingPage}>
       <div className="container">
         <div className={styles.redwingHeader}>
           <p>Private Collection</p>
           <h1>Red Wing Shoes</h1>
-          <span>{redwingImages.length} pairs and details</span>
+          <span>An enduring collection of Red Wing craftsmanship</span>
         </div>
 
         <div className={styles.redwingGrid}>
           {redwingImages.map((imageName, index) => (
-            <figure className={styles.redwingCard} key={imageName}>
+            <button
+              className={styles.redwingCard}
+              key={imageName}
+              type="button"
+              onClick={() => setSelectedImage(imageName)}
+              aria-label={`Enlarge Red Wing shoes collection photo ${index + 1}`}
+            >
               <img
                 src={`/images/redwing/${imageName}`}
                 alt={`Red Wing shoes collection photo ${index + 1}`}
                 loading="lazy"
               />
-            </figure>
+            </button>
           ))}
         </div>
       </div>
+
+      {selectedImage && (
+        <div
+          className={styles.redwingLightbox}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Enlarged Red Wing shoes collection photo"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              setSelectedImage(null);
+            }
+          }}
+        >
+          <button
+            className={styles.redwingLightboxClose}
+            type="button"
+            onClick={() => setSelectedImage(null)}
+            aria-label="Close enlarged photo"
+          >
+            <X size={24} aria-hidden="true" />
+          </button>
+          <img
+            className={styles.redwingLightboxImage}
+            src={`/images/redwing/${selectedImage}`}
+            alt="Enlarged Red Wing shoes collection photo"
+          />
+        </div>
+      )}
     </section>
   );
 };
