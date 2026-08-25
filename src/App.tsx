@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -8,25 +8,36 @@ import LocalBrands from './pages/LocalBrands';
 import Itineraries from './pages/Itineraries';
 import FoodDrink from './pages/FoodDrink';
 import Events from './pages/Events';
+import Redwing from './pages/Redwing';
 import './i18n';
+
+const AppContent: React.FC = () => {
+  const { pathname } = useLocation();
+  const isHiddenRedwingPage = pathname === '/redwing' || pathname === '/redwing/';
+
+  return (
+    <div className="app-container">
+      {!isHiddenRedwingPage && <Navbar />}
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/destinations" element={<Destinations />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/food-drink" element={<FoodDrink />} />
+          <Route path="/itineraries" element={<Itineraries />} />
+          <Route path="/brands" element={<LocalBrands />} />
+          <Route path="/redwing" element={<Redwing />} />
+        </Routes>
+      </main>
+      {!isHiddenRedwingPage && <Footer />}
+    </div>
+  );
+};
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="app-container">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/destinations" element={<Destinations />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/food-drink" element={<FoodDrink />} />
-            <Route path="/itineraries" element={<Itineraries />} />
-            <Route path="/brands" element={<LocalBrands />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
   );
 };
