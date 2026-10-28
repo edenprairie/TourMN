@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>æèµæµç®å¨:å¤ä¹è¾¾å°ç®æ éé¢ | Investment Calculator</title>
+<title>投资测算器:多久达到目标金额 | Investment Calculator</title>
 <style>
   :root {
     --ink: #1c1a17;
@@ -115,80 +115,80 @@
 <div class="wrap">
 
 <header class="page">
-  <h1>æèµæµç®å¨</h1>
-  <p class="fact">ææå¤å©(monthly compounding)æµç® Â· æ°å­é½å¯ä»¥èªå·±æ¹</p>
-  <p class="intro">è¾å¥å½åæ¬éãæ¯ææå¥ãå¹´åæ¶ççåç®æ éé¢,é¡µé¢å®æ¶ç®åºé¢è®¡å¤ä¹è½è¾¾å°ç®æ ,å¹¶ç»åºéå¹´çä½é¢ååãä¸é¢çæ°å­åªæ¯å ä½é»è®¤å¼,æ¹æä½ èªå·±çå³å¯ã</p>
+  <h1>投资测算器</h1>
+  <p class="fact">按月复利(monthly compounding)测算 · 数字都可以自己改</p>
+  <p class="intro">输入当前本金、每月投入、年化收益率和目标金额,页面实时算出预计多久能达到目标,并给出逐年的余额变化。下面的数字只是占位默认值,改成你自己的即可。</p>
 </header>
 
 <section id="inputs">
-  <h2>è¾å¥</h2>
+  <h2>输入</h2>
   <div class="inputs">
     <div class="field">
-      <label for="principal">å½åæ¬é</label>
+      <label for="principal">当前本金</label>
       <div class="inwrap"><span class="unit">$</span><input id="principal" type="number" min="0" step="1000" value="1000000" inputmode="decimal"></div>
-      <div class="hint">ç°å¨è´¦æ·éå·²æçé±</div>
+      <div class="hint">现在账户里已有的钱</div>
     </div>
     <div class="field">
-      <label for="contrib">æ¯ææå¥</label>
+      <label for="contrib">每月投入</label>
       <div class="inwrap"><span class="unit">$</span><input id="contrib" type="number" min="0" step="100" value="3000" inputmode="decimal"></div>
-      <div class="hint">æ¯ä¸ªææ°æå¥çé±,ææ«å­å¥</div>
+      <div class="hint">每个月新投入的钱,月末存入</div>
     </div>
     <div class="field">
-      <label for="rate">å¹´åæ¶çç</label>
+      <label for="rate">年化收益率</label>
       <div class="inwrap"><input id="rate" type="number" step="0.1" value="8" inputmode="decimal"><span class="unit">%</span></div>
-      <div class="hint">ææå¤å©,æå©ç = å¹´å Ã· 12</div>
+      <div class="hint">按月复利,月利率 = 年化 ÷ 12</div>
     </div>
     <div class="field">
-      <label for="target">ç®æ éé¢</label>
+      <label for="target">目标金额</label>
       <div class="inwrap"><span class="unit">$</span><input id="target" type="number" min="0" step="10000" value="2000000" inputmode="decimal"></div>
-      <div class="hint">æ³è¾¾å°çæ»èµäº§</div>
+      <div class="hint">想达到的总资产</div>
     </div>
     <div class="field">
-      <label for="years">æµç®å¹´é</label>
-      <div class="inwrap"><input id="years" type="number" min="1" max="100" step="1" value="20" inputmode="decimal"><span class="unit">å¹´</span></div>
-      <div class="hint">æ¢ä¸ªè§åº¦ç:ææ»¡ N å¹´åæå¤å°é±</div>
+      <label for="years">测算年限</label>
+      <div class="inwrap"><input id="years" type="number" min="1" max="100" step="1" value="20" inputmode="decimal"><span class="unit">年</span></div>
+      <div class="hint">换个角度看:投满 N 年后有多少钱</div>
     </div>
   </div>
   <div class="callout note" style="margin-top:12px">
-    <div class="title">è®¡ç®å£å¾</div>
-    ææå¤å©:æå©ç = å¹´åæ¶çç Ã· 12;æ¯ææå¥å¨<strong>ææ«</strong>å­å¥,å½æä¸è®¡æ¯,ä»ä¸ä¸ä¸ªæå¼å§è®¡æ¯ãæªèèç¨è´¹ãéèãæç»­è´¹åæ±ç,åªæ¯æ°å­¦æµç®,ä¸æææèµå»ºè®®ã
+    <div class="title">计算口径</div>
+    按月复利:月利率 = 年化收益率 ÷ 12;每月投入在<strong>月末</strong>存入,当月不计息,从下一个月开始计息。未考虑税费、通胀、手续费和汇率,只是数学测算,不构成投资建议。
   </div>
 </section>
 
 <section id="output">
-  <h2>ç»æ</h2>
+  <h2>结果</h2>
   <div class="results">
     <div class="stat hero">
-      <div class="label">é¢è®¡è¾¾å°ç®æ éè¦</div>
-      <div class="value" id="r-time">â</div>
+      <div class="label">预计达到目标需要</div>
+      <div class="value" id="r-time">—</div>
       <div class="sub" id="r-time-sub"></div>
     </div>
     <div class="stat">
-      <div class="label"><span id="r-years-label">20</span> å¹´åçä½é¢</div>
-      <div class="value" id="r-final">â</div>
+      <div class="label"><span id="r-years-label">20</span> 年后的余额</div>
+      <div class="value" id="r-final">—</div>
       <div class="sub" id="r-final-sub"></div>
     </div>
     <div class="stat">
-      <div class="label">è¾¾æ æ¶çç´¯è®¡æå¥(æ¬é + æ¯ææå¥)</div>
-      <div class="value" id="r-invested">â</div>
+      <div class="label">达标时的累计投入(本金 + 每月投入)</div>
+      <div class="value" id="r-invested">—</div>
       <div class="sub" id="r-growth-sub"></div>
     </div>
   </div>
 </section>
 
 <section id="detail">
-  <h2>éå¹´æç»</h2>
+  <h2>逐年明细</h2>
   <div class="chartbox">
-    <svg id="chart" viewBox="0 0 700 260" role="img" aria-label="ä½é¢å¢é¿æ²çº¿"></svg>
+    <svg id="chart" viewBox="0 0 700 260" role="img" aria-label="余额增长曲线"></svg>
     <div class="legend">
-      <span class="sw" style="background:#8c3b22"></span>å¹´æ«ä½é¢
-      <span class="sw" style="background:#b9b2a6"></span>ç´¯è®¡æå¥(æ¬é + æ¯ææå¥)
-      <span class="sw" style="background:#4a7ec2;border-top:1px dashed #4a7ec2"></span>ç®æ éé¢
+      <span class="sw" style="background:#8c3b22"></span>年末余额
+      <span class="sw" style="background:#b9b2a6"></span>累计投入(本金 + 每月投入)
+      <span class="sw" style="background:#4a7ec2;border-top:1px dashed #4a7ec2"></span>目标金额
     </div>
   </div>
   <table class="yearly">
     <thead>
-      <tr><th>æ¶é´</th><th>ç´¯è®¡æå¥</th><th>ç´¯è®¡æ¶ç</th><th>ææ«ä½é¢</th></tr>
+      <tr><th>时间</th><th>累计投入</th><th>累计收益</th><th>期末余额</th></tr>
     </thead>
     <tbody id="rows"></tbody>
   </table>
@@ -196,7 +196,7 @@
 </section>
 
 <footer class="closing">
-  æ´çäº 2026 å¹´ 10 æ 28 æ¥ãæ¬é¡µä¸ºçº¯æ°å­¦æµç®:åºå®å¹´åæ¶ççãææå¤å©ãæ¯ææå¥ææ«å­å¥ãçå®æèµæ¶ççéå¹´æ³¢å¨,æ¬é¡µä¸é¢æµå¸åº,ä¹ä¸æææèµå»ºè®®ã
+  整理于 2026 年 10 月 28 日。本页为纯数学测算:固定年化收益率、按月复利、每月投入月末存入。真实投资收益率逐年波动,本页不预测市场,也不构成投资建议。
 </footer>
 
 </div>
@@ -204,7 +204,7 @@
 <script>
 (function () {
   var $ = function (id) { return document.getElementById(id); };
-  var MAX_MONTHS = 1200; // 100 å¹´å°é¡¶
+  var MAX_MONTHS = 1200; // 100 年封顶
 
   var fmtUSD = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 
@@ -213,8 +213,8 @@
     return isFinite(v) ? v : 0;
   }
 
-  // ææå¤å©æ¨¡æ:æ¯æåæä¸æä½é¢è®¡æ¯,åå¨ææ«å­å¥å½ææå¥
-  // è¿å { months: è¾¾æ ææ°(æªè¾¾æ ä¸º null), snaps: å¹´åº¦å¿«ç§æ°ç», finalBal, finalInvested }
+  // 按月复利模拟:每月先按上月余额计息,再在月末存入当月投入
+  // 返回 { months: 达标月数(未达标为 null), snaps: 年度快照数组, finalBal, finalInvested }
   function simulate(P, C, ratePct, target, horizonMonths) {
     var i = ratePct / 100 / 12;
     var bal = P, invested = P, months = null;
@@ -235,9 +235,9 @@
 
   function timeText(m) {
     var y = Math.floor(m / 12), mo = m % 12;
-    if (y === 0) return mo + ' ä¸ªæ';
-    if (mo === 0) return y + ' å¹´';
-    return y + ' å¹´ ' + mo + ' ä¸ªæ';
+    if (y === 0) return mo + ' 个月';
+    if (mo === 0) return y + ' 年';
+    return y + ' 年 ' + mo + ' 个月';
   }
 
   function render() {
@@ -249,47 +249,47 @@
     $('r-years-label').textContent = Y;
 
     if (T <= P) {
-      $('r-time').textContent = 'å·²ç»è¾¾å°ç®æ ';
-      $('r-time-sub').textContent = 'å½åæ¬éä¸ä½äºç®æ éé¢';
+      $('r-time').textContent = '已经达到目标';
+      $('r-time-sub').textContent = '当前本金不低于目标金额';
       var sim0 = simulate(P, C, R, Infinity, Y * 12);
       $('r-invested').textContent = fmtUSD.format(sim0.finalInvested);
-      $('r-growth-sub').textContent = 'ç´¯è®¡æ¶ç ' + fmtUSD.format(sim0.finalBal - sim0.finalInvested) + '(' + Y + ' å¹´å£å¾)';
+      $('r-growth-sub').textContent = '累计收益 ' + fmtUSD.format(sim0.finalBal - sim0.finalInvested) + '(' + Y + ' 年口径)';
       $('r-final').textContent = fmtUSD.format(sim0.finalBal);
-      $('r-final-sub').textContent = Y + ' å¹´å±æå¥ ' + fmtUSD.format(sim0.finalInvested);
+      $('r-final-sub').textContent = Y + ' 年共投入 ' + fmtUSD.format(sim0.finalInvested);
       drawChart(sim0.snaps, T, Y * 12);
       drawRows(sim0.snaps, null);
-      $('table-note').textContent = 'ç®æ å·²è¾¾å°,ä¸é¢ææµç®å¹´éå±ç¤ºä½é¢å¢é¿ã';
+      $('table-note').textContent = '目标已达到,下面按测算年限展示余额增长。';
       return;
     }
 
     var sim = simulate(P, C, R, T, MAX_MONTHS);
 
     if (sim.months === null) {
-      $('r-time').textContent = 'è¶è¿ 100 å¹´';
-      $('r-time-sub').textContent = 'æå½åæå¥åæ¶çç,100 å¹´åè¾¾ä¸å°ç®æ ,è¯è¯æé«æ¯ææå¥æå¹´åæ¶çç';
+      $('r-time').textContent = '超过 100 年';
+      $('r-time-sub').textContent = '按当前投入和收益率,100 年内达不到目标,试试提高每月投入或年化收益率';
     } else {
       $('r-time').textContent = timeText(sim.months);
       var d = new Date();
       d.setMonth(d.getMonth() + sim.months);
-      $('r-time-sub').textContent = 'çº¦å¨ ' + d.getFullYear() + ' å¹´ ' + (d.getMonth() + 1) + ' æè¾¾æ ';
+      $('r-time-sub').textContent = '约在 ' + d.getFullYear() + ' 年 ' + (d.getMonth() + 1) + ' 月达标';
     }
 
     var reachIdx = sim.months === null ? sim.snaps.length - 1 : sim.snaps.findIndex(function (s) { return s.m === sim.months; });
     var atReach = sim.snaps[Math.max(0, reachIdx)];
     $('r-invested').textContent = fmtUSD.format(atReach.invested);
-    $('r-growth-sub').textContent = 'ç´¯è®¡æ¶ç ' + fmtUSD.format(atReach.bal - atReach.invested);
+    $('r-growth-sub').textContent = '累计收益 ' + fmtUSD.format(atReach.bal - atReach.invested);
 
     var simN = simulate(P, C, R, T, Y * 12);
     $('r-final').textContent = fmtUSD.format(simN.finalBal);
     $('r-final-sub').textContent = simN.months !== null
-      ? timeText(simN.months) + ' å·²è¾¾æ ;ä¹åç»§ç»­æå° ' + Y + ' å¹´'
-      : Y + ' å¹´å±æå¥ ' + fmtUSD.format(simN.finalInvested) + ',å°æªè¾¾æ ';
+      ? timeText(simN.months) + ' 已达标;之后继续投到 ' + Y + ' 年'
+      : Y + ' 年共投入 ' + fmtUSD.format(simN.finalInvested) + ',尚未达标';
 
     var showSnaps = sim.months === null ? sim.snaps : sim.snaps.slice(0, reachIdx + 1);
     drawChart(showSnaps, T, showSnaps[showSnaps.length - 1].m);
     drawRows(showSnaps, sim.months);
     $('table-note').textContent = sim.months === null
-      ? '100 å¹´åæªè¾¾æ ,è¡¨æ ¼å±ç¤º 100 å¹´çæ¨¡æç»æã'
+      ? '100 年内未达标,表格展示 100 年的模拟结果。'
       : '';
   }
 
@@ -300,8 +300,8 @@
       var tr = document.createElement('tr');
       var isReach = reachMonth !== null && s.m === reachMonth;
       if (isReach) tr.className = 'reach';
-      var label = s.m % 12 === 0 ? 'ç¬¬ ' + (s.m / 12) + ' å¹´' : timeText(s.m);
-      if (isReach) label += '(è¾¾æ )';
+      var label = s.m % 12 === 0 ? '第 ' + (s.m / 12) + ' 年' : timeText(s.m);
+      if (isReach) label += '(达标)';
       tr.innerHTML = '<td>' + label + '</td><td>' + fmtUSD.format(s.invested) + '</td><td>'
         + fmtUSD.format(s.bal - s.invested) + '</td><td>' + fmtUSD.format(s.bal) + '</td>';
       tb.appendChild(tr);
@@ -322,7 +322,7 @@
       for (var k in attrs) e.setAttribute(k, attrs[k]);
       return e;
     }
-    // y è½´å»åº¦
+    // y 轴刻度
     var steps = 4;
     for (var g = 0; g <= steps; g++) {
       var v = maxV * g / steps;
@@ -331,15 +331,15 @@
       t.textContent = v >= 1e6 ? ('$' + (v / 1e6).toFixed(1) + 'M') : ('$' + Math.round(v / 1000) + 'k');
       svg.appendChild(t);
     }
-    // x è½´å¹´ä»½å»åº¦
+    // x 轴年份刻度
     var totalYears = Math.ceil(lastM / 12);
     var every = Math.max(1, Math.ceil(totalYears / 10));
     for (var yr = 0; yr <= totalYears; yr += every) {
       var tx = el('text', { x: x(yr * 12), y: H - 8, 'text-anchor': 'middle', 'font-size': 11, fill: '#5c574f' });
-      tx.textContent = yr + 'å¹´';
+      tx.textContent = yr + '年';
       svg.appendChild(tx);
     }
-    // ç®æ çº¿
+    // 目标线
     if (isFinite(target) && target > 0) {
       svg.appendChild(el('line', { x1: padL, y1: y(target), x2: W - padR, y2: y(target), stroke: '#4a7ec2', 'stroke-width': 1.5, 'stroke-dasharray': '6 4' }));
     }
