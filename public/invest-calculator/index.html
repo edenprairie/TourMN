@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>投资测算器:多久达到目标金额 | Investment Calculator</title>
+<title>投资与退休测算器 | Investment &amp; Retirement Calculator</title>
 <style>
   :root {
     --ink: #1c1a17;
@@ -109,16 +109,35 @@
   table.yearly tr:last-child td { border-bottom: none; }
   table.yearly tr.reach td { background: var(--hit-bg); font-weight: 600; }
   .tablenote { color: var(--ink-2); font-size: 13px; margin-top: 8px; }
+
+  .tabs { display: flex; gap: 8px; margin-top: 22px; }
+  .tabs button { flex: 1; font: inherit; font-weight: 600; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--hairline); background: var(--card); color: var(--ink-2); cursor: pointer; }
+  .tabs button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .grp { margin: 22px 0 8px; font-weight: 700; font-size: 16px; color: var(--accent); }
+  .stat .value.ok { color: #2f6b3a; }
+  .stat .value.bad { color: #a8321c; }
+  table.yearly tr.broke td { background: #fbe9e5; }
+  table.yearly tr.start td { background: var(--hit-bg); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  .scroll table.yearly { min-width: 640px; }
+  .hidden { display: none; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header class="page">
-  <h1>投资测算器</h1>
+  <h1>投资与退休测算器</h1>
   <p class="fact">按月复利(monthly compounding)测算 · 数字都可以自己改</p>
   <p class="intro">输入当前本金、每月投入、年化收益率和目标金额,页面实时算出预计多久能达到目标,并给出逐年的余额变化。下面的数字只是占位默认值,改成你自己的即可。</p>
 </header>
+
+<div class="tabs" role="tablist">
+  <button id="tab-growth" class="on" type="button">增长测算:多久达标</button>
+  <button id="tab-retire" type="button">退休测算:钱够不够</button>
+</div>
+
+<div id="mode-growth">
 
 <section id="inputs">
   <h2>输入</h2>
@@ -195,8 +214,69 @@
   <p class="tablenote" id="table-note"></p>
 </section>
 
+</div>
+
+<div id="mode-retire" class="hidden">
+<section id="r-inputs">
+  <h2>退休测算:输入</h2>
+  <div class="callout warning"><div class="title">简化模型,请先看这里</div>
+    固定年化收益率(现实中逐年波动,遇到熊市早期提取风险更大);税率用一个综合比例代替,不区分 401k/Roth/应税账户,社保视为税后收入;不考虑 RMD(强制最低提取)、长期护理、遗产、房产和其他收入;退休前每月投入不随通胀增长。只做数学参考,不构成投资、税务或医疗保险建议。下面所有数字都只是占位默认值,请改成你自己的。
+  </div>
+  <div class="inputs">
+<div class="grp" style="grid-column:1/-1">基本信息</div>
+<div class="field"><label for="r_age">当前年龄</label><div class="inwrap"><input id="r_age" type="number" step="1" value="55" inputmode="decimal"><span class="unit">岁</span></div><div class="hint">你现在的年龄</div></div>
+<div class="field"><label for="r_ret">预计退休年龄</label><div class="inwrap"><input id="r_ret" type="number" step="1" value="65" inputmode="decimal"><span class="unit">岁</span></div><div class="hint">开始停止投入、开始提取的年龄</div></div>
+<div class="field"><label for="r_life">预期寿命(规划到几岁)</label><div class="inwrap"><input id="r_life" type="number" step="1" value="90" inputmode="decimal"><span class="unit">岁</span></div><div class="hint">宁可保守,往长了估</div></div>
+<div class="grp" style="grid-column:1/-1">退休前:积累</div>
+<div class="field"><label for="r_p">当前本金</label><div class="inwrap"><span class="unit">$</span><input id="r_p" type="number" step="10000" value="500000" inputmode="decimal"></div><div class="hint">目前可用于退休的投资资产</div></div>
+<div class="field"><label for="r_c">每月投入</label><div class="inwrap"><span class="unit">$</span><input id="r_c" type="number" step="100" value="3000" inputmode="decimal"></div><div class="hint">退休前每月新投入,固定金额,不随通胀增长</div></div>
+<div class="field"><label for="r_r1">退休前年化收益率</label><div class="inwrap"><span class="unit">%</span><input id="r_r1" type="number" step="0.1" value="7" inputmode="decimal"></div><div class="hint">名义收益率(未扣通胀),按月复利</div></div>
+<div class="grp" style="grid-column:1/-1">退休后:开销与收入(金额按今天的购买力填写)</div>
+<div class="field"><label for="r_spend">退休后每月生活开销(不含医疗)</label><div class="inwrap"><span class="unit">$</span><input id="r_spend" type="number" step="100" value="4000" inputmode="decimal"></div><div class="hint">按今天的物价估算,之后每年按通胀率上涨</div></div>
+<div class="field"><label for="r_inf">通胀率</label><div class="inwrap"><span class="unit">%</span><input id="r_inf" type="number" step="0.1" value="3" inputmode="decimal"></div><div class="hint">生活开销、社保每年的增长率</div></div>
+<div class="field"><label for="r_r2">退休后年化收益率</label><div class="inwrap"><span class="unit">%</span><input id="r_r2" type="number" step="0.1" value="5" inputmode="decimal"></div><div class="hint">名义收益率;退休后通常更保守</div></div>
+<div class="field"><label for="r_ss">Social Security 每月预计领取</label><div class="inwrap"><span class="unit">$</span><input id="r_ss" type="number" step="100" value="2500" inputmode="decimal"></div><div class="hint">按今天的购买力,可在 ssa.gov 查你的预估;不领就填 0</div></div>
+<div class="field"><label for="r_ssage">开始领取年龄</label><div class="inwrap"><input id="r_ssage" type="number" step="1" value="67" inputmode="decimal"><span class="unit">岁</span></div><div class="hint">62–70 岁之间;越晚领,每月越多(请自行填对应金额)</div></div>
+<div class="grp" style="grid-column:1/-1">医疗与税</div>
+<div class="field"><label for="r_hc1">65 岁前每月医疗开销</label><div class="inwrap"><span class="unit">$</span><input id="r_hc1" type="number" step="50" value="1200" inputmode="decimal"></div><div class="hint">退休到 65 岁之间,自购保险(ACA)+ 自付,今天的金额</div></div>
+<div class="field"><label for="r_hc2">65 岁后每月医疗开销</label><div class="inwrap"><span class="unit">$</span><input id="r_hc2" type="number" step="50" value="700" inputmode="decimal"></div><div class="hint">Medicare 保费(Part B/D、补充险)+ 自付,今天的金额</div></div>
+<div class="field"><label for="r_hinf">医疗费用年增长率</label><div class="inwrap"><span class="unit">%</span><input id="r_hinf" type="number" step="0.1" value="5" inputmode="decimal"></div><div class="hint">通常高于一般通胀</div></div>
+<div class="field"><label for="r_tax">提取时的综合税率</label><div class="inwrap"><span class="unit">%</span><input id="r_tax" type="number" step="0.5" value="15" inputmode="decimal"></div><div class="hint">简化:提取金额中要交的税比例(联邦+州的平均税率),0–50</div></div>
+  </div>
+</section>
+
+<section id="r-output">
+  <h2>结果</h2>
+  <div class="results">
+    <div class="stat hero">
+      <div class="label">够不够退休?</div>
+      <div class="value" id="rr-verdict">—</div>
+      <div class="sub" id="rr-verdict-sub"></div>
+    </div>
+    <div class="stat"><div class="label">退休时点的预计本金</div><div class="value" id="rr-proj">—</div><div class="sub" id="rr-proj-sub"></div></div>
+    <div class="stat"><div class="label">退休时需要的本金(刚好花到预期寿命)</div><div class="value" id="rr-need">—</div><div class="sub" id="rr-need-sub"></div></div>
+    <div class="stat"><div class="label">参考:25 倍法则</div><div class="value" id="rr-25">—</div><div class="sub" id="rr-25-sub"></div></div>
+    <div class="stat"><div class="label">缺口 / 结余(退休时点)</div><div class="value" id="rr-gap">—</div><div class="sub" id="rr-gap-sub"></div></div>
+    <div class="stat hero"><div class="label">怎么调整才能达标</div><div class="value" style="font-size:18px;line-height:1.6" id="rr-adv">—</div><div class="sub" id="rr-adv-sub"></div></div>
+  </div>
+</section>
+
+<section id="r-detail">
+  <h2>退休后逐年现金流</h2>
+  <div class="chartbox">
+    <svg id="r-chart" viewBox="0 0 700 260" role="img" aria-label="退休后余额曲线"></svg>
+    <div class="legend"><span class="sw" style="background:#8c3b22"></span>年末本金余额(名义金额)<span class="sw" style="background:#4a7ec2"></span>折合今天购买力</div>
+  </div>
+  <div class="scroll"><table class="yearly">
+    <thead><tr><th>年龄</th><th>年初本金</th><th>生活开销</th><th>医疗</th><th>社保</th><th>从本金提取(税前)</th><th>年末本金</th></tr></thead>
+    <tbody id="r-rows"></tbody>
+  </table></div>
+  <p class="tablenote">金额均为名义金额(含通胀,未折现),图表中的蓝线为折合今天购买力。提取发生在年初,之后全年按退休后收益率增长。「从本金提取」= (开销 + 医疗 − 社保) ÷ (1 − 税率);社保超过开销时,不提取。</p>
+</section>
+</div>
+
 <footer class="closing">
-  整理于 2026 年 10 月 28 日。本页为纯数学测算:固定年化收益率、按月复利、每月投入月末存入。真实投资收益率逐年波动,本页不预测市场,也不构成投资建议。
+  整理于 2026 年 10 月 28 日。本页为纯数学测算:固定年化收益率、每月投入月末存入;退休测算的简化假设见该标签页内的说明。真实投资收益率逐年波动,本页不预测市场,也不构成投资建议。
 </footer>
 
 </div>
@@ -357,7 +437,168 @@
     $(id).addEventListener('input', render);
   });
   render();
+
+  // 标签切换
+  function setMode(m) {
+    $('mode-growth').className = m === 'growth' ? '' : 'hidden';
+    $('mode-retire').className = m === 'retire' ? '' : 'hidden';
+    $('tab-growth').className = m === 'growth' ? 'on' : '';
+    $('tab-retire').className = m === 'retire' ? 'on' : '';
+    if (m === 'retire' && window.__renderRetire) window.__renderRetire();
+  }
+  $('tab-growth').addEventListener('click', function () { setMode('growth'); });
+  $('tab-retire').addEventListener('click', function () { setMode('retire'); });
 })();
+</script>
+<script>
+/*CALC_START*/
+function retireCalc(p, retAge) {
+  // p: 年龄/收益率等,金额为数字;百分比已是小数。retAge 可覆盖退休年龄
+  var R = retAge === undefined ? p.ret : retAge;
+  var n = Math.max(0, Math.round((R - p.age) * 12));
+  var i1 = p.r1 / 12, bal = p.principal;
+  for (var m = 0; m < n; m++) bal = bal * (1 + i1) + p.contrib;
+  var projected = bal;
+  var rows = [], need = 0, depleted = null, b = projected;
+  var years = Math.max(0, Math.round(p.life - R));
+  for (var k = 0; k < years; k++) {
+    var a = R + k, t = (a - p.age);
+    var infF = Math.pow(1 + p.inf, t), hF = Math.pow(1 + p.hinf, t);
+    var spend = p.spend * 12 * infF;
+    var hc = (a < 65 ? p.hc1 : p.hc2) * 12 * hF;
+    var ss = a >= p.ssAge ? p.ss * 12 * infF : 0;
+    var net = Math.max(0, spend + hc - ss);
+    var w = net / (1 - p.tax);
+    need += w / Math.pow(1 + p.r2, k);
+    var start = b, wTaken = w, broke = false;
+    if (b < w) { wTaken = Math.max(0, b); broke = true; if (depleted === null) depleted = a; }
+    b = (b - wTaken) * (1 + p.r2);
+    rows.push({ age: a, start: start, spend: spend, hc: hc, ss: ss, w: w, wTaken: wTaken, end: b, endReal: b / infF / (1 + p.inf), broke: broke });
+  }
+  return { projected: projected, need: need, depleted: depleted, rows: rows, endBal: b, months: n, years: years,
+           firstW: rows.length ? rows[0].w : 0 };
+}
+function earliestRetire(p) {
+  for (var R = Math.ceil(p.age); R < p.life; R++) {
+    var r = retireCalc(p, R);
+    if (r.projected >= r.need - 1e-6) return R;
+  }
+  return null;
+}
+/*CALC_END*/
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var M = function (v) { return (v < 0 ? '-' : '') + fmt.format(Math.abs(v)); };
+  function g(id) { var v = parseFloat($(id).value); return isFinite(v) ? v : 0; }
+  function read() {
+    return {
+      age: g('r_age'), ret: g('r_ret'), life: g('r_life'),
+      principal: Math.max(0, g('r_p')), contrib: Math.max(0, g('r_c')),
+      r1: g('r_r1') / 100, r2: g('r_r2') / 100,
+      spend: Math.max(0, g('r_spend')), inf: g('r_inf') / 100,
+      ss: Math.max(0, g('r_ss')), ssAge: g('r_ssage'),
+      hc1: Math.max(0, g('r_hc1')), hc2: Math.max(0, g('r_hc2')), hinf: g('r_hinf') / 100,
+      tax: Math.min(0.5, Math.max(0, g('r_tax') / 100))
+    };
+  }
+  function drawChart(rows, p) {
+    var svg = $('r-chart'), NS = 'http://www.w3.org/2000/svg';
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    if (!rows.length) return;
+    var W = 700, H = 260, padL = 70, padR = 16, padT = 14, padB = 30;
+    var pts = [{ age: rows[0].age, end: rows[0].start, endReal: rows[0].start / Math.pow(1 + p.inf, rows[0].age - p.age) }];
+    rows.forEach(function (r) { pts.push({ age: r.age + 1, end: r.end, endReal: r.endReal }); });
+    var maxV = 1; pts.forEach(function (q) { maxV = Math.max(maxV, q.end, q.endReal); }); maxV *= 1.05;
+    var a0 = pts[0].age, a1 = pts[pts.length - 1].age;
+    var x = function (a) { return padL + (W - padL - padR) * ((a - a0) / Math.max(1, a1 - a0)); };
+    var y = function (v) { return H - padB - (H - padT - padB) * (Math.max(0, v) / maxV); };
+    function el(tag, at) { var e = document.createElementNS(NS, tag); for (var k in at) e.setAttribute(k, at[k]); return e; }
+    for (var s = 0; s <= 4; s++) {
+      var v = maxV * s / 4;
+      svg.appendChild(el('line', { x1: padL, y1: y(v), x2: W - padR, y2: y(v), stroke: '#e3ded5', 'stroke-width': 1 }));
+      var t = el('text', { x: padL - 8, y: y(v) + 4, 'text-anchor': 'end', 'font-size': 11, fill: '#5c574f' });
+      t.textContent = v >= 1e6 ? '$' + (v / 1e6).toFixed(1) + 'M' : '$' + Math.round(v / 1000) + 'k';
+      svg.appendChild(t);
+    }
+    var every = Math.max(1, Math.ceil((a1 - a0) / 10));
+    for (var a = a0; a <= a1; a += every) {
+      var tx = el('text', { x: x(a), y: H - 8, 'text-anchor': 'middle', 'font-size': 11, fill: '#5c574f' });
+      tx.textContent = a + '岁'; svg.appendChild(tx);
+    }
+    function path(key, color, w) {
+      var d = pts.map(function (q, i) { return (i ? 'L' : 'M') + x(q.age).toFixed(1) + ' ' + y(q[key]).toFixed(1); }).join(' ');
+      svg.appendChild(el('path', { d: d, fill: 'none', stroke: color, 'stroke-width': w, 'stroke-linejoin': 'round' }));
+    }
+    path('endReal', '#4a7ec2', 2); path('end', '#8c3b22', 2.5);
+  }
+  function render() {
+    var p = read();
+    var bad = !(p.life > p.ret) || !(p.ret >= p.age) || p.tax >= 1;
+    if (bad) {
+      $('rr-verdict').textContent = '请检查年龄输入';
+      $('rr-verdict').className = 'value bad';
+      $('rr-verdict-sub').textContent = '需要:预计退休年龄 ≥ 当前年龄,预期寿命 > 退休年龄。';
+      return;
+    }
+    var r = retireCalc(p);
+    var ok = r.depleted === null && r.projected >= r.need - 1e-6;
+    var gap = r.projected - r.need;
+    var v = $('rr-verdict');
+    if (ok) {
+      v.textContent = '够';
+      v.className = 'value ok';
+      $('rr-verdict-sub').textContent = p.life + ' 岁时预计还剩 ' + M(r.endBal) + '(名义金额,约合今天 ' + M(r.rows[r.rows.length - 1].endReal) + ')';
+    } else {
+      v.textContent = '不够';
+      v.className = 'value bad';
+      $('rr-verdict-sub').textContent = (r.depleted !== null ? '本金预计在 ' + r.depleted + ' 岁耗尽,' : '') + '距离预期寿命 ' + p.life + ' 岁还有 ' + Math.max(0, p.life - (r.depleted === null ? p.life : r.depleted)) + ' 年没有本金可用';
+    }
+    $('rr-proj').textContent = M(r.projected);
+    $('rr-proj-sub').textContent = p.ret + ' 岁时,按当前本金与每月投入积累 ' + (r.months / 12).toFixed(1).replace(/\.0$/, '') + ' 年';
+    $('rr-need').textContent = M(r.need);
+    $('rr-need-sub').textContent = '覆盖 ' + p.ret + '–' + p.life + ' 岁共 ' + r.years + ' 年的开销、医疗和税,扣掉社保,按退休后收益率折现';
+    var x25 = r.firstW * 25;
+    $('rr-25').textContent = M(x25);
+    $('rr-25-sub').textContent = '退休第一年从本金提取 ' + M(r.firstW) + '(税前)× 25。只是经验值,假设约 4% 提取率';
+    var gp = $('rr-gap');
+    gp.textContent = (gap >= 0 ? '结余 ' : '缺口 ') + M(Math.abs(gap));
+    gp.className = 'value ' + (gap >= 0 ? 'ok' : 'bad');
+    $('rr-gap-sub').textContent = '预计本金 − 需要本金(' + p.ret + ' 岁时点的名义金额)';
+
+    // 建议
+    var er = earliestRetire(p), lines = [];
+    if (ok) {
+      lines.push(er !== null && er < p.ret ? '最早 ' + er + ' 岁就可以退休(其他条件不变)。' : '按现有设置已经达标。');
+    } else {
+      if (er !== null) lines.push('推迟到 ' + er + ' 岁退休可以达标(其他条件不变)。');
+      else lines.push('无论几岁退休,按现有假设都不够,需要提高投入、降低开销或提高收益假设。');
+      var n = r.months, i1 = p.r1 / 12;
+      if (n > 0) {
+        var f = i1 === 0 ? n : (Math.pow(1 + i1, n) - 1) / i1;
+        lines.push('或者每月多投入约 ' + M(-gap / f) + '(共 ' + M(p.contrib + -gap / f) + '/月)。');
+      }
+    }
+    $('rr-adv').innerHTML = lines.join('<br>');
+    $('rr-adv-sub').textContent = '每项建议都只改一个条件、其余不变;组合调整需自己在上方改数字试算。';
+
+    var tb = $('r-rows'); tb.innerHTML = '';
+    r.rows.forEach(function (w, idx) {
+      var tr = document.createElement('tr');
+      var cls = w.broke ? 'broke' : (idx === 0 ? 'start' : '');
+      if (cls) tr.className = cls;
+      tr.innerHTML = '<td>' + w.age + (w.broke ? '(本金不足)' : '') + '</td><td>' + M(w.start) + '</td><td>' + M(w.spend) + '</td><td>' + M(w.hc) + '</td><td>' + M(w.ss) + '</td><td>' + M(w.wTaken) + '</td><td>' + M(w.end) + '</td>';
+      tb.appendChild(tr);
+    });
+    drawChart(r.rows, p);
+  }
+  window.__renderRetire = render;
+  ['r_age','r_ret','r_life','r_p','r_c','r_r1','r_spend','r_inf','r_r2','r_ss','r_ssage','r_hc1','r_hc2','r_hinf','r_tax'].forEach(function (id) {
+    $(id).addEventListener('input', render);
+  });
+  render();
+})();
+
 </script>
 </body>
 </html>
