@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>投资测算器:多久达到目标金额 | Investment Calculator</title>
+<style>
+  :root {
+    --ink: #1c1a17;
+    --ink-2: #5c574f;
+    --hairline: #e3ded5;
+    --page: #faf8f4;
+    --card: #ffffff;
+    --accent: #8c3b22;
+    --note-bg: #eef3ea;
+    --note-border: #b8c9ae;
+    --warn-bg: #faf0e6;
+    --warn-border: #e0bd93;
+    --hit-bg: #eaf1fb;
+    --hit-border: #a9c3e8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75;
+    font-size: 16px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 64px; }
+  header.page { padding: 24px 0 8px; }
+  header.page h1 { font-size: 30px; margin: 0 0 10px; line-height: 1.3; }
+  header.page .fact { color: var(--accent); font-size: 14px; margin: 0 0 8px; }
+  header.page .intro { color: var(--ink-2); margin: 0; }
+  section { margin-top: 40px; }
+  h2 { font-size: 21px; border-bottom: 1px solid var(--hairline); padding-bottom: 8px; }
+  .callout {
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    border: 1px solid;
+    font-size: 15px;
+  }
+  .callout .title { font-weight: 700; margin-bottom: 4px; }
+  .callout.note { background: var(--note-bg); border-color: var(--note-border); }
+  .callout.warning { background: var(--warn-bg); border-color: var(--warn-border); }
+  footer.closing { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--hairline); color: var(--ink-2); font-size: 13px; }
+  a { color: var(--accent); }
+
+  .inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 560px) { .inputs { grid-template-columns: 1fr; } }
+  .field {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 12px 16px;
+  }
+  .field label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .field .hint { color: var(--ink-2); font-size: 12.5px; margin-top: 4px; }
+  .field .inwrap { display: flex; align-items: baseline; gap: 6px; }
+  .field .unit { color: var(--ink-2); font-size: 15px; }
+  .field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font: inherit;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent);
+    padding: 2px 0;
+  }
+  .field input:focus { border-bottom: 2px solid var(--accent); }
+
+  .results { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 560px) { .results { grid-template-columns: 1fr; } }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .stat.hero { grid-column: 1 / -1; background: var(--hit-bg); border-color: var(--hit-border); }
+  .stat .label { color: var(--ink-2); font-size: 13.5px; }
+  .stat .value { font-size: 26px; font-weight: 700; line-height: 1.3; }
+  .stat.hero .value { font-size: 32px; color: var(--accent); }
+  .stat .sub { color: var(--ink-2); font-size: 13px; margin-top: 2px; }
+
+  .chartbox {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .chartbox svg { width: 100%; height: auto; display: block; }
+  .chartbox .legend { color: var(--ink-2); font-size: 12.5px; margin-top: 6px; }
+  .legend .sw { display: inline-block; width: 18px; height: 3px; vertical-align: middle; margin: 0 6px 2px 14px; border-radius: 2px; }
+
+  table.yearly { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; font-size: 14.5px; }
+  table.yearly th, table.yearly td { padding: 8px 12px; text-align: right; border-bottom: 1px solid var(--hairline); }
+  table.yearly th:first-child, table.yearly td:first-child { text-align: left; }
+  table.yearly thead th { background: #f3efe8; color: var(--ink-2); font-weight: 600; font-size: 13px; }
+  table.yearly tr:last-child td { border-bottom: none; }
+  table.yearly tr.reach td { background: var(--hit-bg); font-weight: 600; }
+  .tablenote { color: var(--ink-2); font-size: 13px; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <h1>投资测算器</h1>
+  <p class="fact">按月复利(monthly compounding)测算 · 数字都可以自己改</p>
+  <p class="intro">输入当前本金、每月投入、年化收益率和目标金额,页面实时算出预计多久能达到目标,并给出逐年的余额变化。下面的数字只是占位默认值,改成你自己的即可。</p>
+</header>
+
+<section id="inputs">
+  <h2>输入</h2>
+  <div class="inputs">
+    <div class="field">
+      <label for="principal">当前本金</label>
+      <div class="inwrap"><span class="unit">$</span><input id="principal" type="number" min="0" step="1000" value="1000000" inputmode="decimal"></div>
+      <div class="hint">现在账户里已有的钱</div>
+    </div>
+    <div class="field">
+      <label for="contrib">每月投入</label>
+      <div class="inwrap"><span class="unit">$</span><input id="contrib" type="number" min="0" step="100" value="3000" inputmode="decimal"></div>
+      <div class="hint">每个月新投入的钱,月末存入</div>
+    </div>
+    <div class="field">
+      <label for="rate">年化收益率</label>
+      <div class="inwrap"><input id="rate" type="number" step="0.1" value="8" inputmode="decimal"><span class="unit">%</span></div>
+      <div class="hint">按月复利,月利率 = 年化 ÷ 12</div>
+    </div>
+    <div class="field">
+      <label for="target">目标金额</label>
+      <div class="inwrap"><span class="unit">$</span><input id="target" type="number" min="0" step="10000" value="2000000" inputmode="decimal"></div>
+      <div class="hint">想达到的总资产</div>
+    </div>
+    <div class="field">
+      <label for="years">测算年限</label>
+      <div class="inwrap"><input id="years" type="number" min="1" max="100" step="1" value="20" inputmode="decimal"><span class="unit">年</span></div>
+      <div class="hint">换个角度看:投满 N 年后有多少钱</div>
+    </div>
+  </div>
+  <div class="callout note" style="margin-top:12px">
+    <div class="title">计算口径</div>
+    按月复利:月利率 = 年化收益率 ÷ 12;每月投入在<strong>月末</strong>存入,当月不计息,从下一个月开始计息。未考虑税费、通胀、手续费和汇率,只是数学测算,不构成投资建议。
+  </div>
+</section>
+
+<section id="output">
+  <h2>结果</h2>
+  <div class="results">
+    <div class="stat hero">
+      <div class="label">预计达到目标需要</div>
+      <div class="value" id="r-time">—</div>
+      <div class="sub" id="r-time-sub"></div>
+    </div>
+    <div class="stat">
+      <div class="label"><span id="r-years-label">20</span> 年后的余额</div>
+      <div class="value" id="r-final">—</div>
+      <div class="sub" id="r-final-sub"></div>
+    </div>
+    <div class="stat">
+      <div class="label">达标时的累计投入(本金 + 每月投入)</div>
+      <div class="value" id="r-invested">—</div>
+      <div class="sub" id="r-growth-sub"></div>
+    </div>
+  </div>
+</section>
+
+<section id="detail">
+  <h2>逐年明细</h2>
+  <div class="chartbox">
+    <svg id="chart" viewBox="0 0 700 260" role="img" aria-label="余额增长曲线"></svg>
+    <div class="legend">
+      <span class="sw" style="background:#8c3b22"></span>年末余额
+      <span class="sw" style="background:#b9b2a6"></span>累计投入(本金 + 每月投入)
+      <span class="sw" style="background:#4a7ec2;border-top:1px dashed #4a7ec2"></span>目标金额
+    </div>
+  </div>
+  <table class="yearly">
+    <thead>
+      <tr><th>时间</th><th>累计投入</th><th>累计收益</th><th>期末余额</th></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <p class="tablenote" id="table-note"></p>
+</section>
+
+<footer class="closing">
+  整理于 2026 年 10 月 28 日。本页为纯数学测算:固定年化收益率、按月复利、每月投入月末存入。真实投资收益率逐年波动,本页不预测市场,也不构成投资建议。
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var MAX_MONTHS = 1200; // 100 年封顶
+
+  var fmtUSD = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+  function num(id) {
+    var v = parseFloat($(id).value);
+    return isFinite(v) ? v : 0;
+  }
+
+  // 按月复利模拟:每月先按上月余额计息,再在月末存入当月投入
+  // 返回 { months: 达标月数(未达标为 null), snaps: 年度快照数组, finalBal, finalInvested }
+  function simulate(P, C, ratePct, target, horizonMonths) {
+    var i = ratePct / 100 / 12;
+    var bal = P, invested = P, months = null;
+    var snaps = [];
+    var limit = Math.min(horizonMonths, MAX_MONTHS);
+    for (var m = 1; m <= limit; m++) {
+      bal = bal * (1 + i) + C;
+      invested += C;
+      if (months === null && target > P && bal >= target) {
+        months = m;
+      }
+      if (m % 12 === 0 || m === limit || m === months) {
+        snaps.push({ m: m, bal: bal, invested: invested });
+      }
+    }
+    return { months: months, snaps: snaps, finalBal: bal, finalInvested: invested };
+  }
+
+  function timeText(m) {
+    var y = Math.floor(m / 12), mo = m % 12;
+    if (y === 0) return mo + ' 个月';
+    if (mo === 0) return y + ' 年';
+    return y + ' 年 ' + mo + ' 个月';
+  }
+
+  function render() {
+    var P = Math.max(0, num('principal'));
+    var C = Math.max(0, num('contrib'));
+    var R = Math.max(-99, num('rate'));
+    var T = Math.max(0, num('target'));
+    var Y = Math.min(100, Math.max(1, Math.round(num('years'))));
+    $('r-years-label').textContent = Y;
+
+    if (T <= P) {
+      $('r-time').textContent = '已经达到目标';
+      $('r-time-sub').textContent = '当前本金不低于目标金额';
+      var sim0 = simulate(P, C, R, Infinity, Y * 12);
+      $('r-invested').textContent = fmtUSD.format(sim0.finalInvested);
+      $('r-growth-sub').textContent = '累计收益 ' + fmtUSD.format(sim0.finalBal - sim0.finalInvested) + '(' + Y + ' 年口径)';
+      $('r-final').textContent = fmtUSD.format(sim0.finalBal);
+      $('r-final-sub').textContent = Y + ' 年共投入 ' + fmtUSD.format(sim0.finalInvested);
+      drawChart(sim0.snaps, T, Y * 12);
+      drawRows(sim0.snaps, null);
+      $('table-note').textContent = '目标已达到,下面按测算年限展示余额增长。';
+      return;
+    }
+
+    var sim = simulate(P, C, R, T, MAX_MONTHS);
+
+    if (sim.months === null) {
+      $('r-time').textContent = '超过 100 年';
+      $('r-time-sub').textContent = '按当前投入和收益率,100 年内达不到目标,试试提高每月投入或年化收益率';
+    } else {
+      $('r-time').textContent = timeText(sim.months);
+      var d = new Date();
+      d.setMonth(d.getMonth() + sim.months);
+      $('r-time-sub').textContent = '约在 ' + d.getFullYear() + ' 年 ' + (d.getMonth() + 1) + ' 月达标';
+    }
+
+    var reachIdx = sim.months === null ? sim.snaps.length - 1 : sim.snaps.findIndex(function (s) { return s.m === sim.months; });
+    var atReach = sim.snaps[Math.max(0, reachIdx)];
+    $('r-invested').textContent = fmtUSD.format(atReach.invested);
+    $('r-growth-sub').textContent = '累计收益 ' + fmtUSD.format(atReach.bal - atReach.invested);
+
+    var simN = simulate(P, C, R, T, Y * 12);
+    $('r-final').textContent = fmtUSD.format(simN.finalBal);
+    $('r-final-sub').textContent = simN.months !== null
+      ? timeText(simN.months) + ' 已达标;之后继续投到 ' + Y + ' 年'
+      : Y + ' 年共投入 ' + fmtUSD.format(simN.finalInvested) + ',尚未达标';
+
+    var showSnaps = sim.months === null ? sim.snaps : sim.snaps.slice(0, reachIdx + 1);
+    drawChart(showSnaps, T, showSnaps[showSnaps.length - 1].m);
+    drawRows(showSnaps, sim.months);
+    $('table-note').textContent = sim.months === null
+      ? '100 年内未达标,表格展示 100 年的模拟结果。'
+      : '';
+  }
+
+  function drawRows(snaps, reachMonth) {
+    var tb = $('rows');
+    tb.innerHTML = '';
+    snaps.forEach(function (s) {
+      var tr = document.createElement('tr');
+      var isReach = reachMonth !== null && s.m === reachMonth;
+      if (isReach) tr.className = 'reach';
+      var label = s.m % 12 === 0 ? '第 ' + (s.m / 12) + ' 年' : timeText(s.m);
+      if (isReach) label += '(达标)';
+      tr.innerHTML = '<td>' + label + '</td><td>' + fmtUSD.format(s.invested) + '</td><td>'
+        + fmtUSD.format(s.bal - s.invested) + '</td><td>' + fmtUSD.format(s.bal) + '</td>';
+      tb.appendChild(tr);
+    });
+  }
+
+  function drawChart(snaps, target, lastM) {
+    var svg = $('chart');
+    var W = 700, H = 260, padL = 70, padR = 16, padT = 14, padB = 30;
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    if (!snaps.length) return;
+    var maxV = Math.max(target, snaps[snaps.length - 1].bal) * 1.05;
+    var x = function (m) { return padL + (W - padL - padR) * (m / Math.max(12, lastM)); };
+    var y = function (v) { return H - padB - (H - padT - padB) * (v / maxV); };
+    var NS = 'http://www.w3.org/2000/svg';
+    function el(tag, attrs) {
+      var e = document.createElementNS(NS, tag);
+      for (var k in attrs) e.setAttribute(k, attrs[k]);
+      return e;
+    }
+    // y 轴刻度
+    var steps = 4;
+    for (var g = 0; g <= steps; g++) {
+      var v = maxV * g / steps;
+      svg.appendChild(el('line', { x1: padL, y1: y(v), x2: W - padR, y2: y(v), stroke: '#e3ded5', 'stroke-width': 1 }));
+      var t = el('text', { x: padL - 8, y: y(v) + 4, 'text-anchor': 'end', 'font-size': 11, fill: '#5c574f' });
+      t.textContent = v >= 1e6 ? ('$' + (v / 1e6).toFixed(1) + 'M') : ('$' + Math.round(v / 1000) + 'k');
+      svg.appendChild(t);
+    }
+    // x 轴年份刻度
+    var totalYears = Math.ceil(lastM / 12);
+    var every = Math.max(1, Math.ceil(totalYears / 10));
+    for (var yr = 0; yr <= totalYears; yr += every) {
+      var tx = el('text', { x: x(yr * 12), y: H - 8, 'text-anchor': 'middle', 'font-size': 11, fill: '#5c574f' });
+      tx.textContent = yr + '年';
+      svg.appendChild(tx);
+    }
+    // 目标线
+    if (isFinite(target) && target > 0) {
+      svg.appendChild(el('line', { x1: padL, y1: y(target), x2: W - padR, y2: y(target), stroke: '#4a7ec2', 'stroke-width': 1.5, 'stroke-dasharray': '6 4' }));
+    }
+    function path(key, color, width) {
+      var d = snaps.map(function (s, idx) {
+        return (idx === 0 ? 'M' : 'L') + x(s.m).toFixed(1) + ' ' + y(s[key]).toFixed(1);
+      }).join(' ');
+      svg.appendChild(el('path', { d: d, fill: 'none', stroke: color, 'stroke-width': width, 'stroke-linejoin': 'round' }));
+    }
+    path('invested', '#b9b2a6', 2);
+    path('bal', '#8c3b22', 2.5);
+  }
+
+  ['principal', 'contrib', 'rate', 'target', 'years'].forEach(function (id) {
+    $(id).addEventListener('input', render);
+  });
+  render();
+})();
+</script>
+</body>
+</html>
