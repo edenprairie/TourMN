@@ -144,12 +144,12 @@
   <div class="inputs">
     <div class="field">
       <label for="principal">当前本金</label>
-      <div class="inwrap"><span class="unit">$</span><input id="principal" type="number" min="0" step="1000" value="1000000" inputmode="decimal"></div>
+      <div class="inwrap"><span class="unit">$</span><input id="principal" type="text" value="1000000" inputmode="decimal"></div>
       <div class="hint">现在账户里已有的钱</div>
     </div>
     <div class="field">
       <label for="contrib">每月投入</label>
-      <div class="inwrap"><span class="unit">$</span><input id="contrib" type="number" min="0" step="100" value="3000" inputmode="decimal"></div>
+      <div class="inwrap"><span class="unit">$</span><input id="contrib" type="text" value="3000" inputmode="decimal"></div>
       <div class="hint">每个月新投入的钱,月末存入</div>
     </div>
     <div class="field">
@@ -159,7 +159,7 @@
     </div>
     <div class="field">
       <label for="target">目标金额</label>
-      <div class="inwrap"><span class="unit">$</span><input id="target" type="number" min="0" step="10000" value="2000000" inputmode="decimal"></div>
+      <div class="inwrap"><span class="unit">$</span><input id="target" type="text" value="2000000" inputmode="decimal"></div>
       <div class="hint">想达到的总资产</div>
     </div>
     <div class="field">
@@ -228,18 +228,18 @@
 <div class="field"><label for="r_ret">预计退休年龄</label><div class="inwrap"><input id="r_ret" type="number" step="1" value="65" inputmode="decimal"><span class="unit">岁</span></div><div class="hint">开始停止投入、开始提取的年龄</div></div>
 <div class="field"><label for="r_life">预期寿命(规划到几岁)</label><div class="inwrap"><input id="r_life" type="number" step="1" value="90" inputmode="decimal"><span class="unit">岁</span></div><div class="hint">宁可保守,往长了估</div></div>
 <div class="grp" style="grid-column:1/-1">退休前:积累</div>
-<div class="field"><label for="r_p">当前本金</label><div class="inwrap"><span class="unit">$</span><input id="r_p" type="number" step="10000" value="500000" inputmode="decimal"></div><div class="hint">目前可用于退休的投资资产</div></div>
-<div class="field"><label for="r_c">每月投入</label><div class="inwrap"><span class="unit">$</span><input id="r_c" type="number" step="100" value="3000" inputmode="decimal"></div><div class="hint">退休前每月新投入,固定金额,不随通胀增长</div></div>
+<div class="field"><label for="r_p">当前本金</label><div class="inwrap"><span class="unit">$</span><input id="r_p" type="text" value="500000" inputmode="decimal"></div><div class="hint">目前可用于退休的投资资产</div></div>
+<div class="field"><label for="r_c">每月投入</label><div class="inwrap"><span class="unit">$</span><input id="r_c" type="text" value="3000" inputmode="decimal"></div><div class="hint">退休前每月新投入,固定金额,不随通胀增长</div></div>
 <div class="field"><label for="r_r1">退休前年化收益率</label><div class="inwrap"><span class="unit">%</span><input id="r_r1" type="number" step="0.1" value="7" inputmode="decimal"></div><div class="hint">名义收益率(未扣通胀),按月复利</div></div>
 <div class="grp" style="grid-column:1/-1">退休后:开销与收入(金额按今天的购买力填写)</div>
-<div class="field"><label for="r_spend">退休后每月生活开销(不含医疗)</label><div class="inwrap"><span class="unit">$</span><input id="r_spend" type="number" step="100" value="4000" inputmode="decimal"></div><div class="hint">按今天的物价估算,之后每年按通胀率上涨</div></div>
+<div class="field"><label for="r_spend">退休后每月生活开销(不含医疗)</label><div class="inwrap"><span class="unit">$</span><input id="r_spend" type="text" value="4000" inputmode="decimal"></div><div class="hint">按今天的物价估算,之后每年按通胀率上涨</div></div>
 <div class="field"><label for="r_inf">通胀率</label><div class="inwrap"><span class="unit">%</span><input id="r_inf" type="number" step="0.1" value="3" inputmode="decimal"></div><div class="hint">生活开销、社保每年的增长率</div></div>
 <div class="field"><label for="r_r2">退休后年化收益率</label><div class="inwrap"><span class="unit">%</span><input id="r_r2" type="number" step="0.1" value="5" inputmode="decimal"></div><div class="hint">名义收益率;退休后通常更保守</div></div>
-<div class="field"><label for="r_ss">Social Security 每月预计领取</label><div class="inwrap"><span class="unit">$</span><input id="r_ss" type="number" step="100" value="2500" inputmode="decimal"></div><div class="hint">按今天的购买力,可在 ssa.gov 查你的预估;不领就填 0</div></div>
+<div class="field"><label for="r_ss">Social Security 每月预计领取</label><div class="inwrap"><span class="unit">$</span><input id="r_ss" type="text" value="2500" inputmode="decimal"></div><div class="hint">按今天的购买力,可在 ssa.gov 查你的预估;不领就填 0</div></div>
 <div class="field"><label for="r_ssage">开始领取年龄</label><div class="inwrap"><input id="r_ssage" type="number" step="1" value="67" inputmode="decimal"><span class="unit">岁</span></div><div class="hint">62–70 岁之间;越晚领,每月越多(请自行填对应金额)</div></div>
 <div class="grp" style="grid-column:1/-1">医疗与税</div>
-<div class="field"><label for="r_hc1">65 岁前每月医疗开销</label><div class="inwrap"><span class="unit">$</span><input id="r_hc1" type="number" step="50" value="1200" inputmode="decimal"></div><div class="hint">退休到 65 岁之间,自购保险(ACA)+ 自付,今天的金额</div></div>
-<div class="field"><label for="r_hc2">65 岁后每月医疗开销</label><div class="inwrap"><span class="unit">$</span><input id="r_hc2" type="number" step="50" value="700" inputmode="decimal"></div><div class="hint">Medicare 保费(Part B/D、补充险)+ 自付,今天的金额</div></div>
+<div class="field"><label for="r_hc1">65 岁前每月医疗开销</label><div class="inwrap"><span class="unit">$</span><input id="r_hc1" type="text" value="1200" inputmode="decimal"></div><div class="hint">退休到 65 岁之间,自购保险(ACA)+ 自付,今天的金额</div></div>
+<div class="field"><label for="r_hc2">65 岁后每月医疗开销</label><div class="inwrap"><span class="unit">$</span><input id="r_hc2" type="text" value="700" inputmode="decimal"></div><div class="hint">Medicare 保费(Part B/D、补充险)+ 自付,今天的金额</div></div>
 <div class="field"><label for="r_hinf">医疗费用年增长率</label><div class="inwrap"><span class="unit">%</span><input id="r_hinf" type="number" step="0.1" value="5" inputmode="decimal"></div><div class="hint">通常高于一般通胀</div></div>
 <div class="field"><label for="r_tax">提取时的综合税率</label><div class="inwrap"><span class="unit">%</span><input id="r_tax" type="number" step="0.5" value="15" inputmode="decimal"></div><div class="hint">简化:提取金额中要交的税比例(联邦+州的平均税率),0–50</div></div>
   </div>
@@ -289,8 +289,16 @@
   var fmtUSD = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 
   function num(id) {
-    var v = parseFloat($(id).value);
+    var v = parseFloat($(id).value.replace(/,/g, ''));
     return isFinite(v) ? v : 0;
+  }
+
+  function formatMoneyInput(input) {
+    var value = input.value.replace(/,/g, '');
+    if (!value || !/^\d+(\.\d*)?$/.test(value)) return;
+    var parts = value.split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    input.value = parts.join('.');
   }
 
   // 按月复利模拟:每月先按上月余额计息,再在月末存入当月投入
@@ -433,9 +441,14 @@
     path('bal', '#8c3b22', 2.5);
   }
 
-  ['principal', 'contrib', 'rate', 'target', 'years'].forEach(function (id) {
-    $(id).addEventListener('input', render);
+  var moneyInputIds = ['principal', 'contrib', 'target', 'r_p', 'r_c', 'r_spend', 'r_ss', 'r_hc1', 'r_hc2'];
+  moneyInputIds.forEach(function (id) {
+    var input = $(id);
+    input.addEventListener('input', render);
+    input.addEventListener('blur', function () { formatMoneyInput(input); render(); });
+    formatMoneyInput(input);
   });
+  ['rate', 'years'].forEach(function (id) { $(id).addEventListener('input', render); });
   render();
 
   // 标签切换
@@ -490,7 +503,7 @@ function earliestRetire(p) {
   var $ = function (id) { return document.getElementById(id); };
   var fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
   var M = function (v) { return (v < 0 ? '-' : '') + fmt.format(Math.abs(v)); };
-  function g(id) { var v = parseFloat($(id).value); return isFinite(v) ? v : 0; }
+  function g(id) { var v = parseFloat($(id).value.replace(/,/g, '')); return isFinite(v) ? v : 0; }
   function read() {
     return {
       age: g('r_age'), ret: g('r_ret'), life: g('r_life'),
@@ -592,9 +605,29 @@ function earliestRetire(p) {
     });
     drawChart(r.rows, p);
   }
+  ['r_p','r_c','r_spend','r_ss','r_hc1','r_hc2'].forEach(function (id) {
+    var input = $(id), value = input.value.replace(/,/g, '');
+    if (value && /^\d+(\.\d*)?$/.test(value)) {
+      var parts = value.split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      input.value = parts.join('.');
+    }
+  });
   window.__renderRetire = render;
   ['r_age','r_ret','r_life','r_p','r_c','r_r1','r_spend','r_inf','r_r2','r_ss','r_ssage','r_hc1','r_hc2','r_hinf','r_tax'].forEach(function (id) {
     $(id).addEventListener('input', render);
+  });
+  ['r_p','r_c','r_spend','r_ss','r_hc1','r_hc2'].forEach(function (id) {
+    var input = $(id);
+    input.addEventListener('blur', function () {
+      var value = input.value.replace(/,/g, '');
+      if (value && /^\d+(\.\d*)?$/.test(value)) {
+        var parts = value.split('.');
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        input.value = parts.join('.');
+      }
+      render();
+    });
   });
   render();
 })();
