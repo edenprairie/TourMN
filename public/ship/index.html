@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>集运公司参考:顺励国际与盛优国际 | Freight Forwarder Guide</title>
+<title>集运公司对比:顺励国际 vs 盛优国际 | Freight Forwarder Comparison</title>
 <style>
   :root {
     --ink: #1c1a17;
@@ -26,7 +26,7 @@
     line-height: 1.75;
     font-size: 16px;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 64px; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 28px 20px 64px; }
   header.page { padding: 24px 0 8px; }
   header.page h1 { font-size: 30px; margin: 0 0 10px; line-height: 1.3; }
   header.page .fact { color: var(--accent); font-size: 14px; margin: 0 0 8px; }
@@ -73,172 +73,44 @@
   .callout.warning { background: var(--warn-bg); border-color: var(--warn-border); }
   footer.closing { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--hairline); color: var(--ink-2); font-size: 13px; }
   a { color: var(--accent); }
-  h3 { font-size: 17px; margin: 22px 0 8px; }
-  h3 .sub { color: var(--ink-2); font-size: 13px; font-weight: 400; margin-left: 6px; }
-  ul, ol { padding-left: 22px; } li { margin-bottom: 6px; }
+
+  .legend { position: sticky; top: 0; z-index: 5; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px 0; background: var(--page, #faf8f4); }
+  .lg { border-radius: 10px; padding: 8px 10px; border: 1px solid; display: flex; flex-direction: column; line-height: 1.35; }
+  .lg b { font-size: 15px; } .lg span { font-size: 12px; opacity: .8; }
+  .lg.l, .cell.l { background: #eef3ea; border-color: #b8c9ae; }
+  .lg.r, .cell.r { background: #f6f1ea; border-color: #e0d3c0; }
+  details.topic { margin-top: 20px; }
+  details.topic > summary { cursor: pointer; font-size: 19px; font-weight: 700; padding: 10px 0; border-bottom: 1px solid #e3ded5; min-height: 44px; list-style: none; }
+  details.topic > summary::-webkit-details-marker { display: none; }
+  details.topic > summary::after { content: "–"; float: right; color: #8c3b22; }
+  details.topic:not([open]) > summary::after { content: "+"; }
+  .tsub { color: #5c574f; font-size: 14px; margin: 8px 0 0; }
+  .cmp { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin-top: 10px; align-items: start; }
+  .cell { border: 1px solid; border-radius: 10px; padding: 10px; font-size: 13.5px; line-height: 1.6; overflow-wrap: anywhere; }
+  .cell h4 { margin: 12px 0 4px; font-size: 13px; color: #8c3b22; } .cell h4:first-child { margin-top: 0; }
+  .cell p { margin: 0 0 8px; } .cell ul { margin: 0 0 8px; padding-left: 16px; } .cell li { margin-bottom: 4px; }
+  .prs { margin: 0 0 8px; } .pr { display: flex; flex-direction: column; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,.08); }
+  .pr span { color: #5c574f; font-size: 12.5px; } .pr b { font-size: 14px; }
+  table.mt { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 8px; }
+  table.mt th, table.mt td { padding: 5px 2px; text-align: right; border-bottom: 1px solid rgba(0,0,0,.08); } table.mt th:first-child, table.mt td:first-child { text-align: left; color: #5c574f; }
+  table.mt th { font-size: 12px; color: #8c3b22; }
+  .callout { border-radius: 8px; padding: 8px 10px; margin: 8px 0; border: 1px solid; font-size: 12.5px; line-height: 1.55; }
+  .callout .title { font-weight: 700; margin-bottom: 2px; }
+  .callout.note { background: rgba(255,255,255,.6); border-color: #b8c9ae; } .callout.warning { background: #faf0e6; border-color: #e0bd93; }
+  details.sub { margin: 4px 0 8px; } details.sub summary { cursor: pointer; font-weight: 600; min-height: 32px; }
+  @media (min-width: 700px) { .cell { font-size: 15px; padding: 14px; } .cell h4 { font-size: 14px; } .pr { flex-direction: row; justify-content: space-between; gap: 12px; } .pr b { text-align: right; } .callout { font-size: 14px; } table.mt { font-size: 14px; } }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header class="page">
-  <h1>集运公司参考:顺励国际与盛优国际</h1>
-  <p class="fact">整理于 2026 年 11 月 3 日,两家公司</p>
-  <p class="intro">收录两家中国到美国的集运公司:顺励国际(微信群,作者已使用)和盛优国际(微信小程序,作者尚未使用)。内容来自两家公司各自提供的资料,价格与条款均为公司说法,未独立核实,下单前请再确认。个人会员号、完整收件信息不在本页。</p>
+  <h1>集运公司对比:顺励国际 vs 盛优国际</h1>
+  <p class="fact">整理于 2026 年 11 月 3 日,两家公司左右对照</p>
+  <p class="intro">左边顺励国际(微信群,作者已使用),右边盛优国际(微信小程序,作者尚未使用),按项目逐行对齐。内容来自两家公司各自提供的资料,价格单位均为人民币,条款为公司说法,未独立核实,下单前请再确认。个人会员号、完整收件信息不在本页。</p>
 </header>
 
-<section>
-<h2>两家公司一览</h2>
-<p>本页收录两家集运公司的资料，价格、地址和赔付条款各自独立，请勿混用。</p>
-<div class="callout note"><div class="title">顺励国际（微信群：明尼拼邮～直邮群）</div>作者目前在用，已有使用经验。资料来自该微信群发布的公告。收件仓在浙江义乌。</div>
-<div class="callout warning"><div class="title">盛优国际（微信小程序）</div>作者还没有使用过。资料来自该公司通过微信小程序提供的介绍，收件仓在广东深圳。</div>
-<p>本页只做资料整理，不改变任何现有包裹的运送安排，也不代表建议更换公司。</p>
-</section>
-<section>
-<h2>第一家：顺励国际（已使用）</h2>
-<p>微信群名：明尼拼邮～直邮群--顺励国际。以下内容按群公告原文整理，原文没写清的地方保持原样并另行标注。</p>
-</section>
-<section>
-<h2>顺励国际 · 收货信息</h2>
-<p>仓库在浙江省义乌市。收件人写法为「（微信名）转明尼（空/海）运」，地址最后也要加上自己的微信名。完整地址和电话在群公告里，本页不公开。</p>
-<div class="callout warning"><div class="title">必须按格式填写</div>购物软件里要把信息隐藏功能关闭，否则会省略名字，仓库找不到是谁的快递。一定按收件格式填写，地址最后也要加上微信名。因地址或名字格式没写好变成无名包裹、导致包裹不见了，公司不予赔付。</div>
-</section>
-<section>
-<h2>顺励国际 · 拼邮海运</h2>
-<p>拼邮 1KG 起拼，两周一次。价格含私人地址费，双清包税到门。</p>
-<h3>普货 <span class="sub">拼邮</span></h3>
-<div class="row"><div class="head"><span class="name">拼满 12KG 以上</span><span class="value">25元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">拼满 50KG</span><span class="value">23元/KG</span></div></div>
-<h3>敏感货 <span class="sub">拼邮</span></h3>
-<div class="row"><div class="head"><span class="name">拼满 21KG</span><span class="value">35元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">拼满 70KG 以上</span><span class="value">33元/KG</span></div></div>
-<div class="callout note"><div class="title">原文未说明的地方</div>群公告里多数价格只写数字（如「23/KG」），没有写币种；已确认均为人民币（元）。「拼满 12KG 以上 25」和「拼满 50KG 价格 23」按原文列出，具体门槛的含义（是否为阶梯价）原文没有解释。</div>
-</section>
-<section>
-<h2>顺励国际 · 直邮</h2>
-<p>价格含私人地址费，双清包税到门。</p>
-<div class="row"><div class="head"><span class="name">普货（12KG 起）</span><span class="value">25元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">敏感货（21KG 起）</span><span class="value">35元/KG</span></div></div>
-<p>原文在价格后写有「限时达」三个字，没有说明具体指哪条线路或时效，需向群主确认。</p>
-</section>
-<section>
-<h2>顺励国际 · 空运普货</h2>
-<div class="row"><div class="head"><span class="name">22KG 以上，时效 4–7 天</span><span class="value">80元/KG</span></div></div>
-<p>原文：包税不包清关，价格含私人地址费。注意海运写的是「双清包税」，空运是「包税不包清关」，两者不同。22KG 以下的空运价格原文没有给出。</p>
-</section>
-<section>
-<h2>顺励国际 · 计费规则</h2>
-<div class="row"><div class="head"><span class="name">海运拼箱体积重</span><span class="value">长×宽×高 ÷ 5000</span></div></div>
-<div class="row"><div class="head"><span class="name">海运整箱体积重</span><span class="value">长×宽×高 ÷ 6000</span></div></div>
-<div class="row"><div class="head"><span class="name">空运拼箱体积重</span><span class="value">长×宽×高 ÷ 4000</span></div></div>
-<div class="row"><div class="head"><span class="name">空运整箱体积重</span><span class="value">长×宽×高 ÷ 5000</span></div></div>
-<ul><li>体积重和实际重量，哪个大按哪个计费。</li><li>最低计费 1KG；如 1.1KG 按 2KG 取整计费，不再采用 0.5KG 一个单位计费。</li><li>有必要时可以帮忙用压缩袋，20 元人民币一个，适合很泡很轻的衣服、羽绒服、棉被等。</li></ul>
-</section>
-<section>
-<h2>顺励国际 · 货物尺寸要求</h2>
-<p>箱子大尺寸有两种：100×40×30 或 60×50×40。超过只能单独当作一件发出。如果货物很轻，单件最低按 12KG 起算；如需看清再邮寄，价格是一样的（原文表述如此）。</p>
-<div class="row"><div class="head"><span class="name">最长边超过 120cm</span><span class="value">加 200 元</span></div></div>
-<div class="row"><div class="head"><span class="name">次边超过 70</span><span class="value">加 200 元</span></div></div>
-<div class="row"><div class="head"><span class="name">单件实重超过 22KG，或体积重超过 30KG</span><span class="value">加 300 元</span></div></div>
-<div class="row"><div class="head"><span class="name">（两条短边之和 ×2 + 最长边）超过 260</span><span class="value">加 250 元</span></div></div>
-<ul><li>拼邮不接受超周长的货物，超周长可以直邮到家。</li><li>货物超过 2 米，UPS 派送不了，不接。</li><li>超大件可走卡派，100KG 起，价格需另外单独询价。</li></ul>
-<div class="callout note"><div class="title">原文未说明的地方</div>价格和附加费的币种已确认为人民币。次边「70」和周长「260」原文没写长度单位（最长边写了 cm），按上下文应为 cm，需向群主确认。</div>
-</section>
-<section>
-<h2>顺励国际 · 延误与赔付</h2>
-<h3>限时达 <span class="sub">正常延误理赔</span></h3>
-<p>开船后（以开船时间计算）的第二天起算，13–15 天提取。第 17 天（以 UPS 或联邦官网扫描时间为准）开始赔偿：超一天退 0.5 元/KG，最高理赔 2 元/KG。美国节假日放假、船晚到港、码头罢工，均不在承诺时效内。</p>
-<h3>查验理赔 <span class="sub">海关查验</span></h3>
-<p>因海关查验导致时效超时，统一理赔 1 元/KG；查验未超出时效承诺范围则不予理赔。敏感货查验超过时效不予理赔。</p>
-<h3>索赔条件 <span class="sub">丢失、损坏</span></h3>
-<ul><li>快递在仓库丢失，最高赔付 500 元/个包裹。</li><li>特货一直都有查验被扣货的风险；被扣货只退运费，没有其他额外赔付。</li><li>在美国本土 UPS 或 FedEx 包裹送丢，按每箱最高 100 美金赔付，不做额外赔付。</li><li>所有货物不赔付货值，国际物流没有运费险。</li><li>出库后因挤压导致货物破碎、变形、损坏，不在赔付范围内。</li><li>公司有最终解释权。客户一旦同意接受服务，即视为已详细阅读以上全部内容并无异议。</li></ul>
-</section>
-<section>
-<h2>第二家：盛优国际（尚未使用）</h2>
-<div class="callout warning"><div class="title">作者还没有用过这家</div>以下全部是公司自己提供的资料，没有使用经验可参考。</div>
-</section>
-<section>
-<h2>盛优国际 · 收货信息</h2>
-<p>仓库在广东省深圳市宝安区沙井街道。注册后每位用户有自己的会员号，收件人和地址都要带上会员号，具体格式向公司客服索取，本页不公开。</p>
-<div class="callout note"><div class="title">免费仓库服务</div>公司称仓库提供免费仓储、收货、验货、打包服务，网上购买的物品可直接邮寄到仓库。地址里带上会员号，方便仓库认领包裹。</div>
-</section>
-<section>
-<h2>盛优国际 · 集运流程：只需三步</h2>
-<ol><li>发货至仓库：将货物快递至公司集运仓库，自寄货或网购直接下单到仓库均可。</li><li>打包计费：仓库免费拆包合箱、拍照称重，核算运费后发给客户。</li><li>海外签收：货物发出后提供单号及物流信息查询系统，海外派送上门。</li></ol>
-</section>
-<section>
-<h2>盛优国际 · 海运报价（双清包税，派送上门）</h2>
-<p>时效：普船约35天，快船约25天。按体积重与实重取大计费，海运体积重 = 长×宽×高 ÷ 6000。</p>
-<h3>普货（普船） <span class="sub">各类普通货物</span></h3>
-<div class="row"><div class="head"><span class="name">12KG 以上</span><span class="value">24元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">21KG 以上</span><span class="value">22元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">51KG 以上</span><span class="value">20元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">100KG 以上</span><span class="value">18元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">500KG 以上</span><span class="value">16元/KG</span></div></div>
-<h3>普货（快船） <span class="sub">各类普通货物</span></h3>
-<div class="row"><div class="head"><span class="name">12KG 以上</span><span class="value">27元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">21KG 以上</span><span class="value">25元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">51KG 以上</span><span class="value">23元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">100KG 以上</span><span class="value">21元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">500KG 以上</span><span class="value">18元/KG</span></div></div>
-<h3>敏感货（普船） <span class="sub">化妆品、食品等</span></h3>
-<div class="row"><div class="head"><span class="name">12KG 以上</span><span class="value">33元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">21KG 以上</span><span class="value">31元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">51KG 以上</span><span class="value">28元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">100KG 以上</span><span class="value">24元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">500KG 以上</span><span class="value">21元/KG</span></div></div>
-<h3>敏感货（快船） <span class="sub">化妆品、食品等</span></h3>
-<div class="row"><div class="head"><span class="name">12KG 以上</span><span class="value">36元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">21KG 以上</span><span class="value">34元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">51KG 以上</span><span class="value">31元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">100KG 以上</span><span class="value">26元/KG</span></div></div>
-<div class="row"><div class="head"><span class="name">500KG 以上</span><span class="value">23元/KG</span></div></div>
-<div class="callout warning"><div class="title">海运风险、赔付与尺寸限制</div>敏感货有1–3%的扣货风险，邮寄前请知晓；海运赔偿20元人民币/KG，不赔偿货值。海关查验、船期延误、塞港、中转延误、假期、自然灾害、战争等不可控因素不作延时赔偿。尺寸要求：第一边长不超过1.2米，第二边长不超过75cm，周长不超过260cm（超过请咨询客服）；单件限重22KG，特殊货物请单询。</div>
-</section>
-<section>
-<h2>盛优国际 · 空运快递（时效3–7天，单清包税）</h2>
-<p>最低1公斤起发；包税需另加手续费150元/票。按体积重与实重取大计费，空运体积重 = 长×宽×高 ÷ 5000。</p>
-<h3>普货 <span class="sub">另收操作费 158元/票</span></h3>
-<div class="row"><div class="head"><span class="name">1KG 起</span><span class="value">50元/0.5KG</span></div></div>
-<div class="row"><div class="head"><span class="name">5KG 起</span><span class="value">45元/0.5KG</span></div></div>
-<div class="row"><div class="head"><span class="name">10–22KG</span><span class="value">40元/0.5KG</span></div></div>
-<div class="row"><div class="head"><span class="name">23KG 以上（免操作费）</span><span class="value">38元/0.5KG</span></div></div>
-<h3>敏感货 <span class="sub">另收操作费 158元/票</span></h3>
-<div class="row"><div class="head"><span class="name">1KG 起</span><span class="value">60元/0.5KG</span></div></div>
-<div class="row"><div class="head"><span class="name">5KG 起</span><span class="value">55元/0.5KG</span></div></div>
-<div class="row"><div class="head"><span class="name">10–22KG</span><span class="value">50元/0.5KG</span></div></div>
-<div class="row"><div class="head"><span class="name">23KG 以上（免操作费）</span><span class="value">48元/0.5KG</span></div></div>
-<div class="callout warning"><div class="title">空运快递赔付</div>未上网之前丢失或者扣关，赔偿40元人民币/KG；提取后不赔偿不退运费，不赔偿货值；国外退件一切费用由客户支付。肉类、药品、仿牌价格单询；超大件价格单询。</div>
-</section>
-<section>
-<h2>盛优国际 · 空运专线（时效7–12天，双清包税，不分普敏）</h2>
-<p>最低1公斤起发。按体积重与实重取大计费，体积重 = 长×宽×高 ÷ 5000。</p>
-<h3>普货与敏感货同价 <span class="sub">另收操作费 158元/票，10KG 以上免操作费</span></h3>
-<div class="row"><div class="head"><span class="name">1KG 起</span><span class="value">48元/0.5KG</span></div></div>
-<div class="row"><div class="head"><span class="name">5KG 起</span><span class="value">48元/0.5KG</span></div></div>
-<div class="row"><div class="head"><span class="name">10KG 以上（免操作费）</span><span class="value">48元/0.5KG</span></div></div>
-<div class="callout warning"><div class="title">空运专线赔付</div>丢失或者扣关，赔偿40元人民币/KG；提取后，最高赔付100USD/票。肉类、药品、仿牌价格单询；超大件价格单询。</div>
-</section>
-<section>
-<h2>盛优国际 · 货物分类</h2>
-<h3>普货 <span class="sub">普通货物</span></h3>
-<ul><li>非知名品牌的衣服鞋帽等</li><li>饰品</li><li>塑料制品</li><li>纸制品</li></ul>
-<h3>敏感货 <span class="sub">可运但价格更高、有一定扣货风险</span></h3>
-<ul><li>含液体的物品</li><li>膏状物品</li><li>粉末状物品</li><li>食品、茶叶、佐料</li><li>所有化妆品（眼影、睫毛膏、口红、唇膏、假睫毛、眉笔、眼线笔、面膜等所有直接接触皮肤的物品）</li><li>含电池的物品（充电宝、手机等）</li><li>带有磁性的物品（音响等）</li><li>带电机的物品（豆浆机、破壁机、搅拌机等）</li><li>情趣用品</li><li>奢侈品（正品或仿品）、潮牌、知名卡通动漫形象</li><li>一线品牌或海关备案品牌（Nike 等）</li><li>普通药品、保健品</li></ul>
-<h3>禁运 <span class="sub">不能邮寄</span></h3>
-<ul><li>刀具</li><li>玩具枪</li><li>易燃易爆类：打火机、酒精、压力罐喷雾</li><li>原木、原土、原石、动物毛皮、骨头、昆虫标本，动物、植物、生鲜、水果</li><li>现金、货币、古董、贵金属等</li><li>药品（麻醉类、激素类、处方药、抗生素类、人胎素类、精神类、催眠药品）</li><li>香烟、烟草</li><li>毒品</li></ul>
-</section>
-<section>
-<h2>盛优国际 · 微信小程序</h2>
-<p>公司通过微信小程序「盛优国际物流」操作，主要功能：</p>
-<ul><li>包裹预报、我的包裹、申请打包、待付款</li><li>包裹认领、仓库列表、运费估算、操作指引</li><li>如何下单、新手问题、禁运物品等说明</li></ul>
-<dl class="facts"><div class="fact-row"><dt>美国空运</dt> <dd>时效3到7天，包税</dd></div><div class="fact-row"><dt>美国海运</dt> <dd>时效20到25天左右，包税</dd></div></dl>
-<div class="callout warning"><div class="title">海运时效两处不一致</div>报价表写普船约35天、快船约25天，而小程序路线页写海运约20–25天。实际时效以客服确认为准。</div>
-</section>
-<section>
-<h2>盛优国际 · 尚未明确的事项</h2>
-<ul><li>报价有效期未注明，下单前请与客服确认当时价格。</li><li>空运专线原报价表最后两栏均标注「10公斤以上（免操作费）」，更高重量档是否有优惠不明。</li><li>海运时效两个来源不一致（报价表35/25天，小程序20–25天）。</li><li>禁运与限制的完整清单以小程序「禁运物品」页和客服答复为准。</li><li>本页全部价格与规则来自公司提供的资料，未独立核实。</li></ul>
-</section>
+<div class="legend"><div class="lg l"><b>顺励国际</b><span>已使用 · 微信群</span></div><div class="lg r"><b>盛优国际</b><span>尚未使用 · 小程序</span></div></div><details class="topic" open><summary>概览</summary><div class="cmp"><div class="cell l"><h4>渠道</h4><p>微信群「明尼拼邮～直邮群」，群公告资料</p><h4>仓库所在地</h4><p>浙江省义乌市</p><h4>服务方式</h4><ul><li>拼邮（1KG 起拼，两周一次）</li><li>直邮</li><li>空运普货</li></ul></div><div class="cell r"><h4>渠道</h4><p>微信小程序「盛优国际物流」，公司提供的资料</p><h4>仓库所在地</h4><p>广东省深圳市宝安区沙井街道</p><h4>服务方式</h4><ul><li>海运（普船、快船）</li><li>空运快递（单清包税）</li><li>空运专线（双清包税）</li></ul></div></div></details><details class="topic" open><summary>收货信息</summary><div class="cmp"><div class="cell l"><p>仓库在浙江省义乌市。收件人写法为「（微信名）转明尼（空/海）运」，地址最后也要加上自己的微信名。完整地址和电话在群公告里，本页不公开。</p><div class="callout warning"><div class="title">必须按格式填写</div>购物软件里要把信息隐藏功能关闭，否则会省略名字，仓库找不到是谁的快递。一定按收件格式填写，地址最后也要加上微信名。因地址或名字格式没写好变成无名包裹、导致包裹不见了，公司不予赔付。</div></div><div class="cell r"><p>仓库在广东省深圳市宝安区沙井街道。注册后每位用户有自己的会员号，收件人和地址都要带上会员号，具体格式向公司客服索取，本页不公开。</p><div class="callout note"><div class="title">免费仓库服务</div>公司称仓库提供免费仓储、收货、验货、打包服务，网上购买的物品可直接邮寄到仓库。地址里带上会员号，方便仓库认领包裹。</div></div></div></details><details class="topic" open><summary>海运报价</summary><div class="cmp"><div class="cell l"><p>价格含私人地址费，双清包税到门。单位：元/KG（人民币）。</p><h4>拼邮（1KG 起拼，两周一次）</h4><h4>普货</h4><div class="prs"><div class="pr"><span>拼满 12KG 以上</span><b>25元</b></div><div class="pr"><span>拼满 50KG</span><b>23元</b></div></div><h4>敏感货</h4><div class="prs"><div class="pr"><span>拼满 21KG</span><b>35元</b></div><div class="pr"><span>拼满 70KG 以上</span><b>33元</b></div></div><h4>直邮</h4><div class="prs"><div class="pr"><span>普货（12KG 起）</span><b>25元</b></div><div class="pr"><span>敏感货（21KG 起）</span><b>35元</b></div></div><div class="callout note"><div class="title">原文未说明</div>群公告里多数价格只写数字，没有写币种；已确认均为人民币（元）。「拼满 12KG 以上 25」和「拼满 50KG 价格 23」按原文列出，具体门槛的含义（是否为阶梯价）原文没有解释。</div><p>原文在价格后写有「限时达」三个字，没有说明具体指哪条线路或时效，需向群主确认。</p></div><div class="cell r"><p>双清包税，派送上门。时效：普船约 35 天，快船约 25 天。单位：元/KG（人民币）。</p><h4>普货</h4><table class="mt"><thead><tr><th></th><th>普船</th><th>快船</th></tr></thead><tbody><tr><td>12KG+</td><td>24</td><td>27</td></tr><tr><td>21KG+</td><td>22</td><td>25</td></tr><tr><td>51KG+</td><td>20</td><td>23</td></tr><tr><td>100KG+</td><td>18</td><td>21</td></tr><tr><td>500KG+</td><td>16</td><td>18</td></tr></tbody></table><h4>敏感货（化妆品、食品等）</h4><table class="mt"><thead><tr><th></th><th>普船</th><th>快船</th></tr></thead><tbody><tr><td>12KG+</td><td>33</td><td>36</td></tr><tr><td>21KG+</td><td>31</td><td>34</td></tr><tr><td>51KG+</td><td>28</td><td>31</td></tr><tr><td>100KG+</td><td>24</td><td>26</td></tr><tr><td>500KG+</td><td>21</td><td>23</td></tr></tbody></table><div class="callout warning"><div class="title">时效说法不一致</div>报价表写普船约35天、快船约25天，而小程序路线页写海运约20–25天，两处不一致，以客服确认为准。</div></div></div></details><details class="topic" open><summary>空运报价</summary><div class="cmp"><div class="cell l"><h4>空运普货</h4><div class="prs"><div class="pr"><span>22KG 以上</span><b>80元/KG</b></div><div class="pr"><span>时效</span><b>4–7 天</b></div></div><p>原文：包税不包清关，价格含私人地址费。海运写的是「双清包税」，空运是「包税不包清关」，两者不同。22KG 以下的空运价格原文没有给出。</p></div><div class="cell r"><h4>空运快递（3–7 天，单清包税）</h4><p>另收操作费 158 元/票，包税手续费 150 元/票。23KG 以上免操作费。</p><h4>普货（元/0.5KG）</h4><div class="prs"><div class="pr"><span>1KG 起</span><b>50</b></div><div class="pr"><span>5KG 起</span><b>45</b></div><div class="pr"><span>10–22KG</span><b>40</b></div><div class="pr"><span>23KG 以上</span><b>38</b></div></div><h4>敏感货（元/0.5KG）</h4><div class="prs"><div class="pr"><span>1KG 起</span><b>60</b></div><div class="pr"><span>5KG 起</span><b>55</b></div><div class="pr"><span>10–22KG</span><b>50</b></div><div class="pr"><span>23KG 以上</span><b>48</b></div></div><h4>空运专线（7–12 天，双清包税）</h4><p>不分普货和敏感货，统一 48元/0.5KG，另收操作费 158 元/票，10KG 以上免操作费。</p><div class="callout note"><div class="title">原表不清楚</div>空运专线原报价表最后两栏都写「10公斤以上（免操作费）」，更高重量档是否有优惠不明。</div></div></div></details><details class="topic" open><summary>计费规则</summary><div class="cmp"><div class="cell l"><h4>体积重</h4><div class="prs"><div class="pr"><span>海运拼箱</span><b>长×宽×高 ÷ 5000</b></div><div class="pr"><span>海运整箱</span><b>长×宽×高 ÷ 6000</b></div><div class="pr"><span>空运拼箱</span><b>长×宽×高 ÷ 4000</b></div><div class="pr"><span>空运整箱</span><b>长×宽×高 ÷ 5000</b></div></div><ul><li>体积重和实际重量，哪个大按哪个计费。</li><li>最低计费 1KG；如 1.1KG 按 2KG 取整，不再采用 0.5KG 一个单位计费。</li><li>有必要时可以帮忙用压缩袋，20 元人民币一个，适合很泡很轻的衣服、羽绒服、棉被等。</li></ul></div><div class="cell r"><h4>体积重</h4><div class="prs"><div class="pr"><span>海运</span><b>长×宽×高 ÷ 6000</b></div><div class="pr"><span>空运快递</span><b>长×宽×高 ÷ 5000</b></div><div class="pr"><span>空运专线</span><b>长×宽×高 ÷ 5000</b></div></div><ul><li>按体积重与实重取大计费。</li><li>空运最低 1 公斤起发。</li></ul></div></div></details><details class="topic" open><summary>尺寸与重量限制</summary><div class="cmp"><div class="cell l"><p>箱子大尺寸有两种：100×40×30 或 60×50×40。超过只能单独当作一件发出。货物很轻时，单件最低按 12KG 起算；如需看清再邮寄，价格是一样的（原文表述如此）。</p><div class="prs"><div class="pr"><span>最长边超过 120cm</span><b>加 200 元</b></div><div class="pr"><span>次边超过 70</span><b>加 200 元</b></div><div class="pr"><span>单件实重超过 22KG，或体积重超过 30KG</span><b>加 300 元</b></div><div class="pr"><span>（两条短边之和 ×2 + 最长边）超过 260</span><b>加 250 元</b></div></div><ul><li>拼邮不接受超周长的货物，超周长可以直邮到家。</li><li>货物超过 2 米，UPS 派送不了，不接。</li><li>超大件可走卡派，100KG 起，价格另外单独询价。</li></ul><div class="callout note"><div class="title">原文未说明</div>价格和附加费的币种已确认为人民币。次边「70」和周长「260」原文没写长度单位（最长边写了 cm），按上下文应为 cm，需向群主确认。</div></div><div class="cell r"><div class="prs"><div class="pr"><span>第一边长</span><b>不超过 1.2 米</b></div><div class="pr"><span>第二边长</span><b>不超过 75cm</b></div><div class="pr"><span>周长</span><b>不超过 260cm（超过请咨询客服）</b></div><div class="pr"><span>单件重量</span><b>不超过 22KG</b></div></div><p>特殊货物请单独询价。</p></div></div></details><details class="topic" open><summary>货物分类</summary><div class="cmp"><div class="cell l"><div class="callout warning"><div class="title">敏感货（特货）</div>特货一直都有查验被扣货的风险；被扣货只退运费，没有其他额外赔付。</div><p>群公告没有给出具体的普货、敏感货、禁运品清单。</p></div><div class="cell r"><p>分普货、敏感货、禁运三类。敏感货有 1–3% 的扣货风险。</p><details class="sub"><summary>普货</summary><ul><li>非知名品牌的衣服鞋帽等</li><li>饰品</li><li>塑料制品</li><li>纸制品</li></ul></details><details class="sub"><summary>敏感货（12 类，可运但价格更高）</summary><ul><li>含液体的物品</li><li>膏状物品</li><li>粉末状物品</li><li>食品、茶叶、佐料</li><li>所有化妆品（眼影、睫毛膏、口红、唇膏、假睫毛、眉笔、眼线笔、面膜等所有直接接触皮肤的物品）</li><li>含电池的物品（充电宝、手机等）</li><li>带有磁性的物品（音响等）</li><li>带电机的物品（豆浆机、破壁机、搅拌机等）</li><li>情趣用品</li><li>奢侈品（正品或仿品）、潮牌、知名卡通动漫形象</li><li>一线品牌或海关备案品牌（Nike 等）</li><li>普通药品、保健品</li></ul></details><details class="sub"><summary>禁运（8 类，不能邮寄）</summary><ul><li>刀具</li><li>玩具枪</li><li>易燃易爆类：打火机、酒精、压力罐喷雾</li><li>原木、原土、原石、动物毛皮、骨头、昆虫标本，动物、植物、生鲜、水果</li><li>现金、货币、古董、贵金属等</li><li>药品（麻醉类、激素类、处方药、抗生素类、人胎素类、精神类、催眠药品）</li><li>香烟、烟草</li><li>毒品</li></ul></details><p>肉类、药品、仿牌价格单询；超大件价格单询。</p></div></div></details><details class="topic" open><summary>延误与赔付</summary><div class="cmp"><div class="cell l"><h4>正常延误（限时达）</h4><p>开船后（以开船时间计算）的第二天起算，13–15 天提取。第 17 天（以 UPS 或联邦官网扫描时间为准）开始赔偿：超一天退 0.5 元/KG，最高理赔 2 元/KG。美国节假日放假、船晚到港、码头罢工，均不在承诺时效内。</p><h4>海关查验</h4><p>因海关查验导致时效超时，统一理赔 1 元/KG；查验未超出时效承诺范围则不予理赔。敏感货查验超过时效不予理赔。</p><h4>丢失、损坏</h4><ul><li>快递在仓库丢失，最高赔付 500 元/个包裹。</li><li>被扣货只退运费，没有其他额外赔付。</li><li>在美国本土 UPS 或 FedEx 包裹送丢，按每箱最高 100 美金赔付，不做额外赔付。</li><li>所有货物不赔付货值，国际物流没有运费险。</li><li>出库后因挤压导致货物破碎、变形、损坏，不在赔付范围内。</li><li>公司有最终解释权。客户一旦同意接受服务，即视为已详细阅读以上全部内容并无异议。</li></ul></div><div class="cell r"><h4>海运</h4><p>赔偿 20 元人民币/KG，不赔偿货值。海关查验、船期延误、塞港、中转延误、假期、自然灾害、战争等不可控因素不作延时赔偿。</p><h4>空运快递</h4><p>未上网之前丢失或者扣关，赔偿 40 元人民币/KG；提取后不赔偿、不退运费，不赔偿货值；国外退件一切费用由客户支付。</p><h4>空运专线</h4><p>丢失或者扣关，赔偿 40 元人民币/KG；提取后，最高赔付 100 USD/票。</p></div></div></details><details class="topic" open><summary>流程与其他</summary><div class="cmp"><div class="cell l"><p>资料里没有写集运流程和小程序功能。按群公告，需要按收件格式填写，并关闭购物软件的信息隐藏。</p></div><div class="cell r"><h4>集运三步</h4><ul><li>发货至仓库：将货物快递至公司集运仓库，自寄货或网购直接下单到仓库均可。</li><li>打包计费：仓库免费拆包合箱、拍照称重，核算运费后发给客户。</li><li>海外签收：货物发出后提供单号及物流信息查询系统，海外派送上门。</li></ul><h4>微信小程序</h4><ul><li>包裹预报、我的包裹、申请打包、待付款</li><li>包裹认领、仓库列表、运费估算、操作指引</li><li>如何下单、新手问题、禁运物品等说明</li></ul></div></div></details><details class="topic" open><summary>尚未明确的事项</summary><div class="cmp"><div class="cell l"><ul><li>「限时达」的具体含义。</li><li>「拼满 12KG 以上」与「拼满 50KG」两档价格的门槛含义。</li><li>次边和周长的长度单位。</li><li>海运「双清包税」与空运「包税不包清关」的差别。</li><li>22KG 以下的空运价格。</li><li>本页全部内容来自群公告，未独立核实，价格可能变化。</li></ul></div><div class="cell r"><ul><li>报价有效期未注明，下单前请与客服确认当时价格。</li><li>海运时效两个来源不一致（报价表 35/25 天，小程序 20–25 天）。</li><li>禁运与限制的完整清单以小程序「禁运物品」页和客服答复为准。</li><li>本页全部价格与规则来自公司提供的资料，未独立核实。</li></ul></div></div></details>
 
 <footer class="closing">2026 年 11 月 3 日根据顺励国际群公告和盛优国际提供的资料整理。本页只做信息整理,价格和规则可能随时变化。</footer>
 </div>
